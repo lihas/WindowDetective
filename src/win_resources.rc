@@ -1,0 +1,51 @@
+/////////////////////////////////////////////////////////////////////
+//                                                                 //
+//   Windows resource file                                         //
+//                                                                 //
+/////////////////////////////////////////////////////////////////////
+
+#include "window_detective/resource.h"
+#include <WinVer.h>
+
+
+// Application icon
+IDI_APPICON  ICON  "Window Detective.ico"
+
+
+// Version info
+VS_VERSION_INFO  VERSIONINFO
+ FILEVERSION     VERSION_NUM
+ PRODUCTVERSION  VERSION_NUM
+ FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS       VS_FF_DEBUG
+#else
+ FILEFLAGS       0x0L
+#endif
+ FILEOS          VOS_NT
+ FILETYPE        VFT_APP
+ FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      ""
+            VALUE "FileDescription",  APP_NAME
+            VALUE "FileVersion",      VERSION_STR
+            #ifdef _DEBUG
+             VALUE "InternalName",    DEBUG_APP_NAME
+            #else
+             VALUE "InternalName",    APP_NAME
+            #endif
+            VALUE "LegalCopyright",   ""
+            VALUE "OriginalFilename", "Window Detective.exe"
+            VALUE "ProductName",      APP_NAME
+            VALUE "ProductVersion",   VERSION_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

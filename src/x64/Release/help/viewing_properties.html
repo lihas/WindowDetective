@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Viewing Window Properties</h2>
+    </div>
+    <div id="content">
+      <p>You can view a window's properties by right clicking on that
+      window in the tree and selecting "View Properties". A pane will
+      be displayed showing various properties for the selected window.</p>
+      <div class="screenshot" align="center">
+        <img src="images/window_properties.png" />
+        <p>An example of the Properties dialog.</p>
+      </div>
+      <h3>Generic window properties</h3>
+      <table class="optionlist">
+        <tr>
+        <td class="option">Text/Title</td>
+        <td>Displays the text set for the control/window. This is the title for
+        windows and dialog boxes.</td>
+        </tr>
+        <tr>
+        <td class="option">Handle</td>
+        <td>The handle (HWND) of the window.</td>
+        </tr>
+        <tr>
+        <td class="option">Parent</td>
+        <td>The name and handle of the window's parent. Clicking on this label will
+        highlight that window in the hierarchy tree.</td>
+        </tr>
+        <tr>
+        <td class="option">Owner</td>
+        <td>The name and handle of the window's owner, if it has one. Clicking on this
+        label will highlight that window in the hierarchy tree.
+        Only an overlapped or pop-up window (e.g. dialog) can be owned or have
+        an owner.</td>
+        </tr>
+        <tr>
+        <td class="option">Dimensions</td>
+        <td>The window's left, top, right, and bottom positions in pixels.</td>
+        </tr>
+        <tr>
+        <td class="option">Position</td>
+        <td>The window's x,y position on the screen. Measured in pixels where 0,0 is
+        the top-left corner of the screen.</td>
+        </tr>
+        <tr>
+        <td class="option">Size</td>
+        <td>Width and height in pixels</td>
+        </tr>
+        <tr>
+        <td class="option">Relative Dimensions</td>
+        <td>If the window is a child of another window, this displays it's x,y position
+        and size relative to it's parent.</td>
+        </tr>
+        <tr>
+        <td class="option">Client Dimensions</td>
+        <td>The dimensions of the 'client' area of the window. This is the area within
+        the title bar and border.<br />
+        Only applicable to window and dialog box controls.</td>
+        </tr>
+        <tr>
+        <td class="option">Style bits</td>
+        <td>The window's combined style bits as an integer, in hexadecimal.</td>
+        </tr>
+        <tr>
+        <td class="option">Styles</td>
+        <td>A list of styles applied to the window.</td>
+        </tr>
+        <tr>
+        <td class="option">Extended Style bits</td>
+        <td>The window's combined extended style bits as an integer, in hexadecimal.</td>
+        </tr>
+        <tr>
+        <td class="option">Extended Styles</td>
+        <td>A list of extended styles applied to the window.</td>
+        </tr>
+        <tr>
+        <td class="option">Horizontal Scroll</td>
+        <td>The horizontal scroll bar, if the window has one (or if the window is a scroll bar).
+        The following properties are displayed:
+        <table class="optionlist">
+          <tr>
+          <td class="option">Max Position</td>
+          <td>Minimum scrolling position, in pixels.</td>
+          </tr>
+          <tr>
+          <td class="option">Min Position</td>
+          <td>Maximum scrolling position, in pixels.</td>
+          </tr>
+          <tr>
+          <td class="option">Current Position</td>
+          <td>Position of the scroll box, in pixels.</td>
+          </tr>
+          <tr>
+          <td class="option">Page</td>
+          <td>The page size, in device units. A scroll bar uses this value to determine
+          the appropriate size of the proportional scroll box</td>
+          </tr>
+        </table></td>
+        </tr>
+        <tr>
+        <td class="option">Vertical Scroll</td>
+        <td>The vertical scroll bar, if the window has one. Properties are same as above.
+        </tr>
+        <tr>
+        <td class="option">Font</td>
+        <td>The font of the window text. The following properties are displayed:
+        <table class="optionlist">
+          <tr>
+          <td class="option">Handle</td>
+          <td>Value of the HFONT handle.</td>
+          </tr>
+          <tr>
+          <td class="option">Face name</td>
+          <td>The typeface name of the font.</td>
+          </tr>
+          <tr>
+          <td class="option">Weight</td>
+          <td>The weight of the font in the range 0 through 1000. For example, 400
+          is normal and 700 is bold. If this value is zero, a default weight is used.</td>
+          </tr>
+          <tr>
+          <td class="option">Width/Height</td>
+          <td>The average width and height, in logical units, of characters in the font.</td>
+          </tr>
+          <tr>
+          <td class="option">Quality</td>
+          <td>The output quality. The output quality defines how carefully the
+          graphics device interface (GDI) must attempt to match the logical-font
+          attributes to those of an actual physical font.</td>
+          </tr>
+          <tr>
+          <td class="option">Style</td>
+          <td>Normal, italic, underline or strike-out.</td>
+          </tr>
+        </table></td>
+        </tr>
+        <tr>
+        <td class="option">Properties</td>
+        <td>A list of application-defined window properties. Each property consists
+        of a string name and a handle to some data.</td>
+        </tr>
+        <tr>
+        <td class="option">Owner Process</td>
+        <td>The filename of the process that created the window.</td>
+        </tr>
+        <tr>
+        <td class="option">Owner Process ID</td>
+        <td>The ID of the owner process.</td>
+        </tr>
+        <tr>
+        <td class="option">Owner Thread ID</td>
+        <td>The ID of the thread within the owner process which created the window.</td>
+        </tr>
+      </table>
+      <h3>Specific window properties</h3>
+      <p>Some system controls such as list boxes and combo boxes will have specific
+      properties. These properties will be shown in a separate tab.</p>
+      <h3>Window class properties</h3>
+      <p>In addition to the window's properties, properties for the window's class
+      are also displayed. These properties include:
+      <table class="optionlist">
+        <tr>
+        <td class="option">Class Name</td>
+        <td>A string name identifying the class.</td>
+        </tr>
+        <tr>
+        <td class="option">Atom</td>
+        <td>A value that uniquely identifies the window class.</td>
+        </tr>
+        <tr>
+        <td class="option">Style bits</td>
+        <td>The window class's combined style bits as an integer, in hexadecimal.</td>
+        </tr>
+        <tr>
+        <td class="option">Styles</td>
+        <td>A list of window class styles. These are used to control the behaviour of
+        all windows of this class.</td>
+        </tr>
+        <tr>
+        <td class="option">Class Extra Bytes</td>
+        <td>The number of bytes for extra data for the class.</td>
+        </tr>
+        <tr>
+        <td class="option">Window Extra Bytes</td>
+        <td>Number of extra window bytes</td>
+        </tr>
+        <tr>
+        <td class="option">Background Brush</td>
+        <td>The brush used to paint the window's background. This is either a system
+        defined constant representing a system colour, or a custom colour. If it is
+        a custom defined colour, the following properties are displayed:
+        <table class="optionlist">
+          <tr>
+          <td class="option">Handle</td>
+          <td>Value of the HBRUSH handle.</td>
+          </tr>
+          <tr>
+          <td class="option">Style</td>
+          <td>The style of the brush. This specifies whether the brush is solid, uses
+          a bitmap pattern, a hatch pattern or is hollow.</td>
+          </tr>
+          <tr>
+          <td class="option">Colour</td>
+          <td>The colour in which the brush is to be drawn. If the style is the
+          BS_HOLLOW or BS_PATTERN style, colour is ignored.</td>
+          </tr>
+          <tr>
+          <td class="option">Hatch</td>
+          <td>Specifies the orientation of the lines used to create the hatch, e.g
+          diagonal, cross, vertical or horizontal.</td>
+          </tr>
+        </table></td>
+        </tr>
+      </table>
+      </p>
+    </div>
+  </body>
+</html>

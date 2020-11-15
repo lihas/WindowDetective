@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentatie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Een Venster Vinden</h2>
+    </div>
+    <div id="content">
+      <p>Als je een venster niet in de boom of op het scherm kunt traceren, kun je zoeken via het zoekdialoog.
+	  Om dit dialoog te openen klik je op het Vind icoon
+      <img class="icon" src="images/icons/find.png" /> of type Ctrl-F.
+      </p>
+      <p>Je kunt zoeken naar een venster op zijn tekst/title, handle of klasse.
+      <!-- TODO: For some reason, a slash (/) is being displayed here in browsers. -->
+      <table class="optionlist">
+        <tr><td class="option">Tekst</td>
+        <td>Een string of sub-string om te zoeken in de tekst van het venster (als dit een
+        top-level venster is, zal dit de titel zijn).</br>
+        Vink het "Hoofdlettergevoelig" box aan om met exacte hoofdlettergebruik te zoeken.</br>
+        Vink het "Reguliere Expressie" box aan om te zoeken met een reguliere expressie.</br>
+        Het type van de regexp hangt af van de instellingen, zie
+        <a href="./preferences_general.html#regex">Regex Voorkeur</a>
+        </td></tr>
+        <tr><td class="option">Handle</td>
+        <td>De HWND handle van het venster om te zoeken.
+        Dit kan zowel een integer in base 10 (decimaal) or base 16 (hexadecimaal) zijn.
+        </td>/<tr>
+        <tr><td class="option">Klasse</td>
+        <td>De naam van de venster klasse. De lijst van alle geregistreerde klassen is
+        beschikbaar in de drop-down lijst.
+        </td></tr>
+      </table>
+      </p>
+      <p>
+      Nadat je de juiste criteria hebt ingevuld, druk je op de "Vind" knop.
+      Als een enkel venster gevonden is wordt het gelokaliseerd en opgelicht in de
+	  hi&euml;rarchie boom. Anders, een lijst van resultaten van alle gevonden vensters zal getoont worden.
+      Deze vensters worden getoont in een lijst met dezelfde kolommen als in de hi&euml;rarchie boom.</br>
+      Je kunt ook de zoekopdracht herhalen door op "Herhaal Zoekopdracht" in het resultatenvenster te klikken.
+	  Dit zal de zoekopdracht opnieuw uitvoeren en de lijst vernieuwen met nieuwe resultaten.
+	  Dit kan handig zijn als enkele vensters veranderd zijn sinds de eerste keer van dezoekopdracht.
+      </p>
+      <p>Let op: De "Hoofdlettergevoelig" en "Reguliere Expressie" boxen maken gebruik van
+      <a href="./smart_settings.html">Smart Instellingen</a>.
+    </div>
+  </body>
+</html>

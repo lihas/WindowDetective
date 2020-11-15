@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Pomoc programu Window Detective</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Wyświetlanie właściwości okna</h2>
+    </div>
+    <div id="content">
+      <p>Aby wyświetlić właściwości okna, należy kliknąć prawym przyciskiem myszy nazwę okna w widoku drzewa i wybrać polecenie &quot;Pokaż właściwości&quot;. Zostanie wyświetlone okno, w kt&oacute;rym znajdują się właściwości wybranego okna.<br /> <!-- TODO: Screenshot --> Lista właściwości zawiera:
+      <table class="optionlist">
+        <tr><td class="option">Tekst/Tytuł</td>
+        <td>Tekst wybranego obiektu. W przypadku standardowych okien i okien dialogowych jest to tytuł.
+        </td></tr>
+        <tr><td class="option">Dojście</td>
+        <td>Dojście (HWND) wybranego okna.
+        </td></tr>
+        <tr><td class="option">Dojście okna nadrzędnego</td>
+        <td>Dojście okna nadrzędnego (parent) wobec wybranego okna.
+        </td></tr>
+        <tr><td class="option">Wymiary</td>
+        <td>Położenie okna na osiach x, y oraz jego szerokość i wysokość.
+        </td></tr>
+        <tr><td class="option">Położenie</td>
+        <td>Położenie okna na osiach x, y oraz jego szerokość i wysokość. Wartość jest wyrażona w pikselach, gdzie &quot;0,0&quot; oznacza lewy g&oacute;rny r&oacute;g ekranu.
+        </td></tr>
+        <tr><td class="option">Rozmiar</td>
+        <td>Wysokość i szerokość okna wyrażona w pikselach.
+        </td></tr>
+        <tr><td class="option">Wymiary względne</td>
+        <td>Jeśli wybrane okno jest oknem podrzędnym (child), podane zostanie położenie okna na osiach x, y względem okna nadrzędnego (parent).
+        </td></tr>
+        <tr><td class="option">Wymiary obszaru klienckiego</td>
+        <td>Wymiary obszaru klienckiego okna. Obszar kliencki to obszar okna wydzielony paskiem tytułu i obramowaniem.<br /> Ta informacja dotyczy jedynie okien standardowych i okien dialogowych.
+        </td></tr>
+        <tr><td class="option">Bity styl&oacute;w</td>
+        <td>Bity styl&oacute;w podane jako liczba całkowita w zapisie szesnastkowym.
+        </td></tr>
+        <tr><td class="option">Style</td>
+        <td>Lista styl&oacute;w wybranego okna.
+        </td></tr>
+        <tr><td class="option">Rozszerzone bity styl&oacute;w</td>
+        <td>Rozszerzone bity styl&oacute;w podane jako liczba całkowita w zapisie szesnastkowym.
+        </td></tr>
+        <tr><td class="option">Style rozszerzone</td>
+        <td>Lista styl&oacute;w rozszerzonych wybranego okna.
+        </td></tr>
+        <tr><td class="option">Proces</td>
+        <td>Nazwa pliku wykonalnego, kt&oacute;ry utworzył wybrane okno.
+        </td></tr>
+        <tr><td class="option">Identyfikator procesu</td>
+        <td>Identyfikator procesu (PID), kt&oacute;ry utworzył wybrane okno.
+        </td></tr>
+        <tr><td class="option">Identyfikator wątku</td>
+        <td>Identyfikator wątku, kt&oacute;ry utworzył wybrane okno.
+        </td></tr>
+        <tr><td class="option">Czcionka</td>
+        <td>Czcionka tekstu okna. Poniżej znajdują się dostępne właściwości:
+        <table class="optionlist">
+          <tr><td class="option">Dojście</td>
+          <td>Dojście czcionki (HFONT).
+          </td></tr>
+          <tr><td class="option">Kr&oacute;j</td>
+          <td>Nazwa kroju czcionki.
+          </td></tr>
+          <tr><td class="option">Grubość</td>
+          <td>Grubość czcionki w przedziale od 0 do 1000. Dla przykładu, wartość 400 oznacza normalną grubość, natomiast wartość 700 &mdash; czcionkę pogrubioną. W przypadku podania wartości zerowej zostanie użyta domyślna wartość.
+          </td></tr>
+          <tr><td class="option">Szerokość/Wysokość</td>
+          <td>Średnia szerokość i wysokość znak&oacute;w czcionki wyrażona w jednostkach logicznych.
+          </td></tr>
+          <tr><td class="option">Jakość</td>
+          <td>Jakość wyjściowa, kt&oacute;ra określa dokładność, z jaką interfejs graficzny GDI powinien odtworzyć czcionkę na urządzeniu fizycznym.
+          </td></tr>
+          <tr><td class="option">Styl</td>
+          <td>Dostępne style czcionek obejmują czcionkę zwykłą, pochyłą, podkreśloną i przekreśloną.
+          </td></tr>
+        </td></tr>
+        </table>
+        <tr><td class="option">Właściwości okna</td>
+        <td>Lista właściwości okna zdefiniowanych przez aplikację. Każda właściwość zawiera nazwę oraz dojście do danych. Przejdź do tematu <a href="http://msdn.microsoft.com/en-us/library/ms632594.aspx">MSDN</a>, aby dowiedzieć się więcej o właściwościach okna.
+        </td></tr>
+      </table>
+      </p><br />
+      <p>Opr&oacute;cz właściwości wybranego okna wyświetlane są także właściwości jego klasy.<br /> Lista właściwości zawiera:
+      <table class="optionlist">
+        <tr><td class="option">Nazwa klasy</td>
+        <td>Ciąg znak&oacute;w będący nazwą klasy.
+        </td></tr>
+        <tr><td class="option">Dodatkowe bity klasy</td>
+        <td>Liczba bit&oacute;w zawierających dodatkowe dane dla klasy. Przejdź do tematu <a href="http://msdn.microsoft.com/en-us/library/ms633574.aspx#extra_class_memory">MSDN</a>, aby dowiedzieć się więcej o dodatkowej pamięci klasy i okien.
+        </td></tr>
+        <tr><td class="option">Dodatkowe bity okna</td>
+        <td>Liczba dodatkowych bit&oacute;w okna.
+        </td></tr>
+        <tr><td class="option">Pędzel tła</td>
+        <td>Pędzel, kt&oacute;ry umożliwia wypełnienie tła okna. Wartość może być stałą systemową, określającą kolor systemowy, lub kolorem niestandardowym. Jeśli wartość określa kolor niestandardowy, wyświetlane są następujące właściwości.
+        <table class="optionlist">
+          <tr><td class="option">Dojście</td>
+          <td>Dojście HBRUSH
+          </td></tr>
+          <tr><td class="option">Styl</td>
+          <td>Styl pędzla Określa, czy pędzel ma być wypełniony, pusty, kreskowany, czy też ma używać bitmapy.
+          </td></tr>
+          <tr><td class="option">Kolor</td>
+          <td>Kolor pędzla. Jeśli styl pędzla to BS_HOLLOW lub BS_PATTERN, wartość jest ignorowana.
+          </td></tr>
+          <tr><td class="option">Wz&oacute;r kreskowania</td>
+          <td>Określa orientację linii używanych do zakreskowania obszaru, np. ukośna, poprzeczna, pozioma lub pionowa.
+          </td></tr>
+        </table>
+        </td></tr>
+      </table>
+      </p>
+    </div>
+  </body>
+</html>

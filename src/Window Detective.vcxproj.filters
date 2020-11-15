@@ -1,0 +1,1010 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\window_detective">
+      <UniqueIdentifier>{913def6c-8746-400f-98e9-d44df761a8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{d874658d-c2e2-4b0d-ba1e-5257eaaa458c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\custom_widgets">
+      <UniqueIdentifier>{27454b95-c213-4ec9-b0aa-fd7598f88c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\property_pages">
+      <UniqueIdentifier>{3287799e-6265-4c21-8266-ed7f7e659a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inspector">
+      <UniqueIdentifier>{0d912c3a-b729-49a9-8056-18d6350059b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\inspector\ui_controls">
+      <UniqueIdentifier>{2e31b87b-cb1f-4e4c-be22-9a4c897f56ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\window_detective">
+      <UniqueIdentifier>{400d79f7-cef1-4497-8545-9f50c6c464be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{a7f0e93c-e979-4c7b-9392-e55bf0c89d48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui\custom_widgets">
+      <UniqueIdentifier>{99479eab-d57f-4a11-9dbf-c85b8c98d3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui\property_pages">
+      <UniqueIdentifier>{e636c0ac-0e4f-4d1d-ac4e-b2f8d64acdf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inspector">
+      <UniqueIdentifier>{1f49355d-f709-43b2-b290-bcc58b417052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\inspector\ui_controls">
+      <UniqueIdentifier>{b5870d88-784e-4ff5-890b-a0582827a808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{9252a8d8-ab5d-4792-b43a-4770d9ddb957}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{507e2844-530f-46e7-9405-20c7c5fbb635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{b4e0a244-2172-411b-b8ca-f8ac7879cb07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="window_detective\IniFile.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="window_detective\Logger.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="window_detective\main.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="window_detective\QtHelpers.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="window_detective\Resources.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="window_detective\Settings.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="window_detective\StringFormatter.cpp">
+      <Filter>Source Files\window_detective</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\AboutDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ActionManager.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\FindDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\HighlightPane.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\InfoPane.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MessageFilterDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MessageFiltering.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MessagesPane.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\SetPropertiesDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\BalloonTip.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\BrushPropertyWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\ColourButton.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\FontPropertyWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\HexSpinBox.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\MessageWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\ScrollPropertyWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\SearchCriteriaWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\SearchInputPane.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\TreeItem.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\WindowPicker.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\WindowPropWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\WindowTree.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\AbstractPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\ComboBoxPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\DateTimePickerPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\EditPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\GenericPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\ListBoxPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\ListViewPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\ProgressBarPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\PropertiesPane.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\StatusBarPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\TabPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\property_pages\WindowClassPropertyPage.cpp">
+      <Filter>Source Files\ui\property_pages</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\DynamicData.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\MessageHandler.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\Process.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\RemoteFunctions.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\SearchCriteria.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\WindowManager.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\WindowMessage.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\WindowMisc.cpp">
+      <Filter>Source Files\inspector</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\Button.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\ComboBox.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\DateTimePicker.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\Edit.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\ListBox.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\ListView.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\ProgressBar.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\StatusBar.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\Tab.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="inspector\ui_controls\Window.cpp">
+      <Filter>Source Files\inspector\ui_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\rcc\qrc_qt_resources.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_AbstractPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_BalloonTip.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_BrushPropertyWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ColourButton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ComboBoxPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_DateTimePickerPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_EditPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_FindDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_FontPropertyWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_GenericPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_HexSpinBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_HighlightPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_InfoPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ListBoxPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ListViewPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_MessageFilterDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_MessageFiltering.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_MessagesPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_MessageWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ProgressBarPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_PropertiesPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ScrollPropertyWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SearchCriteriaWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SearchInputPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SetPropertiesDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_StatusBarPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_TabPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_TreeItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_Window.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_WindowClassPropertyPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_WindowManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_WindowPicker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_WindowPropWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_WindowTree.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_AbstractPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_BalloonTip.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_BrushPropertyWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ColourButton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ComboBoxPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_DateTimePickerPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_EditPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_FindDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_FontPropertyWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_GenericPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_HexSpinBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_HighlightPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_InfoPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ListBoxPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ListViewPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_MessageFilterDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_MessageFiltering.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_MessagesPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_MessageWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ProgressBarPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_PropertiesPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ScrollPropertyWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SearchCriteriaWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SearchInputPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SetPropertiesDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_StatusBarPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_TabPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_TreeItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_Window.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_WindowClassPropertyPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_WindowManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_WindowPicker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_WindowPropWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_WindowTree.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\rcc\qrc_qt_resources.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ResizableDockContainer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ResizableDockContainer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\SystemMetricsPane.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SystemMetricsPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SystemMetricsPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SystemColoursPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SystemColoursPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\SystemColoursPane.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\SystemParametersPane.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SystemParametersPane.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SystemParametersPane.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MainWindow.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_MainWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_MainWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_PreferencesDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_PreferencesDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\PreferencesDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SystemInfoDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SystemInfoDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\SystemInfoDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SearchResultsDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SearchResultsDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\SearchResultsDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_SizeInputWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_SizeInputWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\custom_widgets\SizeInputWidget.cpp">
+      <Filter>Source Files\ui\custom_widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_RemoteConnectionDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_RemoteConnectionDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_RemoteServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\RemoteConnectionDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc\moc_ServerThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_RemoteServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc\moc_ServerThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="window_detective\Error.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\include.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\IniFile.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\Logger.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\main.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\QtHelpers.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\resource.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\Resources.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\Settings.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\SmartSettings.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="window_detective\StringFormatter.h">
+      <Filter>Header Files\window_detective</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ActionManager.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\custom_widgets\CustomComboBoxes.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\DynamicData.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\inspector.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\MessageHandler.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\Process.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\RemoteFunctions.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\SearchCriteria.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\WindowMessage.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\WindowMisc.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\Button.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\ComboBox.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\DateTimePicker.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\Edit.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\ListBox.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\ListView.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\ProgressBar.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\StatusBar.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\ui_controls\Tab.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_FindDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_MessageFilterDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_MessagesPane.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_PropertiesPane.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_SetPropertiesDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inspector\SystemConstant.h">
+      <Filter>Header Files\inspector</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_SystemMetricsPane.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_SystemColoursPane.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_SystemParametersPane.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_MainWindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_PreferencesDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_SystemInfoDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_SearchResultsDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\forms\ui_RemoteConnectionDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win_resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\AboutDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\FindDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\HighlightPane.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\InfoPane.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\MessageFilterDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\MessageFiltering.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\MessagesPane.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\SetPropertiesDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\AbstractPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\ComboBoxPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\DateTimePickerPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\EditPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\GenericPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\ListBoxPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\ListViewPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\ProgressBarPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\PropertiesPane.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\StatusBarPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\TabPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\ScrollPropertyWidget.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\property_pages\WindowClassPropertyPage.h">
+      <Filter>Header Files\ui\property_pages</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\BalloonTip.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\BrushPropertyWidget.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\ColourButton.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\FontPropertyWidget.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\HexSpinBox.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\MessageWidget.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\SearchCriteriaWidget.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\SearchInputPane.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\TreeItem.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\WindowPicker.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\WindowPropWidget.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\WindowTree.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="inspector\ui_controls\Window.h">
+      <Filter>Header Files\inspector\ui_controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="inspector\WindowManager.h">
+      <Filter>Header Files\inspector</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\FindDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\MessageFilterDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\MessagesPane.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\PropertiesPane.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\SetPropertiesDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qt_resources.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\ResizableDockContainer.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\SystemMetricsPane.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\SystemMetricsPane.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\SystemColoursPane.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\SystemColoursPane.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\SystemParametersPane.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\SystemParametersPane.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\MainWindow.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\PreferencesDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\PreferencesDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\SystemInfoDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\SystemInfoDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\SearchResultsDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\SearchResultsDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\custom_widgets\SizeInputWidget.h">
+      <Filter>Header Files\ui\custom_widgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\FindDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\forms\RemoteConnectionDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RemoteServer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\RemoteConnectionDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ServerThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Window Detective.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\picker.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\preferences.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\find.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\edit_clear.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\list_clear.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\refresh.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\help.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\window.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\process.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\transparent.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\locate.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\flash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\save.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\start.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\stop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\filter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\highlight.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\auto_expand.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\system_info.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\message_sent.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\message_posted.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\message_returned.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\tile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\cascade.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\log_status.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\error.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\warning.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\info.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\pref_general.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\pref_window_tree.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\pref_picker.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\pref_log.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\pref_styles.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\window_large.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="img\magnifying_glass.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ui\forms\RemoteConnection.ui">
+      <Filter>Form Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentatie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Venster Eigenschappen Bekijken</h2>
+    </div>
+    <div id="content">
+      <p>Je kunt de eigenschappen van een venster bekijken door rechts te klikken
+      op dat venster in de boom en "Bekijk Eigenschappen" te selecteren. Er zal een
+      venster getoont worden met diverse eigenschappen voor het geselecteerde venster.</br>
+      Deze eigenschappen houden in:
+      <table class="optionlist">
+        <tr><td class="option">Tekst/Titel</td>
+        <td>Toont de tekst voor de control/venster. Dit is de titel voor
+        vensters en dialoog boxen.
+        </td></tr>
+        <tr><td class="option">Handle</td>
+        <td>De handle (HWND) van het venster.
+        </td></tr>
+        <tr><td class="option">Ouder Handle</td>
+        <td>Handle van het bovenliggend venster.
+        </td></tr>
+        <tr><td class="option">Afmetingen</td>
+        <td>De x,y positie, breedte en hoogte van het venster.
+        </td></tr>
+        <tr><td class="option">Positie</td>
+        <td>De x,y positie van het venster op het scherm. Gemeten in pixels waar 0,0 de
+        linkerbovenhoek van het scherm is.
+        </td></tr>
+        <tr><td class="option">Grootte</td>
+        <td>Breedte en Hoogte in pixels
+        </td></tr>
+        <tr><td class="option">Relatieve Afmetingen</td>
+        <td>Als het venster een kind is van een ander venster, dan is dit de x,y positie
+        en grootte ten opzichte van zijn ouder.
+        </td></tr>
+        <tr><td class="option">Client Afmetingen</td>
+        <td>De afmetingen van het 'client' gebied van het venster. Dit is het gebied binnen
+        de titelbalk en de rand.</br>
+        Alleen toepasbaar op vensters en dialoog box controls.
+        </td></tr>
+        <tr><td class="option">Stijl bits</td>
+        <td>De gecombineerde stijlbits van het venster als een integer, in hexadecimaal.
+        </td></tr>
+        <tr><td class="option">Stijlen</td>
+        <td>Een lijst van stijlen toegepast op het venster.
+        </td></tr>
+        <tr><td class="option">Uitgebreide Stijl bits</td>
+        <td>De gecombineerde uitgebreide stijlbits van het venster als een integer, in hexadecimaal.
+        </td></tr>
+        <tr><td class="option">Uitgebriede Stijlen</td>
+        <td>Een lijst van uitgebriede stijlen toegepast op het venster.
+        </td></tr>
+        <tr><td class="option">Proces Eigenaar</td>
+        <td>De bestandsnaam van het proces dat het venster heeft aangemaakt.
+        </td></tr>
+        <tr><td class="option">Proces Eigenaar ID</td>
+        <td>Het huidige PID van de proces eigenaar.
+        </td></tr>
+        <tr><td class="option">Eigenaar Thread ID</td>
+        <td>Het ID van de thread binnen het eignaar proces die het venster heeft aangemaakt.
+        </td></tr>
+        <tr><td class="option">Venster Eigenschappen</td>
+        <td>Een lijst van applicatie-gedefinieerde venster eigenschappen. Elke eigenschap bestaat uit
+        een string naam en een handle naar enige data.
+        Kijk op <a href="http://msdn.microsoft.com/en-us/library/ms632594.aspx">MSDN</a>
+        voor meer informatie over venster eigenschappen.
+        </td></tr>
+      </table>
+      </p>
+      <p>In toevoeging op de venster eigenschappen, worden de eigenschappen voor de klasse van het venster
+      ook getoont.</br> Deze eigenschappen houden in:
+      <table class="optionlist">
+        <tr><td class="option">Klasse Naam</td>
+        <td>Een string naam die de klasse identificeert.
+        </td></tr>
+        <tr><td class="option">Klasse Extra Bytes</td>
+        <td>Het aantal bytes voor extra data van de klasse. Kijk op
+        <a href="http://msdn.microsoft.com/en-us/library/ms633574.aspx#extra_class_memory">MSDN</a>
+        voor meer informatie over extra klassen en venster geheugen.
+        </td></tr>
+        <tr><td class="option">Venster Extra Bytes</td>
+        <td>Het aantal extra venster bytes
+        </td></tr>
+        <tr><td class="option">Achtergrond Brush</td>
+        <td>Handle voor de brush (HBRUSH) die gebruikt wordt om de achtergrond van het venster te tekenen. Dit
+        kan een systeemgedefinieerde constante zijn die een systeemkleur representeert.
+        </td></tr>
+      </table>
+      </p>
+    </div>
+  </body>
+</html>

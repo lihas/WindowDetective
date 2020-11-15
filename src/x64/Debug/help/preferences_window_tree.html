@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Window Tree Preferences</h2>
+    </div>
+    <div id="content">
+      <h3><a name="hidden_windows"></a>Hidden Windows</h3>
+      <span class="optionlist">
+        <p class="option">Grey hidden windows</p>
+        <p>Any windows that are not visible on screen (that is, they do not have
+        a WS_VISIBLE style), will be shown as grey in the tree. Note: The tree
+        must be refreshed for this to take effect.</p>
+      </span>
+      </p>
+      <h3><a name="change_highlighting"></a>Change Highlighting</h3>
+      <p>When an item in the tree is changed, it will be highlighted.</p>
+      <table class="optionlist">
+        <tr>
+        <td class="option">Duration</td>
+        <td>The time that the item will stay highlighted for</td>
+        </tr>
+        <tr>
+        <td class="option">Colour</td>
+        <td>Choose colours for each highlight event. The immediate colour is the colour
+        of the item that is updated. The unexpanded colour is the colour of the
+        closest visible (expanded) ancestor of an item which is not expanded.</td>
+        </tr>
+      </table>
+      <p class="note"><b>Note:</b> When an item is changed, not all of it's properties
+      (in the tree and any property windows) will not get automatically updated.</p>
+    </div>
+  </body>
+</html>

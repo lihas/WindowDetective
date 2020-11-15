@@ -1,0 +1,104 @@
+
+body {
+    font-size: 12pt;
+    font-family: Helvetica;
+    background-color: #ffffea;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #5c95ee;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+#header h2 {
+    color: #f0f0fa;
+}
+
+#content {
+    padding: 10px;
+}
+
+a:link    { color: #2277ff; }
+a:visited { color: #aa22aa; }
+a:hover   { color: #44aaff; }
+a:active  { color: #ffaa44; }
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16pt;
+    color: #333333;
+}
+
+h4 {
+    margin-top: 25px;
+    margin-bottom: 0pt;
+}
+
+img {
+    border: solid 1px;
+}
+
+img.icon {
+    border: none;
+}
+
+table.normal,
+table.normal th,
+table.normal td {
+    border: 1px solid #dbdbcc;
+    padding: 2px;
+}
+/* TODO: see if this can be done any better */
+table.normal {
+    background-color: #edede8;
+}
+
+table.normal tr.alt {
+    background-color: #fcfcf7;
+}
+
+/* Screenshot images and description text */
+.screenshot {
+    min-width: 100px;
+    margin: 2px;
+    padding: 2px;
+}
+
+.screenshot p {
+    font-size: 9pt;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Style for option labels and tables */
+.option {
+    font-style: italic;
+}
+
+table.optionlist {
+    border-collapse: collapse;
+    padding: 2px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+table.optionlist tr, td {
+    border: none;
+    background-color: transparent;
+    vertical-align: top;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+table td.option {
+    white-space: nowrap;
+}

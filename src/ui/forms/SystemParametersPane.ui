@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SystemParametersPane</class>
+ <widget class="QWidget" name="SystemParametersPane">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>0</number>
+   </property>
+   <item row="1" column="0">
+    <widget class="QListWidget" name="parameterGroupList">
+     <item>
+      <property name="text">
+       <string>Accessibility parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Desktop parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Icon parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Input parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Menu parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Screen saver parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Time-out parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>UI effect parameters</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Window parameters</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QDialogButtonBox" name="buttonBox">
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Apply|QDialogButtonBox::Reset</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QStackedWidget" name="pages">
+     <property name="currentIndex">
+      <number>8</number>
+     </property>
+     <widget class="QWidget" name="accessibilityPage">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="accessibilityArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>319</width>
+            <height>120</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="5" column="0">
+            <widget class="QLabel" name="mouseVanishLabel">
+             <property name="text">
+              <string>Mouse Vanish</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="mouseSonarLabel">
+             <property name="text">
+              <string>Mouse Sonar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="animationsLabel">
+             <property name="text">
+              <string>Animations</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="mouseSonar">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="focusBorderLabel">
+             <property name="text">
+              <string>Focus rectangle border</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="notificationPopupDurationLabel">
+             <property name="text">
+              <string>Notification pop-up duration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="animations">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="notificationPopupDuration">
+             <property name="suffix">
+              <string> seconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QCheckBox" name="mouseVanish">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="SizeInputWidget" name="focusBorder" native="true"/>
+           </item>
+           <item row="6" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="desktopPage">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="desktopArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>134</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,2">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="0" column="1">
+            <widget class="QWidget" name="widget_5" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="wallpaperPath">
+                <property name="cursor">
+                 <cursorShape>IBeamCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>###</string>
+                </property>
+                <property name="textFormat">
+                 <enum>Qt::PlainText</enum>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+                <property name="textInteractionFlags">
+                 <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="fontSmoothingLabel">
+             <property name="text">
+              <string>Font smoothing (antialiasing)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="fontSmoothing">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="dropShadowLabel">
+             <property name="text">
+              <string>Drop shadow effect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="wallpaperPathLabel">
+             <property name="text">
+              <string>Desktop wallpaper path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="clearTypeLabel">
+             <property name="text">
+              <string>ClearType</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="dropShadow">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="clearType">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="iconPage">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_3">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="iconArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>123</width>
+            <height>75</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="1" column="1">
+            <widget class="SizeInputWidget" name="iconSpacing" native="true"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="FontPropertyWidget" name="iconTitleFont" native="true"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="iconTitleFontLabel">
+             <property name="text">
+              <string>Title font</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="iconTitleWrap">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="iconTitleWrapLabel">
+             <property name="text">
+              <string>Wrap titles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="iconSpacingLabel">
+             <property name="text">
+              <string>Spacing</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="inputPage">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_4">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="inputArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>310</width>
+            <height>295</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="8" column="1">
+            <widget class="SizeInputWidget" name="mouseHoverSize" native="true">
+             <property name="toolTip">
+              <string>Width and height, in pixels, of the rectangle within which the mouse pointer has to stay for TrackMouseEvent to generate a WM_MOUSEHOVER message.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QCheckBox" name="snapDefaultButton">
+             <property name="toolTip">
+              <string>Determines whether the snap-to-default-button feature is enabled. If enabled, the mouse cursor automatically moves to the default button, such as OK or Apply, of a dialog box.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QSpinBox" name="mouseWheelX">
+             <property name="toolTip">
+              <string>Number of characters to scroll when the horizontal mouse wheel is moved.</string>
+             </property>
+             <property name="suffix">
+              <string> characters</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+             <property name="value">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="mouseWheelXLabel">
+             <property name="toolTip">
+              <string>Number of characters to scroll when the horizontal mouse wheel is moved.</string>
+             </property>
+             <property name="text">
+              <string>Wheel scroll horizontal</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="mouseHoverSizeLabel">
+             <property name="toolTip">
+              <string>Width and height, in pixels, of the rectangle within which the mouse pointer has to stay for TrackMouseEvent to generate a WM_MOUSEHOVER message.</string>
+             </property>
+             <property name="text">
+              <string>Mouse hover size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QSpinBox" name="mouseHoverTime">
+             <property name="toolTip">
+              <string>Time, in milliseconds, that the mouse pointer has to stay in the hover rectangle for TrackMouseEvent to generate a WM_MOUSEHOVER message.</string>
+             </property>
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>2147483647</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="mouseHoverTimeLabel">
+             <property name="toolTip">
+              <string>Time, in milliseconds, that the mouse pointer has to stay in the hover rectangle for TrackMouseEvent to generate a WM_MOUSEHOVER message.</string>
+             </property>
+             <property name="text">
+              <string>Mouse hover time</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QSpinBox" name="mouseTrails">
+             <property name="toolTip">
+              <string>This feature improves the visibility of mouse cursor movements by briefly showing a trail of cursors and quickly erasing them.
+Value indicates the number of cursors drawn in the trail.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="mouseTrailsLabel">
+             <property name="toolTip">
+              <string>This feature improves the visibility of mouse cursor movements by briefly showing a trail of cursors and quickly erasing them.
+Value indicates the number of cursors drawn in the trail.</string>
+             </property>
+             <property name="text">
+              <string>Mouse trails</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QSpinBox" name="mouseSpeed">
+             <property name="toolTip">
+              <string>Current mouse speed.
+The mouse speed determines how far the pointer will move based on the distance the mouse moves. Value ranges between 1 (slowest) and 20 (fastest), with 10 being the default.</string>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="mouseSpeedLabel">
+             <property name="toolTip">
+              <string>Current mouse speed.
+The mouse speed determines how far the pointer will move based on the distance the mouse moves. Value ranges between 1 (slowest) and 20 (fastest), with 10 being the default.</string>
+             </property>
+             <property name="text">
+              <string>Mouse speed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="keyboardDelay">
+             <property name="toolTip">
+              <string>Keyboard repeat-delay setting, which is a value in the range from 0 (approximately 250 ms delay) through 3 (approximately 1 second delay). The actual delay associated with each value may vary depending on the hardware.</string>
+             </property>
+             <property name="maximum">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="keyboardDelayLabel">
+             <property name="toolTip">
+              <string>Keyboard repeat-delay setting, which is a value in the range from 0 (approximately 250 ms delay) through 3 (approximately 1 second delay). The actual delay associated with each value may vary depending on the hardware.</string>
+             </property>
+             <property name="text">
+              <string>Keyboard delay</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="keyboardSpeed">
+             <property name="toolTip">
+              <string>Keyboard repeat-speed setting, which is a value in the range from 0 (approximately 2.5 repetitions per second) through 31 (approximately 30 repetitions per second). The actual repeat rates are hardware-dependent and may vary from a linear scale by as much as 20%.</string>
+             </property>
+             <property name="maximum">
+              <number>31</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="keyboardSpeedLabel">
+             <property name="toolTip">
+              <string>Keyboard repeat-speed setting, which is a value in the range from 0 (approximately 2.5 repetitions per second) through 31 (approximately 30 repetitions per second). The actual repeat rates are hardware-dependent and may vary from a linear scale by as much as 20%.</string>
+             </property>
+             <property name="text">
+              <string>Keyboard speed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="keyboardCues">
+             <property name="toolTip">
+              <string>Determines whether menu access keys are always underlined.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="keyboardCuesLabel">
+             <property name="toolTip">
+              <string>Determines whether menu access keys are always underlined.</string>
+             </property>
+             <property name="text">
+              <string>Keyboard cues</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="blockSimulatedInput">
+             <property name="toolTip">
+              <string>Indicates whether an application can reset the screensaver's timer by calling the SendInput function to simulate keyboard or mouse input. True if the simulated input will be blocked.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="blockSimulatedInputLabel">
+             <property name="toolTip">
+              <string>Indicates whether an application can reset the screensaver's timer by calling the SendInput function to simulate keyboard or mouse input. True if the simulated input will be blocked.</string>
+             </property>
+             <property name="text">
+              <string>Block simulated input</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="beeper">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="beeperLabel">
+             <property name="text">
+              <string>Beeper</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="mouseWheelYLabel">
+             <property name="toolTip">
+              <string>Number of lines to scroll when the vertical mouse wheel is moved.</string>
+             </property>
+             <property name="text">
+              <string>Wheel scroll vertical</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QSpinBox" name="mouseWheelY">
+             <property name="toolTip">
+              <string>Number of lines to scroll when the vertical mouse wheel is moved.</string>
+             </property>
+             <property name="suffix">
+              <string> lines</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+             <property name="value">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="snapDefaultButtonLabel">
+             <property name="toolTip">
+              <string>Determines whether the snap-to-default-button feature is enabled. If enabled, the mouse cursor automatically moves to the default button, such as OK or Apply, of a dialog box.</string>
+             </property>
+             <property name="text">
+              <string>Snap to default button</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="menuPage">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_5">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="menuArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>313</width>
+            <height>90</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="3" column="0">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>9</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QRadioButton" name="menuAlignmentRight">
+                <property name="text">
+                 <string>Left</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="menuAlignmentLeft">
+                <property name="text">
+                 <string>Right</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QWidget" name="widget_2" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>9</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QRadioButton" name="menuAnimationFade">
+                <property name="text">
+                 <string>Fade</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="menuAnimationSlide">
+                <property name="text">
+                 <string>Slide</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="menuAlignmentLabel">
+             <property name="text">
+              <string>Pop-up menu alignment</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="menuAnimationLabel">
+             <property name="text">
+              <string>Menu animation type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="menuDelayLabel">
+             <property name="toolTip">
+              <string>Time, in milliseconds, that the system waits before displaying a shortcut menu when the mouse cursor is over a submenu item.</string>
+             </property>
+             <property name="text">
+              <string>Sub-menu show delay</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="menuDelay">
+             <property name="toolTip">
+              <string>Time, in milliseconds, that the system waits before displaying a shortcut menu when the mouse cursor is over a submenu item.</string>
+             </property>
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="screenSaverPage">
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_7">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="screenSaverArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>274</width>
+            <height>63</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="screenSaverPassword">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="screenSaverPasswordLabel">
+             <property name="text">
+              <string>Password required</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="screenSaverTimeoutLabel">
+             <property name="text">
+              <string>Timeout</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="screenSaverTimeout">
+             <property name="suffix">
+              <string> seconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="timeoutPage">
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_8">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="timeoutArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>330</width>
+            <height>96</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="3" column="0">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="hungTimeout">
+             <property name="toolTip">
+              <string>Number of milliseconds that the system waits before terminating an application that does not respond to a shutdown request.</string>
+             </property>
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="killTimeout">
+             <property name="toolTip">
+              <string>Number of milliseconds that the system waits before terminating an application that does not respond to a shutdown request.</string>
+             </property>
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="killServiceTimeout">
+             <property name="toolTip">
+              <string>Number of milliseconds that the service control manager waits before terminating a service that does not respond to a shutdown request.</string>
+             </property>
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="hungTimeoutLabel">
+             <property name="toolTip">
+              <string>Number of milliseconds that the system waits before terminating an application that does not respond to a shutdown request.</string>
+             </property>
+             <property name="text">
+              <string>Hung app time-out</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="killServiceTimeoutLabel">
+             <property name="toolTip">
+              <string>Number of milliseconds that the service control manager waits before terminating a service that does not respond to a shutdown request.</string>
+             </property>
+             <property name="text">
+              <string>Wait to kill service time-out</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="killTimeoutLabel">
+             <property name="toolTip">
+              <string>Number of milliseconds that the system waits before terminating an application that does not respond to a shutdown request.</string>
+             </property>
+             <property name="text">
+              <string>Wait to kill app time-out</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="uiEffectPage">
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_9">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="uiEffectArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>284</width>
+            <height>174</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="5" column="0">
+            <widget class="QLabel" name="selectionFadeLabel">
+             <property name="toolTip">
+              <string>The selection fade effect causes the menu item selected by the user to remain on the screen briefly while fading out after the menu is dismissed.</string>
+             </property>
+             <property name="text">
+              <string>Menu selection fade</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="menuAnimationEnabledLabel">
+             <property name="text">
+              <string>Menu animation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="menuAnimationEnabled">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QCheckBox" name="selectionFade">
+             <property name="toolTip">
+              <string>The selection fade effect causes the menu item selected by the user to remain on the screen briefly while fading out after the menu is dismissed.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="listBoxSmoothScrolling">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="cursorShadowLabel">
+             <property name="text">
+              <string>Cursor shadow</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="comboBoxAnimation">
+             <property name="toolTip">
+              <string>Determines whether the slide-open effect for combo boxes is enabled.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="listBoxSmoothScrollingLabel">
+             <property name="text">
+              <string>List box smooth-scrolling</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="hotTracking">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="hotTrackingLabel">
+             <property name="toolTip">
+              <string>Determines whether hot tracking of user-interface elements, such as menu names on menu bars, is enabled.
+
+Hot tracking means that when the cursor moves over an item, it is highlighted but not selected.</string>
+             </property>
+             <property name="text">
+              <string>Hot tracking</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="cursorShadow">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="comboBoxAnimationLabel">
+             <property name="toolTip">
+              <string>Determines whether the slide-open effect for combo boxes is enabled.</string>
+             </property>
+             <property name="text">
+              <string>Combo box animation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="toolTipAnimationLabel2">
+             <property name="text">
+              <string>ToolTip animation type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="toolTipAnimation">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="toolTipAnimationLabel">
+             <property name="text">
+              <string>ToolTip animation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="7" column="1">
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="spacing">
+               <number>9</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QRadioButton" name="toolTipAnimationFade">
+                <property name="text">
+                 <string>Fade</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="toolTipAnimationSlide">
+                <property name="text">
+                 <string>Slide</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="windowPage">
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_10">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="windowArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>358</width>
+            <height>388</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <item row="9" column="1">
+            <widget class="QCheckBox" name="verticalSnapping">
+             <property name="toolTip">
+              <string>Determines whether a window is vertically maximized when it is sized to the top or bottom of a monitor or monitor array.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="verticalSnappingLabel">
+             <property name="toolTip">
+              <string>Determines whether a window is vertically maximized when it is sized to the top or bottom of a monitor or monitor array.</string>
+             </property>
+             <property name="text">
+              <string>Vertical maximize snapping</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QSpinBox" name="mouseUndockThreshold">
+             <property name="toolTip">
+              <string>Threshold in pixels where undocking behavior is triggered by using a mouse to drag a window from the edge of a monitor or a monitor array toward the center.
+Default: 20</string>
+             </property>
+             <property name="suffix">
+              <string> px</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="mouseUndockThresholdLabel">
+             <property name="toolTip">
+              <string>Threshold in pixels where undocking behavior is triggered by using a mouse to drag a window from the edge of a monitor or a monitor array toward the center.
+Default: 20</string>
+             </property>
+             <property name="text">
+              <string>Mouse undock threshold</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QSpinBox" name="mouseDockThreshold">
+             <property name="toolTip">
+              <string>Threshold in pixels where docking behavior is triggered by using a mouse to drag a window to the edge of a monitor or monitor array.
+Default: 1</string>
+             </property>
+             <property name="suffix">
+              <string> px</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="mouseDockThresholdLabel">
+             <property name="toolTip">
+              <string>Threshold in pixels where docking behavior is triggered by using a mouse to drag a window to the edge of a monitor or monitor array.
+Default: 1</string>
+             </property>
+             <property name="text">
+              <string>Mouse dock threshold</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="dragMaximize">
+             <property name="toolTip">
+              <string>Determines whether a maximized window is restored when its caption bar is dragged.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="dragMaximizeLlabel">
+             <property name="toolTip">
+              <string>Determines whether a maximized window is restored when its caption bar is dragged.</string>
+             </property>
+             <property name="text">
+              <string>Drag from maximize</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QCheckBox" name="windowDocking">
+             <property name="toolTip">
+              <string>Determines whether a window is docked when it is moved to the top, left, or right edges of a monitor or monitor array.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="windowDockingLabel">
+             <property name="toolTip">
+              <string>Determines whether a window is docked when it is moved to the top, left, or right edges of a monitor or monitor array.</string>
+             </property>
+             <property name="text">
+              <string>Window docked at edge</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="caretWidth">
+             <property name="suffix">
+              <string> px</string>
+             </property>
+             <property name="maximum">
+              <number>10000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="caretWidthLabel">
+             <property name="text">
+              <string>Caret width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="windowBorder">
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="windowBorderLlabel">
+             <property name="text">
+              <string>Window sizing border</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="windowTrackingDelay">
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="windowTrackingDelayLabel">
+             <property name="text">
+              <string>Active window tracking delay</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="windowTrackingTop">
+             <property name="toolTip">
+              <string>Determines whether windows activated through active window tracking will be brought to the top.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="windowTrackingTopLabel">
+             <property name="toolTip">
+              <string>Determines whether windows activated through active window tracking will be brought to the top.</string>
+             </property>
+             <property name="text">
+              <string>Active windows to top</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="windowTracking">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="windowTrackingLabel">
+             <property name="toolTip">
+              <string>Whether active window tracking (activating the window the mouse is on) is on or off.</string>
+             </property>
+             <property name="text">
+              <string>Active window tracking</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="12" column="1">
+            <widget class="QSpinBox" name="foregroundFlashCount">
+             <property name="toolTip">
+              <string>Number of times SetForegroundWindow will flash the taskbar button when rejecting a foreground switch request.</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="fullWindowDraggingLabel">
+             <property name="text">
+              <string>Full window dragging</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QCheckBox" name="fullWindowDragging">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QSpinBox" name="foregroundLockTimeout">
+             <property name="toolTip">
+              <string>Amount of time following user input, in milliseconds, during which the system will not allow applications to force themselves into the foreground.</string>
+             </property>
+             <property name="suffix">
+              <string> milliseconds</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="foregroundLockTimeoutLabel">
+             <property name="toolTip">
+              <string>Amount of time following user input, in milliseconds, during which the system will not allow applications to force themselves into the foreground.</string>
+             </property>
+             <property name="text">
+              <string>Foreground lock time-out</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="foregroundFlashCountLabel">
+             <property name="toolTip">
+              <string>Number of times SetForegroundWindow will flash the taskbar button when rejecting a foreground switch request.</string>
+             </property>
+             <property name="text">
+              <string>Foreground flash count</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="mouseRestoreThresholdLabel">
+             <property name="toolTip">
+              <string>Threshold in pixels from the top of the monitor where a vertically maximized window is restored when dragged with the mouse.
+Default: 50</string>
+             </property>
+             <property name="text">
+              <string>Mouse vertical restore threshold</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QSpinBox" name="mouseRestoreThreshold">
+             <property name="toolTip">
+              <string>Threshold in pixels from the top of the monitor where a vertically maximized window is restored when dragged with the mouse.
+Default: 50</string>
+             </property>
+             <property name="suffix">
+              <string> px</string>
+             </property>
+             <property name="maximum">
+              <number>1000000000</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>List of system-wide parameters, obtained from the SystemParametersInfo API function</string>
+     </property>
+     <property name="margin">
+      <number>6</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SizeInputWidget</class>
+   <extends>QWidget</extends>
+   <header>ui\custom_widgets\SizeInputWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FontPropertyWidget</class>
+   <extends>QWidget</extends>
+   <header>ui\custom_widgets\FontPropertyWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>parameterGroupList</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pages</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

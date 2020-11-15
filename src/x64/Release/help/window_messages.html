@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Montioring Window Messages</h2>
+    </div>
+    <div id="content">
+      <p>You can monitor messages sent to a window by right clicking on
+      that window in the tree and selecting "Messages...". Alternatively,
+      you can use the <a href="pick_window.html">picker</a> to select a
+      window, and hold down the Control key when releasing the mouse button.<br />
+      A pane will open displaying any further messages that the selected
+      window receives. You can view the message names (as defined by Windows)
+      as well as their parameters and return value.</p>
+      <div class="screenshot" align="center">
+        <img src="images/window_messages.png" />
+        <p>An example of the Messages dialog.</p>
+      </div>
+      <p>The left-most column of this pane displays an arrow icon, indicating
+      how the message event was delivered. A blue arrow pointing right
+      <img class="icon" src="images/icons/message_sent.png"/> indicates
+      that the message was sent to the window using the SendMessage function.
+      That window will process the message and return a value. A faded blue arrow
+      pointing left <img class="icon" src="images/icons/message_returned.png"/>
+      indicates that the message has returned, and will include the return value.<br />
+      An orange arrow pointing right <img class="icon" src="images/icons/message_posted.png"/>
+      indicates that the message was posted to the queue (using PostMessage or similar
+      functions). These do not have a return value, as they are processed asynchronous.</p>
+      <p>The next column displays the message names, their integer ID is displayed
+      in hex next to it. Messages in the range 0x0400 to 0x7FFF are for use by private
+      window classes, and are displayed as <code>WM_USER + n</code>, where n is
+      the decimal integer added to the base 0x0400. Messages in the range 0x8000 to
+      0xBFFF are available for use by applications, and are displayed as 
+      <code>WM_APP + n</code>, where n is the decimal integer added to the base
+      0x8000. Finally, messages in the range 0xC000 to 0xFFFF are messages for
+      use by applications, which are registered with a string name. That name will
+      be displayed, with the integer ID in hex next to it.</p>
+      <p>For some messages, extra data such as structs pointed to by wParam or lParam
+      is shown in the list.</p>
+      <h3>Filtering Messages</h3>
+      <p>Often you will be looking for specific messages sent to the window. For
+      this case, Window Detective can exclude messages that you are not interested
+      in, so you can focus on the ones you are interested in. Clicking the filter
+      button <img class="icon" src="images/icons/filter.png"/> will open the
+      "Filter/Highlight Messages" dialog on the filter tab. Here you can select
+      which messages to include or exclude.<p>
+      <p>The list includes all known messages applicable to the window. If you want to
+      include or exclude other unknown messages (such as WM_USER or WM_APP messages),
+      tick or untick the "All Others" checkbox. If there are specific custom messages
+      that you want to include or exclude, you can define them in window_messages.ini,
+      then they will appear in the list.</p>
+      <h3>Highlighting Messages</h3>
+      <p>In addition to filtering messages, you can also highlight messages in
+      the list. The foreground (text) colour and the background colour can be
+      changed for specific messages, so that you can easily identify them in the
+      list. Clicking the highlight button <img class="icon" src="images/icons/highlight.png"/>
+      will open the "Filter/Highlight Messages" dialog on the highlight tab. Here
+      you can add or remove highlights, select which type of message they are applied to,
+      and choose the highlight colours.</p>
+      <p>In the example below, highlights for three types of messages have been added:
+      <code>WM_PAINT</code>, <code>WM_MOUSEMOVE</code> and
+      <code>LVM_GETITEMW</code> (a ListView message).</p>
+      <table align="center"><tr>
+        <td class="screenshot">
+          <img src="images/set_highlights.png" />
+          <p>The Filter/Highlight dialog, showing a number of highlights.</p>
+        </td>
+        <td class="screenshot">
+          <img src="images/highlighted_messages.png" />
+          <p>An example of the highlights applied to the messages.</p>
+        </td></tr>
+      </table>
+      <p class="note"><b>Note:</b> Filters and highlights are only applied to
+      messages that are recieved <i>after</i> those filters or highlights are set.</p>
+    </div>
+  </body>
+</html>
+
+
+

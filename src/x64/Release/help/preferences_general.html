@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>General Preferences</h2>
+    </div>
+    <div id="content">
+      <h3><a name="cursor"></a>Cursor</h3>
+      <p>The "window picker" cursor can use 32-bit colour with transparency on
+      operating systems that support it (Window XP and higher). Alternatively,
+      you can choose to use a 16-bit indexed colour cursor.</p>
+      <h3><a name="regex"></a>Regular Expression Syntax</h3>
+      <p>When matching a regular expression, such as in the Find dialog,
+      Window Detective will use one of the following syntax:
+      <table class="optionlist">
+        <tr>
+        <td class="option">Standard RegExp</td>
+        <td>A rich Perl-like pattern matching syntax.</td>
+        </tr>
+        <tr>
+        <td class="option">Wildcard</td>
+        <td>This provides a simple pattern matching syntax similar to that used by
+        shells (command interpreters) for "file globbing".<br />
+        Wildcard matching is much simpler than full regexps and has only four features:
+        <table class="normal" style="border-collapse: collapse;">
+          <tr>
+          <td>c</td>
+          <td>Any character represents itself apart from those mentioned below.
+          Thus c matches the character c.</td>
+          </tr>
+          <tr>
+          <td>?</td>
+          <td>Matches any single character. It is the same as . in full regexps.</td>
+          </tr>
+          <tr>
+          <td>*</td>
+          <td>Matches zero or more of any characters. It is the same as .* in full regexps.</td>
+          <tr>
+          <td>[...]</td>
+          <td>Sets of characters can be represented in square brackets, similar
+          to full regexps. Within the character class, like outside, backslash
+          has no special meaning.</td>
+          </tr>
+        </table></td>
+        </tr>
+        <tr>
+        <td class="option">Wildcard Unix</td>
+        <td>This is similar to Wildcard but with the behaviour of a Unix shell. The
+        wildcard characters can be escaped with the character "".</td>
+        </tr>
+      </table>
+      For more information about regular expressions, visit
+      <a href="http://www.regular-expressions.info">http://www.regular-expressions.info</a>
+      </p>
+      <h3><a name="user_interface"></a>User Interface</h3>
+      <span class="optionlist">
+        <p class="option">Keep Window Detective windows on top</p>
+        <p>The Window Detective main window, and any other dialog windows such as
+        the Find dialog, will stay on top of other windows on the desktop.</p>
+        <p class="note"><b>Note:</b> When this option is changed, the application needs
+        to re-build the affected windows, so you may notice them disappear for a short
+        period of time.</p>
+      </span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Window Detective.ico</file>
+        <file>img/picker.png</file>
+        <file>img/cursor.png</file>
+        <file>img/preferences.png</file>
+        <file>img/find.png</file>
+        <file>img/edit_clear.png</file>
+        <file>img/list_clear.png</file>
+        <file>img/refresh.png</file>
+        <file>img/help.png</file>
+        <file>img/window.png</file>
+        <file>img/process.png</file>
+        <file>img/transparent.png</file>
+        <file>img/locate.png</file>
+        <file>img/flash.png</file>
+        <file>img/save.png</file>
+        <file>img/start.png</file>
+        <file>img/stop.png</file>
+        <file>img/filter.png</file>
+        <file>img/highlight.png</file>
+        <file>img/auto_expand.png</file>
+        <file>img/system_info.png</file>
+        <file>img/message_sent.png</file>
+        <file>img/message_posted.png</file>
+        <file>img/message_returned.png</file>
+        <file>img/tile.png</file>
+        <file>img/cascade.png</file>
+        <file>img/log_status.png</file>
+        <file>img/error.png</file>
+        <file>img/warning.png</file>
+        <file>img/info.png</file>
+        <file>img/pref_general.png</file>
+        <file>img/pref_window_tree.png</file>
+        <file>img/pref_picker.png</file>
+        <file>img/pref_log.png</file>
+        <file>img/pref_styles.png</file>
+        <file>img/window_large.png</file>
+        <file>img/magnifying_glass.png</file>
+    </qresource>
+</RCC>

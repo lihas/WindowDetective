@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Window Detective</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="whatsThis">
+       <string>The main pane, holds multiple property or message panes.</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSpy">
+    <property name="title">
+     <string>&amp;Inspect</string>
+    </property>
+    <widget class="QMenu" name="menuRemote">
+     <property name="title">
+      <string>Remote</string>
+     </property>
+     <addaction name="actionConnect_to_server"/>
+     <addaction name="actionStart_Server"/>
+    </widget>
+    <addaction name="actnFind"/>
+    <addaction name="separator"/>
+    <addaction name="menuRemote"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actnHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actnAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actnPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actnRefresh"/>
+    <addaction name="actnSystemInfo"/>
+   </widget>
+   <widget class="QMenu" name="menuWindows">
+    <property name="title">
+     <string>&amp;Windows</string>
+    </property>
+   </widget>
+   <addaction name="menuSpy"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuWindows"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QDockWidget" name="treeDock">
+   <property name="whatsThis">
+    <string>Lists all windows in the system, sorted either by relationship to the desktop window or by owner process</string>
+   </property>
+   <property name="windowTitle">
+    <string>Window Hierarchy</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="ResizableDockContainer" name="treeDockContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QFormLayout" name="formLayout">
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>View:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cbTreeView">
+          <property name="whatsThis">
+           <string>Selects how the windows are displayed in the tree.</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Desktop window hierarchy</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../qt_resources.qrc">
+             <normaloff>:/img/window.png</normaloff>:/img/window.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Process window hierarchy</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../qt_resources.qrc">
+             <normaloff>:/img/process.png</normaloff>:/img/process.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="WindowTree" name="windowTree">
+       <property name="whatsThis">
+        <string>Lists all windows in the system, arranged either by relationship to the desktop window or by owner process.</string>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollPerPixel</enum>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <property name="allColumnsShowFocus">
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>Window</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="pickerToolBar">
+   <property name="windowTitle">
+    <string>Picker ToolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Main ToolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actnFind"/>
+   <addaction name="actnRefresh"/>
+   <addaction name="actnSystemInfo"/>
+  </widget>
+  <widget class="QDockWidget" name="logDock">
+   <property name="whatsThis">
+    <string>Displays any status messages or window events as they happen</string>
+   </property>
+   <property name="windowTitle">
+    <string>Logs</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="ResizableDockContainer" name="logDockContents">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTreeWidget" name="logList">
+       <property name="whatsThis">
+        <string>Displays any status messages, errors, or window events as they happen.</string>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::NoSelection</enum>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollPerPixel</enum>
+       </property>
+       <property name="horizontalScrollMode">
+        <enum>QAbstractItemView::ScrollPerPixel</enum>
+       </property>
+       <property name="rootIsDecorated">
+        <bool>false</bool>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>Time</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Level</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Message</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actnPreferences">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/preferences.png</normaloff>:/img/preferences.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Preferences...</string>
+   </property>
+  </action>
+  <action name="actnHelp">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/help.png</normaloff>:/img/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Help Contents</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actnAbout">
+   <property name="text">
+    <string>&amp;About Window Detective</string>
+   </property>
+  </action>
+  <action name="actnFind">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/find.png</normaloff>:/img/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Find...</string>
+   </property>
+   <property name="toolTip">
+    <string>Find a window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actnRefresh">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh all window</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actnTile">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/tile.png</normaloff>:/img/tile.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Tile</string>
+   </property>
+  </action>
+  <action name="actnCascade">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/cascade.png</normaloff>:/img/cascade.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Cascade</string>
+   </property>
+  </action>
+  <action name="actnCloseAllMdi">
+   <property name="text">
+    <string>&amp;Close All</string>
+   </property>
+   <property name="toolTip">
+    <string>Close All MDI Windows</string>
+   </property>
+  </action>
+  <action name="actnSystemInfo">
+   <property name="icon">
+    <iconset resource="../../qt_resources.qrc">
+     <normaloff>:/img/system_info.png</normaloff>:/img/system_info.png</iconset>
+   </property>
+   <property name="text">
+    <string>System Info</string>
+   </property>
+   <property name="toolTip">
+    <string>View System UI Configuration Settings</string>
+   </property>
+  </action>
+  <action name="actionConnect_to_server">
+   <property name="text">
+    <string>Connect to server</string>
+   </property>
+  </action>
+  <action name="actionStart_Server">
+   <property name="text">
+    <string>Start Server</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WindowTree</class>
+   <extends>QTreeWidget</extends>
+   <header>ui/custom_widgets/WindowTree.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ResizableDockContainer</class>
+   <extends>QWidget</extends>
+   <header>ui/custom_widgets/ResizableDockContainer.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../qt_resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

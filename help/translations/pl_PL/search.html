@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Pomoc programu Window Detective</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Wyszukiwanie okien</h2>
+    </div>
+    <div id="content">
+      <p>Jeśli nie można zlokalizować danego okna na Pulpicie lub na drzewie okien, należy skorzystać z funkcji wyszukiwania. Aby otworzyć okno wyszukiwania, należy kliknąć przycisk <img class="icon" src="images/icons/find.png" alt="Ctrl F"/> lub nacisnąć klawisze Crtl+F.</p>
+      <p>Wyszukiwanie można przeprowadzić na dwa sposoby. Wyszukiwanie podstawowe umożliwia wyszukanie okna na podstawie jego tytułu, tekstu lub klasy, natomiast wyszukiwanie zaawansowane umożliwia określenie wielu kryteri&oacute;w naraz.</p>
+      <h4>Wyszukiwanie podstawowe</h4>
+      <p>Karta wyszukiwania podstawowego umożliwia wyszukiwanie okien w oparciu o zestaw prostych kryteri&oacute;w.</p>
+      <div class="screenshot" align="center">
+        <img src="images/find_basic.png" />
+        <p>Okno dialogowe wyszukiwania z wybraną kartą wyszukiwania podstawowego.</p>
+      </div>
+      <table class="optionlist">
+        <tr><td class="option">Tekst</td>
+        <td>Ciąg znak&oacute;w, kt&oacute;ry pojawia się w tekście okna (w przypadku okien wyższego poziomu jest to tytuł).<br /> Zaznacz pole &quot;Uwzględnij wielkość liter&quot;, aby uwzględnić wielkość liter podczas wyszukiwania.<br /> Zaznacz pole &quot;Wyrażenia regularne&quot;, aby dopasować tekst według wyrażeń regularnych.<br /> Szablon składni wyrażeń regularnych zależy od wybranych ustawień. Przejdź do tematu <a href="./preferences_general.html#regex">Ustawienia wyrażeń regularnych</a>, aby dowiedzieć się więcej.
+        </td></tr>
+        <tr><td class="option">Dojście</td>
+        <td>Dojście HWND szukanego okna. Wartość może mieć postać liczby całkowitej zapisanej dziesiętnie lub szesnastkowo.
+        </td><tr>
+        <tr><td class="option">Klasa</td>
+        <td>Nazwa klasy okna. Pełny spis zarejestrowanych klas znajduje się na liście rozwijanej.
+        </td></tr>
+      </table>
+      <h4>Wyszukiwanie zaawansowane</h4>
+      <p>Karta wyszukiwania zaawansowanego umożliwia wyszukiwanie okien w oparciu o bardziej złożone kryteria. Liczba kryteri&oacute;w nie jest ograniczona. Dostępne opcje umożliwiają wyszukiwanie według atrybut&oacute;w okien lub wyszukiwanie na podstawie por&oacute;wnania wybranych wartości.</p>
+      <div class="screenshot" align="center">
+        <img src="images/find_advanced.png" />
+        <p>Okno dialogowe wyszukiwania z wybraną kartą wyszukiwania zaawansowanego.</p>
+      </div>
+      <table class="optionlist">
+        <tr><td class="option">Kryteria</td>
+        <td>Lista wszystkich dostępnych kryteri&oacute;w, na podstawie kt&oacute;rych można przeprowadzić wyszukiwanie. Poniżej znajdują się dostępne kryteria wyszukiwania:
+        <table><tr><td><ul>
+          <li>Tekst</li>
+          <li>Dojście</li>
+          <li>Klasa okna</li>
+          <li>Style</li>
+          <li>Style rozszerzone</li>
+        </ul></td>
+        <td><ul>
+          <li>Wartość Unicode</li>
+          <li>Nazwa procesu</li>
+          <li>ID procesu</li>
+          <li>ID wątku</li>
+        </ul></td></tr></table>
+        </td></tr>
+        <tr><td class="option">Operator</td>
+        <td>Każdemu z kryteri&oacute;w odpowiada szereg operator&oacute;w. Zakres dostępnych operator&oacute;w zależy od wybranego kryterium (np. tekst, liczba). Kryteriom tekstowym odpowiadają operatory &quot;r&oacute;wna się&quot; (equals), &quot;zawiera&quot; (contains) i &quot;dopasowanie&quot; (matches &mdash; używane w celu dopasowania z użyciem wyrażeń regularnych). Kryteriom liczbowym odpowiadają standardowe operatory, takie jak &quot;r&oacute;wna się&quot; (equals), &quot;mniejsze niż&quot; (less than) itp.
+        </td></tr>
+        <tr><td class="option">Szukana wartość</td>
+        <td>Zawiera szukaną wartość. Podobnie jak w przypadku operator&oacute;w, rodzaj wartości zależy od wybranego kryterium. Można wprowadzić tylko taką wartość, kt&oacute;ra odpowiada wybranemu kryterium. Okno lub klasę okna należy wybrać z listy rozwijanej, kt&oacute;ra zawiera spis wszystkich aktualnie dostępnych okien i klas.
+        </td></tr>
+        <tr><td class="option">Powiązania logiczne</td>
+        <td>Kryteria można łączyć ze sobą używając operator&oacute;w &quot;i&quot; (and) lub &quot;albo&quot; (or). Operator &quot;i&quot; (and) oznacza, że wyszukiwane okno musi spełniać wszystkie wybrane kryteria. Operator &quot;albo&quot; (or) oznacza, że wyszukiwane okno może spełniać tylko jedno z kryteri&oacute;w. Każde kolejne powiązanie bazuje na wyniku poprzedniego powiązania. Nie można wybrać innej kolejności przeprowadzania operacji. Przykład: Powiązanie <tt>A and B or C</tt> jest interpretowane jako <tt>((A and B) or C)</tt>.
+        </td></tr>
+        <tr><td class="option">Dodaj/Usuń kryteria</td>
+        <td>Dodaje lub usuwa wybrane kryterium. Aby dodać nowe kryterium po już istniejącym kryterium, należy kliknąć przycisk &quot;Dodaj&quot; znajdujący się obok już istniejącego kryterium.
+        </td></tr>
+      </table>
+      <h4>Wyszukiwanie</h4>
+      <p>Po sprecyzowaniu żądanych kryteri&oacute;w wyszukiwania należy kliknąć przycisk &quot;Znajdź&quot;. Zostanie wyświetlone okno wynik&oacute;w wyszukiwania, zwierające spis wszystkich znalezionych okien. Lista znalezionych okien jest wyświetlana podobnie do listy okien w widoku drzewa.<br /> Można także powt&oacute;rzyć wyszukiwanie, klikając przycisk &quot;Wyszukaj ponownie&quot; w oknie wynik&oacute;w. Program Window Detective przeprowadzi kolejne wyszukiwanie i wyświetli zaktualizowaną listę wynik&oacute;w. Procedura ta może okazać się przydatna, jeśli status okien ulegnie zmianie od momentu ostatniego wyszukiwania.</p>
+      <div class="screenshot" align="center">
+        <img src="images/find_results.png" />
+        <p>Okno wynik&oacute;w wyszukiwania z wyświetloną listą wynik&oacute;w wyszukiwania zaawansowanego.</p>
+      </div>
+    </div>
+  </body>
+</html>

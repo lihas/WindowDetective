@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Window Detective", "Window Detective.vcxproj", "{1E342E7A-A421-4199-9C98-7F15F13E722F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WD_Hook", "hook\WD_Hook.vcxproj", "{DF820047-29A8-46D4-9DBA-B85522739C04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Debug|Win32.Build.0 = Debug|Win32
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Debug|x64.ActiveCfg = Debug|x64
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Debug|x64.Build.0 = Debug|x64
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Release|Win32.ActiveCfg = Release|Win32
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Release|Win32.Build.0 = Release|Win32
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Release|x64.ActiveCfg = Release|x64
+		{1E342E7A-A421-4199-9C98-7F15F13E722F}.Release|x64.Build.0 = Release|x64
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Debug|Win32.Build.0 = Debug|Win32
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Debug|x64.ActiveCfg = Debug|x64
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Debug|x64.Build.0 = Debug|x64
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Release|Win32.ActiveCfg = Release|Win32
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Release|Win32.Build.0 = Release|Win32
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Release|x64.ActiveCfg = Release|x64
+		{DF820047-29A8-46D4-9DBA-B85522739C04}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F772D3F2-55B8-467E-9447-1773B4189FD5}
+	EndGlobalSection
+EndGlobal

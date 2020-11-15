@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+  
+  data_types.xml
+  
+Defines common Windows types and structures that are used in messages.
+Note: Types must be defined before they are used.
+
+The format notation used here is similar to that of the C printf function,
+but without the need for a percent sign at the start.
+The following specifiers are allowed:
+  b   boolean ("true" or "false")
+  i   signed decimal integer
+  u   unsigned decimal integer
+  x   unsigned hexadecimal integer
+
+NOTE: Structs can only used for messages which the hook code specifically
+ copies the pointer data from. That is, they cannot be used in user-defined messages.
+-->
+
+<types>
+	<primitive name="int8" size="1" format="i"/>
+	<primitive name="int16" size="2" format="i"/>
+	<primitive name="uint16" size="2" format="u"/>
+	<primitive name="int32" size="4" format="i"/>
+	<primitive name="uint32" size="4" format="u"/>
+	<primitive name="bool" size="4" format="b"/>
+    
+    <!--
+      Note: Handles that can be shared are guaranteed to be 32 bits, even on a 64 bit system.
+      https://msdn.microsoft.com/en-us/library/windows/desktop/aa384203.aspx
+      http://stackoverflow.com/questions/18266626/what-is-the-range-of-a-windows-handle-on-a-64-bits-application
+    -->
+	<primitive name="HWND" size="4" format="x"/>
+	<primitive name="HDC" size="4" format="x"/>
+    
+	<!-- TODO: Handles and pointers are different sizes on 32 and 64-bit platforms. Perhaps use "*" for size. -->
+	<primitive name="handle" size="4" format="x"/> <!-- Generic handle -->
+	<primitive name="UINT_PTR" size="4" format="x"/> <!-- Used in code for wParam and lParam -->
+	<primitive name="ULONG_PTR" size="4" format="x"/>
+
+	<struct_definition name="POINT" format="({x}, {y})">
+		<data type="int32" name="x"/>
+		<data type="int32" name="y"/>
+	</struct_definition>
+
+	<struct_definition name="RECT" format="({left}, {top}, {right}, {bottom})">
+		<data type="int32" name="left"/>
+		<data type="int32" name="top"/>
+		<data type="int32" name="right"/>
+		<data type="int32" name="bottom"/>
+	</struct_definition>
+
+	<struct_definition name="DELETEITEMSTRUCT">
+		<data type="int32" name="CtlType" enum="OwnerDrawnType"/>
+		<data type="uint32" name="CtlID"/>
+		<data type="uint32" name="itemID"/>
+		<data type="HWND" name="hwndItem"/>
+		<data type="ULONG_PTR" name="itemData"/>
+	</struct_definition>
+
+	<struct_definition name="DRAWITEMSTRUCT">
+		<data type="uint32" name="CtlType" enum="OwnerDrawnType"/>
+		<data type="uint32" name="CtlID"/>
+		<data type="uint32" name="itemID"/>
+		<data type="uint32" name="itemAction" flags="OwnerDrawnAction"/>
+		<data type="uint32" name="itemState" flags="OwnerDrawnState"/>
+		<data type="HWND" name="hwndItem"/>
+		<data type="HDC" name="hDC"/>
+		<data type="RECT" name="rcItem"/>
+		<data type="ULONG_PTR" name="itemData"/>
+	</struct_definition>
+
+	<struct_definition name="MEASUREITEMSTRUCT">
+		<data type="int32" name="CtlType" enum="OwnerDrawnType"/>
+		<data type="uint32" name="CtlID"/>
+		<data type="uint32" name="itemID"/>
+		<data type="uint32" name="itemWidth"/>
+		<data type="uint32" name="itemHeight"/>
+		<data type="ULONG_PTR" name="itemData"/>
+	</struct_definition>
+
+	<struct_definition name="MINMAXINFO">
+		<data type="POINT" name="reserved"/>
+		<data type="POINT" name="maxSize"/>
+		<data type="POINT" name="maxPosition"/>
+		<data type="POINT" name="minTrackSize"/>
+		<data type="POINT" name="maxTrackSize"/>
+	</struct_definition>
+
+	<struct_definition name="STYLESTRUCT">
+		<data type="uint32" name="old styles" format="x"/>
+		<data type="uint32" name="new styles" format="x"/>
+	</struct_definition>
+
+	<struct_definition name="WINDOWPOS">
+		<data type="HWND" name="hwnd"/>
+		<data type="HWND" name="hwndInsertAfter"/>
+		<data type="int32" name="x"/>
+		<data type="int32" name="y"/>
+		<data type="int32" name="width"/>
+		<data type="int32" name="height"/>
+		<data type="uint32" name="flags" flags="WindowPosFlags"/>
+	</struct_definition>
+	
+	<!-- Dummy struct for pointers -->
+	<struct_definition name="UIntPointer">
+		<data type="uint32" name="value"/>
+	</struct_definition>
+</types>

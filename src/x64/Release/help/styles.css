@@ -1,0 +1,147 @@
+
+body {
+    font-size: 12pt;
+    font-family: Helvetica;
+    background-color: rgb(255, 255, 240);
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: rgb(92, 149, 238);
+    height: 3.75em;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
+    padding-left: 1.875em;
+}
+
+#header h2 {
+    color: rgb(240, 240, 250);
+}
+
+#content {
+    padding: 0.625em;
+}
+
+
+a:link    { color: rgb(34, 119, 255); }
+a:visited { color: rgb(170, 34, 170); }
+a:hover   { color: rgb(68, 170, 255); }
+a:active  { color: rgb(255, 170, 68); }
+
+p {
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+}
+
+h2 {
+    font-size: 16pt;
+    color: rgb(51, 51, 51);
+}
+
+h3 {
+    font-size: 12pt;
+    margin-top: 1.6em;
+    margin-bottom: 0em;
+    color: rgb(0, 51, 102);
+}
+
+img {
+    border: 1px solid;
+}
+
+img.icon {
+    border: none;
+    margin-bottom: -2px;  /* This just makes it sit better in line with text */
+}
+
+
+/* Styles for notes and information sections */
+.warn, .note, .info {
+    border: 0.1em solid;
+    padding-left: 0.2em;
+}
+
+.warn {
+    border-color: rgb(255, 147, 147);
+    background-color: rgb(255, 215, 215);
+    background: -moz-linear-gradient(top, rgb(255, 215, 215) 3em, rgba(255, 215, 215, 0) 7em);
+}
+.warn b {
+    color: rgb(132, 0, 0);
+}
+
+.note {
+    border-color: rgb(214, 214, 4);
+    background-color: rgb(255, 255, 206);
+    background: -moz-linear-gradient(top, rgb(255, 255, 206) 3em, rgba(255, 255, 206, 0) 7em);
+}
+.note b {
+    color: rgb(102, 68, 0);
+}
+
+.info {
+    border-color: rgb(163, 204, 250);
+    background-color: rgb(232, 244, 241);
+    background: -moz-linear-gradient(top, rgb(232, 244, 241) 3em, rgba(232, 244, 241, 0) 7em);
+}
+.info b {
+    color: rgb(10, 80, 156);
+}
+
+
+/* Sytle for regular table, with alt row colours */
+table.normal,
+table.normal th,
+table.normal td {
+    border: 0.06em solid #dbdbcc;
+    padding: 0.12em;
+}
+
+table.normal tr:nth-child(odd) {
+    background-color: rgb(237, 237, 232);
+}
+
+table.normal tr:nth-child(even) {
+    background-color: rgb(252, 252, 247);
+}
+
+
+/* Screenshot images and description text */
+.screenshot {
+    min-width: 100px;
+    margin: 0.12em;
+    padding: 0.12em;
+}
+
+.screenshot p {
+    font-size: 9pt;
+    white-space: normal;
+    text-align: center;
+}
+
+
+/* Style for option labels and tables */
+.option {
+    font-style: italic;
+    padding-left: 0.25em;
+    border-left: 0.2em solid rgb(255, 211, 147);
+}
+
+table.optionlist {
+    margin-left: 0.5em;
+    border-spacing: 0.3em;
+}
+
+table.optionlist > tbody > tr > td {
+    vertical-align: top;
+    border-top: 0.1em solid rgba(100, 100, 100, 0.15);
+}
+
+span.optionlist p {
+    margin-left: 0.5em;
+}
+
+span.optionlist p.option {
+    margin-left: 0em;
+}

@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Smart Settings</h2>
+    </div>
+    <div id="content">
+      <p>Window Detective has a unique feature which intelligently remembers
+      settings such as window positions and some often-used options. These
+      settings are called "Smart Settings".</p>
+      <h3>What are Smart Settings?</h3>
+      <p>Basically, they are settings that remember the previous value set only
+      if that value has been set often in the past. It will remember the most
+      frequently used settings and ignore any one-time-only changes to those
+      settings.</p>
+      <h3>How does it work?</h3>
+      <p>Each smart setting has a "history", a list of previously set values, as
+      well as a current value. Each time a new value is set, it is added to the
+      list, and an algorithm determines if that new value should be used as the
+      current one or not. The algorithm checks all previous values and if they are
+      all equal to the new value, then it becomes the current value. Otherwise the
+      old current value is kept (but the new value is still remembered in the
+      history).</p>
+      <p>The list of previous values has a maximum size of 3. This
+      size determines how many times you must use a certain value before it is
+      remembered. If this size is too large, Window Detective will only remember
+      settings that you use very often. Too small, and it will remeber every
+      little change you make.</p>
+      <h3>Why are Smart Settings useful?</h3>
+      <p>Each time you use Window Detective, you may be using it for different
+      purposes or you may be using it for mostly the same purpose.</p>
+      <p>Other programs will remember only the last value set for such things as
+      window positions and size. This may be fine if you want it to stay that
+      way, but often you make a change to these settings that you don't want
+      to be permanent.</p>
+      <p>For example, say you work with dual monitors - a primary monitor and
+      a secondary, possibly smaller, one. When you start a program, you place it's
+      window on the primary monitor where you work. But one time you need to move
+      it to the second monitor to free up screen space on the first one. The next
+      time you open the program you expect to see it open on the first monitor
+      where it normally does but instead it opens on the second monitor. This may
+      not be a big deal, but it can be quite annoying. This is where smart
+      settings come in handy. Window Detective will remember that you like it to
+      open on the first monitor, so if you use it on the second monitor one time,
+      it will not remember that and will open in it's usual place next time.</p>
+    <div>
+  </body>
+</html>

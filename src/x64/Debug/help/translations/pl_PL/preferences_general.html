@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Pomoc programu Window Detective</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Ustawienia og&oacute;lne</h2>
+    </div>
+    <div id="content">
+      <h4><a name="cursor"></a>Kursor</h4>
+      <p>W systemie Windows XP (lub wyższym) kursor narzędzia wskazującego może być wyświetlany przy użyciu koloru 32-bitowego z wykorzystaniem efektu przezroczystości. Można także wybrać indeksowany kolor 16-bitowy.</p>
+      <h4><a name="regex"></a>Składnia wyrażeń regularnych</h4>
+      <p>W przypadku użycia wyrażeń regularnych (np. w oknie dialogowym wyszukiwania), program Window Detective wykorzysta jeden z poniższych szablon&oacute;w składni.
+      <table class="optionlist">
+        <tr><td class="option">Standardowa składnia wyrażeń regularnych</td>
+        <td>Składnia zbliżona do składni języka Pearl.
+        </td></tr>
+        <tr><td class="option">Symbole wieloznaczne</td>
+        <td>Prosta składnia dopasowywania, podobna do składni używanych przez powłoki systemowe (aplikacje interpretujące).<br /> Dopasowywanie przy użyciu symboli wieloznacznych jest znacznie prostsze niż w przypadku pełnej składni wyrażeń regularnych. Dostępne są jedynie cztery opcje:
+        <table class="normal" style="border-collapse: collapse;">
+          <tr><td>c</td>
+          <td>Opr&oacute;cz znak&oacute;w podanych poniżej każdy inny znak odpowiada samemu sobie. Znak &quot;c&quot; odpowiada zatem literze &quot;c&quot;.</td>
+          </tr>
+          <tr class="alt"><td>?</td>
+          <td>Odpowiada dowolnemu pojedynczemu znakowi. Działa identycznie jak znak &quot;.&quot; w pełnej składni wyrażeń regularnych.</td>
+          </tr>
+          <tr><td>*</td>
+          <td>Odpowiada dowolnemu ciągowi znak&oacute;w lub brakowi znak&oacute;w. Działa identycznie jak w przypadku pełnej składni wyrażeń regularnych.</td>
+          <tr class="alt"><td>[...]</td>
+          <td>Zestawy znak&oacute;w można określać przy użyciu nawias&oacute;w kwadratowych, podobnie jak w przypadku pełnej składni wyrażeń regularnych. W ramach zestawu znak&oacute;w, podobnie jak poza nim, ukośnik odwrotny nie jest symbolem wieloznacznym.
+          </td>
+        </table>
+        </td></tr>
+        <tr><td class="option">Symbole wieloznaczne (Unix)</td>
+        <td>Składnia symboli wieloznacznych dostosowana do zachowania powłoki systemu Unix. Znakiem ucieczki jest znak &quot;&quot;.
+        </td></tr>
+      </table>
+      Przejdź do strony <a href="http://www.regular-expressions.info">http://www.regular-expressions.info</a>, aby dowiedzieć się więcej o wyrażeniach regularnych.
+      </p>
+    </div>
+  </body>
+</html>

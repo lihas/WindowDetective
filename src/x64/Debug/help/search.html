@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Searching for a Window</h2>
+    </div>
+    <div id="content">
+      <p>If you cannot locate a window in the tree or on screen, you can search
+      for it using the find dialog. To open the find dialog, click the find icon
+      <img class="icon" src="images/icons/find.png"/> or press Ctrl+F.</p>
+      <p>There are two ways to search: basic, where you can search for a window either
+      by it's text/title, handle or class; and advanced, where you can specify multiple
+      criteria to search by.</p>
+      <h3>Basic search</h3>
+      <p>Using the basic tab, you can search for a window using one of a few simple
+      criteria.</p>
+      <div class="screenshot" align="center">
+        <img src="images/find_basic.png" />
+        <p>The find dialog showing the basic tab</p>
+      </div>
+      <table class="optionlist">
+        <tr><td class="option">Text</td>
+        <td>A string or sub-string to search for in the window's text (if it is a
+        top-level window, this will be it's title).<br />
+        Tick the "Case Sensitive" check box to search matching the case.<br />
+        Tick the "Regular Expresion" check box to use regular expression matching.<br />
+        The type of regex syntax used depends on the settings, see
+        <a href="./preferences_general.html#regex">Regex Preference</a>
+        </td></tr>
+        <tr><td class="option">Handle</td>
+        <td>The HWND handle of the window to search for.
+        This can be either an integer in base 10 (decimal) or base 16 (hexadecimal).
+        </td><tr>
+        <tr><td class="option">Class</td>
+        <td>The name of the window's class. The list of all registered classes are
+        available in the drop-down list.
+        </td></tr>
+      </table>
+      <h3>Advanced search</h3>
+      <p>The advanced tab allows for more specific, detailed searches to be performed. You
+      can add any number of search criteria, selecting a property to search for, a comparison
+      operator, and a value to compare to.</p>
+      <div class="screenshot" align="center">
+        <img src="images/find_advanced.png" />
+        <p>The find dialog showing the advanced tab</p>
+      </div>
+      <table class="optionlist">
+        <tr><td class="option">Property</td>
+        <td>Lists all the window properties that can be searched.
+        The following properties are available:
+        <table><tr><td><ul>
+          <li>Text</li>
+          <li>Handle</li>
+          <li>Window Class</li>
+          <li>Styles</li>
+          <li>Extended Styles</li>
+        </ul></td>
+        <td><ul>
+          <li>Is Unicode</li>
+          <li>Process Name</li>
+          <li>Process Id</li>
+          <li>Thread Id</li>
+        </ul></td></tr></table>
+        </td></tr>
+        <tr><td class="option">Operator</td>
+        <td>For each property, a number of search operators is available. What operators
+        are available depend on the type of property (e.g. text, number). Text has
+        operators such as "equals", "contains" and "matches" (for regular expressions).
+        Numbers have the usual operators, "equals", "less than", etc.
+        </td></tr>
+        <tr><td class="option">Value to find</td>
+        <td>This is the value to search for. As with operators, the acceptable values
+        depend on the type of property. The input field will only accept a valid type.
+        For windows and window classes, a drop-down list is provided to select from any
+        existing object.
+        </td></tr>
+        <tr><td class="option">Boolean relation</td>
+        <td>Each search criteria is combined by a boolean relation - "and"/"or". If
+        "and" is selected, both criteria must be true for each window searched. If "or"
+        is selected, only one criteria needs to be true. Each relation operates on the
+        result of the previous criteria, there is no way to specify order-of-operations.
+        That is: <tt>A and B or C</tt> is treated as <tt>((A and B) or C)</tt>.
+        </td></tr>
+        <tr><td class="option">Add/Remove criteria</td>
+        <td>Adds or removes a criteria item. When adding, the new criteria item will
+        be added after the one where the add button was pressed.
+        </td></tr>
+      </table>
+      <h3>Performing the search</h3>
+      <p>After you have entered the appropriate criteria, click the "Find" button.
+      A results dialog will be shown listing all windows found. These windows are
+      displayed in a list with columns similar to that in the hierarchy trees.<br />
+      You also have the option of repeating the search by clicking the "Repeat
+      Search" button on the results pane. This will re-run the search and update
+      the list with the new results. This can be useful if some windows were changed
+      since you first ran the search.</p>
+      <div class="screenshot" align="center">
+        <img src="images/find_results.png" />
+        <p>The search results dialog showing the result of the advanced search above</p>
+      </div>
+    </div>
+  </body>
+</html>

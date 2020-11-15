@@ -1,0 +1,24 @@
+
+SystemParametersPane #accessibilityArea > QLabel,
+SystemParametersPane #desktopArea > QLabel,
+SystemParametersPane #iconArea > QLabel,
+SystemParametersPane #inputArea > QLabel,
+SystemParametersPane #menuArea > QLabel,
+SystemParametersPane #screenSaverArea > QLabel,
+SystemParametersPane #timeoutArea > QLabel,
+SystemParametersPane #uiEffectArea > QLabel,
+SystemParametersPane #windowArea > QLabel {
+	margin-right: 1em;
+}
+
+SystemParametersPane #accessibilityArea > QWidget,
+SystemParametersPane #desktopArea > QWidget,
+SystemParametersPane #iconArea > QWidget,
+SystemParametersPane #inputArea > QWidget,
+SystemParametersPane #menuArea > QWidget,
+SystemParametersPane #screenSaverArea > QWidget,
+SystemParametersPane #timeoutArea > QWidget,
+SystemParametersPane #uiEffectArea > QWidget,
+SystemParametersPane #windowArea > QWidget {
+	min-height: 18px;
+}

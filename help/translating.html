@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Window Detective</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Translating Window Detective</h2>
+    </div>
+    <div id="content">
+      <h3>Introduction</h3>
+      <p>Window Detective is built using the <a href="https://www.qt.io/">Qt framework</a>,
+      which has built-in support for multiple languages. The text strings in the
+      user interface (UI) can be displayed in any language, provided there is a
+      translation file present for that language.</p>
+      <p>When installing Window Detective, you will be asked to select a
+      language. There are a number of languages to choose from and if your
+      systems language is one of them it will be selected by default. If your
+      language is not included in the installer, you may wish to translate the
+      application yourself.</p>
+      <h3>How to translate</h3>
+      <ol>
+        <li><!-- Step 1 -->
+        <p>Download the <a href="http://windowdetective.sourceforge.net/files/translations/Translation Pack.zip"><b>translation pack</b></a></p>
+        <p>In this zip file you will find a file containing all translatable strings
+        in Window Detective as well as the Qt tool (Linguist) which will be used
+        to translate the strings. Qt Linguist can be ran as a stand-alone application
+        (i.e. it doesn't need to be installed), but it does require the DLLs that
+        are included in the zip file.</p>
+        <p>Existing translation files are also included. As new versions of
+        Window Detective are released, these files may need to be updated.</p>
+        </li>
+        <li><!-- Step 2 -->
+        <p>(Optional) Download the latest
+        <a href="http://windowdetective.sourceforge.net/files/Window Detective.zip"><b>source code</b></a></p>
+        <p>This step is not necessary, but it will help when using Linguist.
+        If you do not wish to download the source code, you may skip to the next
+        step. The only disadvantage of not having the source code available is that
+        Linguist will not be able to show you what the UI will look like with the
+        translated strings. You will still be able to perform the translation.</p>
+        <p>If you do download the source code, extract the zip file to where you
+        want to work, and look in the \src\translations directory. This directory
+        contains any existing translation files (which are also included in the
+        Translation Pack) as well as the compiled files (you can ignore them).
+        You will need to put your translation file here for Linguist to be able
+        to pick up the source location (the .ts file contains relative file paths).</p>
+        </li>
+        <li><!-- Step 3 -->
+        <p>Change the name of the <tt>template.ts</tt> file to <tt>&lt;language&gt;_&lt;country&gt;.ts</tt>.</p>
+        <p><tt>&lt;language&gt;</tt> is a lowercase, two-letter, ISO 639 <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">language code</a>,
+        and <tt>&lt;country&gt;</tt> is an uppercase, two-letter, ISO 3166 <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">country code</a>.</p>
+        <p>For example, the Polish translation file is <tt>pl_PL.ts</tt>.
+        If you are not sure what codes to choose, just pick the language or country
+        closest to yours. This naming scheme is not important, it only serves to provide
+        a unique name for each translation.</p>
+        </li>
+        <li><!-- Step 4 -->
+        <p>Start <tt>linguist.exe</tt> and open the .ts file.</p>
+        <p>You will be prompted to select the source and target language. The source
+        language is obviously English (the country doesn't really matter, but it is
+        Australia). The target language and country are the same as those you used
+        to name the .ts file.</p>
+        <p>Once that is done, you will see the Linguist main window:</p>
+        <table>
+        <tr><td>
+        <div class="screenshot">
+          <a href="images/qlinguist.png"><img src="images/qlinguist_small.png" alt="Screenshot of Qt Linguist tool"/></a>
+          <p>The Qt Linguist main window (click for a larger image)</p>
+        </div>
+        </td>
+        <td>
+        <p>On the far left of the window, there is a list of all classes or UI forms
+        that contain translatable text. When an item from that list is selected, the
+        second list shows all strings in that class or form.</p>
+        <p>The right side shows either the source code or the UI form, depending on
+        whether the string is in the source code or a form. Note: If you did not do
+        Step 2, this area will be blank or will day that it cannot find the source code.</p>
+        <p>Below that is the area to enter the translated text, it's pretty straight-
+        forward. You don't have to bother with the comments section unless you want to.</p>
+        <p>After you have entered the translation, press Ctrl+Enter to move on to the
+        next unfinished one</p>
+        </td></tr>
+        </table>
+        </li>
+        <li><!-- Step 5 -->
+        <p>Once you have translated all the strings, create a
+        <a href="https://sourceforge.net/p/windowdetective/translations/">ticket</a>
+        and attach the .ts file. I will then compile the file and
+        include it in the next release. You can give me your name to include in the
+        credits, or i can put your email address or just an alias.</p>
+        </li>
+      </ol>
+      <div class="warn">
+        <p><b>Important Note:</b> There are some words or phrases which should not
+		be translated, either because they are special words that cannot change,
+        or because there is no appropriate translation for them. The following
+        words or phrases should be left alone:</p>
+        <ul>
+          <li>The application name, "Window Detective"</li>
+          <li>Variable placeholders. Some strings contain a placeholder which, when
+          displayed in the UI, will show the value of a variable. This placeholder is
+          a percent character (%) followed by a number. e.g. %1, %2</li>
+          <li>Ampersand (&amp;) before a character. There are used for standard menu
+          accessability, the character following &amp; is used to select that menu item
+          using the keyboard. The character will most likely be different in another
+          language, so you may have to choose another.</li>
+          <li>Punctuation such as full stops or exclamation marks. Linguist will warn
+          you if punctuation is incorrect or you forget a % or &amp;.</li>
+          <li>Newline (\n) or tab (\t) characters.</li>
+          <li>Ctrl key combinations, e.g. Ctrl+F</li>
+          <li>Certain technical words like "window" or "handle". These words have a
+          number of different meanings in English and most likely do too in any other
+          language, but they have a specific meaning here. For instance, "window" refers
+          to a graphical UI component - not a pane of glass; and "handle" refers to an
+          integer used by the Operating System to itentify a window - not something used
+          to open a door.</li>
+          <li>Markup tags. For any strings containing HTML, only the "visible" text
+          can be translated. That is, text that will be shown in the UI when the HTML
+          is rendered. Any text enclosed in angle brackets (<tt>&lt;</tt> and <tt>&gt;</tt>)
+          must not be translated. The same goes for HTML symbols such as
+          <tt>&amp;quot;</tt></li>
+        </ul>
+        <p>If there are any words or phrases you are not sure of, just leave them as
+        they are in English.</p>
+      </div>
+      <!-- TODO mention how to translate html help docs -->
+    </div>
+  </body>
+</html>

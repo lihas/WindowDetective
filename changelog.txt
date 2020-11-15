@@ -1,0 +1,244 @@
+
+
+   Version history of Window Detective
+  =====================================
+
+Below is a list of added features, changes and bug fixes for each version.
+
+
+Version 3.5.1, 2017/12/06
+-------------------------
+Bugs fixed
+ - ID #10. Crash when capturing messages.
+
+
+Version 3.5.0, 2017/09/13
+-------------------------
+New features
+ - General tab of the System Info dialog now includes almost all of the
+   parameters available from SystemParametersInfo, and you can modify them.
+
+
+Version 3.4.0, 2017/06/29
+-------------------------
+New features
+ - Message extra data (structs pointed to by wParam or lParam) can now be
+   configured for any messages. Previously, this was hard-coded for just a
+   few messages.
+ - Properties pane now shows window class atom (unique identifier).
+Minor improvements
+ - Added some more message parameter definitions.
+ - Added some more info to System Info dialog.
+Bugs fixed
+ - Application would crash when saving details of a window when the background
+   brush could not be obtained.
+ - Extended styles for common controls (such as List View) were mistakenly
+   being shown as extended window styles.
+ - Size of docked "Window Hierarchy" and "Logs" panes were not remembered.
+
+
+Version 3.3.0, 2017/04/10
+-------------------------
+New features
+ - Message pane now shows time each message was received.
+ - Properties pane now shows window class styles.
+Other
+ - Removed support for 16bit cursor. Only 32bit is used now.
+ - Removed the pre-packaged styles, as Qt no longer includes them by default.
+   Note that you can still use custom CSS styling.
+
+
+Version 3.2.1, 2012/11/05
+-------------------------
+Minor improvements
+ - Added some more message parameter definitions.
+Bugs fixed
+ - Application would crash when saving messages from a deleted window.
+
+
+Version 3.2.0, 2012/06/20
+-------------------------
+New features
+ - Able to start/stop message capture in the messages pane.
+ - Able to clear message list in messages pane.
+ - Scroll bar info is shown in the properties pane.
+Minor improvements
+ - Added some more message parameter definitions.
+ - Added "parent" as a searchable field. Also replaced "process name" and
+   "process id" with just "process", which has a drop down list of all
+   available processes.
+ - Window Detective will ignore messages sent from itself to another
+   window (which it sometimes does to get window info).
+
+
+Version 3.1.0, 2012/05/29
+-------------------------
+New features
+ - In the message pane, more information is shown for message parameters.
+   Parameter names are used (as defined in the Windows documentation) instead
+   of "wParam" and "lParam".
+ - Define custom messages and their parameters using xml.
+
+
+Version 3.0.0, 2012/03/24
+-------------------------
+New features
+ - For some messages, extra data (structs pointed to by wParam or lParam) is
+   now obtained and shown in message pane.
+ - Option to automatically open property pane whenever a window is selected
+   in the tree. It will show maximised in the MDI area.
+ - Changed the look of the Message Filter dialog (single list instead of two).
+ - Search for partial string in Message Filter dialog list.
+ - ID 3481505. Option to Message Filter dialog to include/exclude
+   unknown messages (ones not in the list).
+Minor improvements
+ - Messages dialog now shows returned messages separately, like Winspector.
+ - "What's This" help text for some dialogs (the ones with a quesion mark
+   button in the title bar).
+Bugs fixed
+ - ID 3434845. Fixed GDI handle leak when creating window highlight border.
+ - Custom messages (defined in user data file) for non-system window classes
+   were not being picked up.
+ - Custom resources (messages, icons, etc) were being read from local app data
+   folder instead of the correct app data location.
+
+
+Version 2.4.1, 2011/09/09
+-------------------------
+Bugs fixed
+ - Settings were not being read on startup.
+
+
+Version 2.4.0, 2011/08/26
+-------------------------
+New features
+ - Parent and owner labels on property pages are clickable, and locate that
+   window in the hierarchy tree when clicked.
+ - Options to restore settings and export to or import from an INI file.
+Minor improvements
+ - Balloon notification is now shown just above the main pane, instead of
+   being a topmost window. i.e. it can now be obscured by other windows.
+ - Added definition for group box (button with BS_GROUPBOX style).
+Bugs fixed
+ - Items in ComboBox property page were not being cleared when the window was
+   updated, resulting in duplicate entries in the list.
+ - Installer overwrote user files on upgrade.
+
+
+Version 2.3.0, 2011/07/20
+-------------------------
+New features
+ - Filter and highlight window messages. Note: So far, this only works for
+   messages that were sent after a filter/highlight was applied.
+ - System Info dialog, which shows system metrics and other general settings.
+ - A window's owner is shown in properties, if the window has an owner.
+ - Added option to have Window Detective main pane always stay on top.
+ - Added option to turn off balloon notifications.
+Minor improvements
+ - Ini files can now contain single line comments (//) after text on a line
+   (instead of having to be at the start of a line only).
+ - Balloon notification will not show if main pane is minimised.
+
+
+Version 2.2.0, 2011/05/26
+-------------------------
+New features
+ - Save window properties as XML. Generic and specific properties are saved.
+Minor improvements
+ - Window messages are now also saved as XML, instead of plain text.
+ - Added class-specific message definitions to window_messages.ini.
+Bugs fixed
+ - Application style sheets (CSS) are now working, and are applied on top of
+   the selected theme instead of requiring the "custom" theme.
+
+
+Version 2.1.0, 2011/03/02
+-------------------------
+New features
+ - Additional properties are shown for some window classes (ListBox, Edit, etc).
+Minor improvements
+ - Improved error handling when reading data files.
+ - ID 3156930. Keep selected items when switching between tree views & refreshing.
+
+
+Version 2.0.1, 2011/01/06
+-------------------------
+Bugs fixed
+ - ID 3149584. Hook DLL was built in debug mode, which would fail to run on a
+   system that did not have Visual Studio installed.
+
+
+Version 2.0.0, 2010/12/23
+-------------------------
+New features
+ - Advanced search which allows you to find windows that match specified criteria.
+ - Multiple language support.
+Minor improvements
+ - Log pane is hidden by default and display any log messages in the status
+   bar. The pane can still be shown and docked if the user wishes.
+ - Window tree view (desktop window hierarchy or process hierarchy) can now be
+   selected via a combo box rather than having a tab for each.
+ - Updated and improved documentation.
+Bugs fixed
+ - In the basic tab of the find dialog, selecting a different input field did
+   not select it's corresponding checkbox.
+ - ID 3098894. Unable to set negative coordinates.
+
+
+Version 1.3.0, 2010/09/24
+-------------------------
+New features
+ - Created user data directory (under %APPDATA%). Users can now define custom
+   window messages and icons, as well as css styles for Window Detective.
+ - Window's font is now displayed in properties.
+Minor improvements
+ - Improved how context menus work. Now supports multiple selection.
+ - Made a menu for MDI windows (cascade, tile, close all).
+ - Search results pane now has a context menu for items.
+Bugs fixed
+ - Hook dll now properly unloads immediately.
+
+
+Version 1.2.0, 2010/07/20
+-------------------------
+New features
+ - User-defined window properties (i.e. those set using the SetProp API
+   function) are now shown in the list of properties.
+ - Window class info such as extra bytes and background HBRUSH now shown.
+ - Restructured the INI files and added more definitions.
+Minor improvements
+ - Give Window Detective process SeDebugPrivilege.
+ - Get/set if window is on top (WS_EX_TOPMOST flag) works now.
+ - Put back the "highlight when changed" feature, but without updating.
+ - Search results pane will now always open, even if there is only one
+   item. This is for consistency and also because you can repeat the search.
+Bugs fixed
+ - Window class combo boxes were not clearing list before adding, resulting
+   in duplicate items.
+
+
+Version 1.1.0, 2010/06/25
+-------------------------
+New features
+ - Improved Search Results pane to use columns and behaviour more like
+   the tree views (in fact, it actually *is* a tree view with no child items).
+ - Columns in tree views auto-size when items are expanded.
+ - Added more "smart settings" and changed the way it works.
+
+
+Version 1.0.1, 2010/06/20
+-------------------------
+Bugs fixed
+ - Crashes sometimes when updating new windows. To solve the problem,
+   I had to remove the "update when changed" feature.
+
+
+Version 1.0.0, 2010/06/19
+-------------------------
+New features
+ - View properties of windows such as text/title, dimensions and styles.
+ - Set properties such as text/title, dimensions and styles.
+ - View all windows in a tree hierarchy of parent/child windows.
+ - 'Pick' windows to inspect using the mouse.
+ - Find window/s by text, handle or class.
+ - Listen for window messages sent to a window.

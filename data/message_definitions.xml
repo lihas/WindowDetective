@@ -1,0 +1,2054 @@
+<?xml version="1.0"?>
+<!--
+
+  message_definitions.xml
+
+Defines window messages and their parameters.
+
+Messages are grouped by the class(es) they are applicable to. One or more
+class names can be specified in the <message_group> tag, separated by a
+comma (but no spaces). The special case, class="all", defines generic messages
+applicable to all window classes.
+
+-->
+
+<!-- TODO: WPARAM and LPARAM are actually pointer types, so they are
+   different sizes on 32 and 64 bit systems
+-->
+
+<messages>
+	<message_group class="all">
+		<message id="0x0000" name="WM_NULL"></message>
+
+		<message id="0x0001" name="WM_CREATE"></message>
+
+		<message id="0x0002" name="WM_DESTROY"></message>
+
+		<message id="0x0003" name="WM_MOVE">
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0005" name="WM_SIZE">
+			<param type="int32" name="size type" from="wParam" enum="SizeType"/>
+			<param type="int16" name="width" from="LOWORD(lParam)"/>
+			<param type="int16" name="height" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0006" name="WM_ACTIVATE">
+			<param type="uint16" name="activated" from="LOWORD(wParam)" enum="ActivateType"/>
+			<param type="bool" name="minimized" from="HIWORD(wParam)"/>
+			<param type="HWND" name="window handle" from="lParam"/>
+		</message>
+
+		<message id="0x0007" name="WM_SETFOCUS">
+			<param type="HWND" name="window handle" from="wParam"/>
+		</message>
+
+		<message id="0x0008" name="WM_KILLFOCUS">
+			<param type="HWND" name="window handle" from="wParam"/>
+		</message>
+
+		<message id="0x000A" name="WM_ENABLE">
+			<param type="bool" name="enabled" from="wParam"/>
+		</message>
+
+		<message id="0x000B" name="WM_SETREDRAW">
+			<param type="bool" name="redraw after change" from="wParam"/>
+		</message>
+
+		<message id="0x000C" name="WM_SETTEXT">
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="uint32" name="status" from="return"/>
+		</message>
+
+		<message id="0x000D" name="WM_GETTEXT">
+			<param type="uint32" name="num chars to copy" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="uint32" name="num chars copied" from="return"/>
+		</message>
+
+		<message id="0x000E" name="WM_GETTEXTLENGTH">
+			<param type="uint32" name="num chars" from="return"/>
+		</message>
+
+		<message id="0x000F" name="WM_PAINT">
+		</message>
+
+		<message id="0x0010" name="WM_CLOSE">
+		</message>
+
+		<message id="0x0011" name="WM_QUERYENDSESSION">
+			<param type="int32" name="event" from="lParam" flags="EndSessionFlags"/>
+		</message>
+
+		<message id="0x0012" name="WM_QUIT">
+			<param type="int32" name="exit code" from="wParam"/>
+		</message>
+
+		<message id="0x0013" name="WM_QUERYOPEN">
+		</message>
+
+		<message id="0x0014" name="WM_ERASEBKGND">
+			<param type="HDC" name="device context" from="wParam"/>
+		</message>
+
+		<message id="0x0015" name="WM_SYSCOLORCHANGE">
+		</message>
+
+		<message id="0x0016" name="WM_ENDSESSION">
+			<param type="bool" name="is being ended" from="wParam"/>
+			<param type="int32" name="event" from="lParam" flags="EndSessionFlags"/>
+		</message>
+
+		<message id="0x0018" name="WM_SHOWWINDOW">
+			<param type="bool" name="show" from="wParam"/>
+			<param type="int32" name="status" from="lParam" enum="ShowWindowStatus"/>
+		</message>
+
+		<message id="0x0019" name="WM_CTLCOLOR">
+			<param type="HDC" name="display context" from="wParam"/>
+			<param type="HWND" name="child window" from="lParam"/>
+		</message>
+
+		<message id="0x001A" name="WM_WININICHANGE"></message>
+
+		<message id="0x001B" name="WM_DEVMODECHANGE">
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x001C" name="WM_ACTIVATEAPP">
+			<param type="bool" name="activated" from="wParam"/>
+			<param type="uint32" name="thread id" from="lParam"/>
+		</message>
+
+		<message id="0x001D" name="WM_FONTCHANGE">
+		</message>
+
+		<message id="0x001E" name="WM_TIMECHANGE">
+		</message>
+
+		<message id="0x001F" name="WM_CANCELMODE">
+		</message>
+
+		<message id="0x0020" name="WM_SETCURSOR">
+			<param type="HWND" name="window" from="wParam"/>
+			<param type="uint16" name="hit test code" from="LOWORD(lParam)" enum="HitTestType"/>
+			<param type="uint16" name="mouse message" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0021" name="WM_MOUSEACTIVATE">
+			<param type="HWND" name="parent window" from="wParam"/>
+			<param type="uint16" name="hit test code" from="LOWORD(lParam)" enum="HitTestType"/>
+			<param type="uint16" name="mouse message" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0022" name="WM_CHILDACTIVATE"></message>
+
+		<message id="0x0023" name="WM_QUEUESYNC"></message>
+
+		<message id="0x0024" name="WM_GETMINMAXINFO">
+			<param type="MINMAXINFO" name="info" from="lParam" passed="in,out"/>
+		</message>
+
+		<message id="0x0026" name="WM_PAINTICON"></message>
+
+		<message id="0x0027" name="WM_ICONERASEBKGND"></message>
+
+		<message id="0x0028" name="WM_NEXTDLGCTL"></message>
+
+		<message id="0x002A" name="WM_SPOOLERSTATUS">
+			<param type="int16" name="number of jobs remaining" from="LOWORD(lParam)"/>
+		</message>
+
+		<message id="0x002B" name="WM_DRAWITEM">
+			<param type="int32" name="control id" from="wParam"/>
+			<param type="DRAWITEMSTRUCT" name="info" from="lParam" passed="in"/>
+		</message>
+
+		<message id="0x002C" name="WM_MEASUREITEM">
+			<param type="int32" name="control id" from="wParam"/>
+			<param type="MEASUREITEMSTRUCT" name="info" from="lParam" passed="in,out"/>
+		</message>
+
+		<message id="0x002D" name="WM_DELETEITEM">
+			<param type="int32" name="control id" from="wParam"/>
+			<param type="DELETEITEMSTRUCT" name="info" from="lParam" passed="in"/>
+		</message>
+
+		<message id="0x002E" name="WM_VKEYTOITEM">
+			<param type="uint16" name="virtual key" from="LOWORD(wParam)" enum="VirtualKey"/>
+			<param type="uint16" name="caret position" from="HIWORD(wParam)"/>
+			<param type="HWND" name="list box handle" from="lParam"/>
+		</message>
+
+		<message id="0x002F" name="WM_CHARTOITEM">
+			<param type="uint16" name="character code" from="LOWORD(wParam)"/>
+			<param type="uint16" name="caret position" from="HIWORD(wParam)"/>
+			<param type="HWND" name="list box handle" from="lParam"/>
+		</message>
+
+		<message id="0x0030" name="WM_SETFONT">
+			<param type="handle" name="font handle" from="wParam"/>
+			<param type="bool" name="redraw" from="LOWORD(lParam)"/>
+		</message>
+
+		<message id="0x0031" name="WM_GETFONT">
+			<param type="handle" name="font handle" from="return"/>
+		</message>
+
+		<message id="0x0032" name="WM_SETHOTKEY">
+			<param type="uint16" name="virtual key" from="LOWORD(wParam)" enum="VirtualKey"/>
+			<param type="uint16" name="modifiers" from="HIWORD(wParam)" flags="HotKeyFlags"/>
+			<param type="int32" name="return state" from="return"/>
+		</message>
+
+		<message id="0x0033" name="WM_GETHOTKEY">
+			<!-- MSDN says these are in the low and high bytes, but they're actually words. -->
+			<param type="uint16" name="virtual key" from="LOWORD(return)" enum="VirtualKey"/>
+			<param type="uint16" name="modifiers" from="HIWORD(return)" flags="HotKeyFlags"/>
+		</message>
+
+		<message id="0x0037" name="WM_QUERYDRAGICON"></message>
+
+		<message id="0x0039" name="WM_COMPAREITEM"></message>
+
+		<message id="0x003D" name="WM_GETOBJECT"></message>
+
+		<message id="0x0041" name="WM_COMPACTING"></message>
+
+		<message id="0x0044" name="WM_COMMNOTIFY"></message>
+
+		<message id="0x0046" name="WM_WINDOWPOSCHANGING">
+			<param type="WINDOWPOS" name="info" from="lParam" passed="in,out"/>
+		</message>
+
+		<message id="0x0047" name="WM_WINDOWPOSCHANGED">
+			<param type="WINDOWPOS" name="info" from="lParam" passed="in"/>
+		</message>
+
+		<message id="0x0048" name="WM_POWER"></message>
+
+		<message id="0x004A" name="WM_COPYDATA"></message>
+
+		<message id="0x004B" name="WM_CANCELJOURNAL"></message>
+
+		<message id="0x004E" name="WM_NOTIFY">
+			<!-- TODO: Handle all types of notifications, which have different structs -->
+			<param type="uint32" name="wParam" from="wParam"/>
+			<param type="uint32" name="lParam" from="lParam"/>
+		</message>
+
+		<message id="0x0050" name="WM_INPUTLANGCHANGEREQUEST">
+			<param type="uint32" name="new locale" from="wParam" flags="InputLangFlags"/>
+			<param type="uint32" name="locale identifier" from="lParam"/>
+		</message>
+
+		<message id="0x0051" name="WM_INPUTLANGCHANGE">
+			<param type="uint32" name="character set" from="wParam"/>
+			<param type="uint32" name="locale identifier" from="lParam"/>
+		</message>
+
+		<message id="0x0052" name="WM_TCARD"></message>
+
+		<message id="0x0053" name="WM_HELP"></message>
+
+		<message id="0x0054" name="WM_USERCHANGED"></message>
+
+		<message id="0x0055" name="WM_NOTIFYFORMAT">
+			<param type="HWND" name="sender" from="wParam"/>
+			<param type="int32" name="command" from="lParam" enum="NotifyFormat"/>
+			<param type="int32" name="format" from="return" enum="NotifyFormat"/>
+		</message>
+
+		<message id="0x007B" name="WM_CONTEXTMENU">
+			<param type="HWND" name="window handle" from="wParam"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x007C" name="WM_STYLECHANGING">
+			<param type="int32" name="style type" from="wParam" flags="StyleType"/>
+			<param type="STYLESTRUCT" name="changes" from="lParam"/>
+		</message>
+
+		<message id="0x007D" name="WM_STYLECHANGED">
+			<param type="int32" name="style type" from="wParam" flags="StyleType"/>
+			<param type="STYLESTRUCT" name="changes" from="lParam"/>
+		</message>
+
+		<message id="0x007E" name="WM_DISPLAYCHANGE">
+			<param type="uint32" name="new image depth (bits per pixel)" from="wParam"/>
+			<param type="uint16" name="horizontal resolution" from="LOWORD(lParam)"/>
+			<param type="uint16" name="vertical resolution" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x007F" name="WM_GETICON">
+			<param type="int32" name="icon type" from="wParam" enum="IconType"/>
+			<param type="handle" name="icon handle" from="return"/>
+		</message>
+
+		<message id="0x0080" name="WM_SETICON">
+			<param type="int32" name="icon type" from="wParam" enum="IconType"/>
+			<param type="handle" name="icon handle" from="lParam"/>
+		</message>
+
+		<message id="0x0081" name="WM_NCCREATE"></message>
+
+		<message id="0x0082" name="WM_NCDESTROY"></message>
+
+		<message id="0x0083" name="WM_NCCALCSIZE">
+		</message>
+
+		<message id="0x0084" name="WM_NCHITTEST">
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0085" name="WM_NCPAINT">
+			<param type="handle" name="update region handle" from="wParam"/>
+		</message>
+
+		<message id="0x0086" name="WM_NCACTIVATE">
+			<param type="bool" name="is active" from="wParam"/>
+			<param type="handle" name="update region handle" from="lParam"/>
+			<param type="bool" name="do default processing" from="return"/>
+		</message>
+
+		<message id="0x0087" name="WM_GETDLGCODE"></message>
+
+		<message id="0x0088" name="WM_SYNCPAINT"></message>
+
+		<message id="0x00A0" name="WM_NCMOUSEMOVE"></message>
+
+		<message id="0x00A1" name="WM_NCLBUTTONDOWN"></message>
+
+		<message id="0x00A2" name="WM_NCLBUTTONUP"></message>
+
+		<message id="0x00A3" name="WM_NCLBUTTONDBLCLK"></message>
+
+		<message id="0x00A4" name="WM_NCRBUTTONDOWN"></message>
+
+		<message id="0x00A5" name="WM_NCRBUTTONUP"></message>
+
+		<message id="0x00A6" name="WM_NCRBUTTONDBLCLK"></message>
+
+		<message id="0x00A7" name="WM_NCMBUTTONDOWN"></message>
+
+		<message id="0x00A8" name="WM_NCMBUTTONUP"></message>
+
+		<message id="0x00A9" name="WM_NCMBUTTONDBLCLK"></message>
+
+		<message id="0x00AB" name="WM_NCXBUTTONDOWN"></message>
+
+		<message id="0x00AC" name="WM_NCXBUTTONUP"></message>
+
+		<message id="0x00AD" name="WM_NCXBUTTONDBLCLK"></message>
+
+		<message id="0x00FF" name="WM_INPUT"></message>
+
+		<message id="0x0100" name="WM_KEYDOWN">
+			<param type="uint32" name="virtual key" from="wParam" enum="VirtualKey"/>
+			<param type="uint32" name="state" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x0101" name="WM_KEYUP">
+			<param type="uint32" name="virtual key" from="wParam" enum="VirtualKey"/>
+			<param type="uint32" name="state" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x0102" name="WM_CHAR">
+			<param type="int32" name="character code" from="wParam"/>
+		</message>
+
+		<message id="0x0103" name="WM_DEADCHAR"></message>
+
+		<message id="0x0104" name="WM_SYSKEYDOWN">
+			<param type="uint32" name="virtual key" from="wParam" enum="VirtualKey"/>
+			<param type="uint32" name="state" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x0105" name="WM_SYSKEYUP">
+			<param type="uint32" name="virtual key" from="wParam" enum="VirtualKey"/>
+			<param type="uint32" name="state" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x0106" name="WM_SYSCHAR">
+			<param type="uint32" name="character code" from="wParam"/>
+			<param type="uint32" name="state" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x0107" name="WM_SYSDEADCHAR"></message>
+
+		<message id="0x0109" name="WM_UNICHAR"></message>
+
+		<message id="0x010A" name="WM_CONVERTREQUEST"></message>
+
+		<message id="0x010B" name="WM_CONVERTRESULT"></message>
+
+		<message id="0x010C" name="WM_INTERIM"></message>
+
+		<message id="0x010D" name="WM_IME_STARTCOMPOSITION"></message>
+
+		<message id="0x010E" name="WM_IME_ENDCOMPOSITION"></message>
+
+		<message id="0x010F" name="WM_IME_COMPOSITION"></message>
+
+		<message id="0x0110" name="WM_INITDIALOG"></message>
+
+		<message id="0x0111" name="WM_COMMAND">
+			<param type="uint16" name="notification code" from="HIWORD(wParam)"/>
+			<param type="uint16" name="identifier" from="LOWORD(wParam)"/>
+			<param type="HWND" name="control handle" from="lParam"/>
+		</message>
+
+		<message id="0x0112" name="WM_SYSCOMMAND">
+			<param type="uint32" name="command" from="wParam" enum="SysCommandType"/>
+			<param type="uint16" name="cursor x" from="LOWORD(lParam)"/>
+			<param type="uint16" name="cursor y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0113" name="WM_TIMER">
+			<param type="int32" name="timer identifier" from="wParam"/>
+			<param type="uint32" name="callback function pointer" from="lParam"/>
+		</message>
+
+		<message id="0x0114" name="WM_HSCROLL">
+			<param type="uint16" name="scroll request" from="LOWORD(wParam)" enum="HScrollType"/>
+			<param type="int16" name="current position" from="HIWORD(wParam)"/>
+			<param type="HWND" name="scroll bar handle" from="lParam"/>
+		</message>
+
+		<message id="0x0115" name="WM_VSCROLL">
+			<param type="uint16" name="scroll request" from="LOWORD(wParam)" enum="VScrollType"/>
+			<param type="int16" name="current position" from="HIWORD(wParam)"/>
+			<param type="HWND" name="scroll bar handle" from="lParam"/>
+		</message>
+
+		<message id="0x0116" name="WM_INITMENU">
+			<param type="HWND" name="menu handle" from="wParam"/>
+		</message>
+
+		<message id="0x0117" name="WM_INITMENUPOPUP">
+			<param type="HWND" name="menu handle" from="wParam"/>
+			<param type="int16" name="menu item position" from="LOWORD(lParam)"/>
+			<param type="bool" name="is window menu" from="HIWORD(lParam)"/>
+		</message>
+
+		<!-- Undocumented -->
+		<message id="0x0118" name="WM_SYSTIMER"></message>
+
+		<message id="0x011F" name="WM_MENUSELECT">
+			<param type="uint16" name="item identifier" from="LOWORD(wParam)"/>
+			<param type="uint16" name="flags" from="HIWORD(wParam)" flags="MenuFlags"/>
+			<param type="HWND" name="menu handle" from="lParam"/>
+		</message>
+
+		<message id="0x0120" name="WM_MENUCHAR">
+			<param type="uint16" name="character code" from="LOWORD(wParam)"/>
+			<param type="uint16" name="flags" from="HIWORD(wParam)" flags="MenuFlags"/>
+			<param type="HWND" name="menu handle" from="lParam"/>
+		</message>
+
+		<message id="0x0121" name="WM_ENTERIDLE"></message>
+
+		<message id="0x0122" name="WM_MENURBUTTONUP">
+			<param type="int32" name="item index" from="wParam"/>
+			<param type="HWND" name="menu handle" from="lParam"/>
+		</message>
+
+		<message id="0x0123" name="WM_MENUDRAG"></message>
+
+		<message id="0x0124" name="WM_MENUGETOBJECT"></message>
+
+		<message id="0x0125" name="WM_UNINITMENUPOPUP"></message>
+
+		<message id="0x0126" name="WM_MENUCOMMAND">
+			<param type="int32" name="item index" from="wParam"/>
+			<param type="HWND" name="menu handle" from="lParam"/>
+		</message>
+
+		<message id="0x0127" name="WM_CHANGEUISTATE"></message>
+
+		<message id="0x0128" name="WM_UPDATEUISTATE"></message>
+
+		<message id="0x0129" name="WM_QUERYUISTATE"></message>
+
+		<message id="0x0132" name="WM_CTLCOLORMSGBOX"></message>
+
+		<message id="0x0133" name="WM_CTLCOLOREDIT"></message>
+
+		<message id="0x0134" name="WM_CTLCOLORLISTBOX"></message>
+
+		<message id="0x0135" name="WM_CTLCOLORBTN"></message>
+
+		<message id="0x0136" name="WM_CTLCOLORDLG"></message>
+
+		<message id="0x0137" name="WM_CTLCOLORSCROLLBAR"></message>
+
+		<message id="0x0138" name="WM_CTLCOLORSTATIC"></message>
+
+		<message id="0x0200" name="WM_MOUSEMOVE">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0201" name="WM_LBUTTONDOWN">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0202" name="WM_LBUTTONUP">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0203" name="WM_LBUTTONDBLCLK">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0204" name="WM_RBUTTONDOWN">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0205" name="WM_RBUTTONUP">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0206" name="WM_RBUTTONDBLCLK">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0207" name="WM_MBUTTONDOWN">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0208" name="WM_MBUTTONUP">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0209" name="WM_MBUTTONDBLCLK">
+			<param type="uint32" name="buttons down" from="wParam" flags="MouseKeys"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x020A" name="WM_MOUSEWHEEL">
+			<param type="uint16" name="buttons down" from="LOWORD(wParam)" flags="MouseKeys"/>
+			<param type="int16" name="rotation" from="HIWORD(wParam)"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x020B" name="WM_XBUTTONDOWN">
+			<param type="uint16" name="buttons down" from="LOWORD(wParam)" flags="MouseKeys"/>
+			<param type="uint16" name="X button clicked" from="HIWORD(wParam)" flags="XButtons"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x020C" name="WM_XBUTTONUP">
+			<param type="uint16" name="buttons down" from="LOWORD(wParam)" flags="MouseKeys"/>
+			<param type="uint16" name="X button clicked" from="HIWORD(wParam)" flags="XButtons"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x020D" name="WM_XBUTTONDBLCLK">
+			<param type="uint16" name="buttons down" from="LOWORD(wParam)" flags="MouseKeys"/>
+			<param type="uint16" name="X button double-clicked" from="HIWORD(wParam)" flags="XButtons"/>
+			<param type="int16" name="x" from="LOWORD(lParam)"/>
+			<param type="int16" name="y" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0210" name="WM_PARENTNOTIFY"></message>
+
+		<message id="0x0211" name="WM_ENTERMENULOOP"></message>
+
+		<message id="0x0212" name="WM_EXITMENULOOP"></message>
+
+		<message id="0x0213" name="WM_NEXTMENU"></message>
+
+		<message id="0x0214" name="WM_SIZING">
+			<param type="int32" name="edge being sized" from="wParam" enum="WindowSizingEdge"/>
+			<param type="RECT" name="drag rectangle" from="lParam" passed="in,out"/>
+			<param type="bool" name="has processed" from="return"/>
+		</message>
+
+		<message id="0x0215" name="WM_CAPTURECHANGED"></message>
+
+		<message id="0x0216" name="WM_MOVING">
+			<param type="RECT" name="window pos" from="lParam" passed="in,out"/>
+			<param type="bool" name="has processed" from="return"/>
+		</message>
+
+		<message id="0x0218" name="WM_POWERBROADCAST">
+			<param type="uint32" name="event" from="wParam" enum="PowerManagementEvent"/>
+		</message>
+
+		<message id="0x0219" name="WM_DEVICECHANGE">
+			<param type="uint32" name="event" from="wParam" enum="DeviceChangeEvent"/>
+		</message>
+
+		<message id="0x0220" name="WM_MDICREATE"></message>
+
+		<message id="0x0221" name="WM_MDIDESTROY"></message>
+
+		<message id="0x0222" name="WM_MDIACTIVATE"></message>
+
+		<message id="0x0223" name="WM_MDIRESTORE"></message>
+
+		<message id="0x0224" name="WM_MDINEXT"></message>
+
+		<message id="0x0225" name="WM_MDIMAXIMIZE"></message>
+
+		<message id="0x0226" name="WM_MDITILE"></message>
+
+		<message id="0x0227" name="WM_MDICASCADE"></message>
+
+		<message id="0x0228" name="WM_MDIICONARRANGE"></message>
+
+		<message id="0x0229" name="WM_MDIGETACTIVE"></message>
+
+		<message id="0x0230" name="WM_MDISETMENU"></message>
+
+		<message id="0x0231" name="WM_ENTERSIZEMOVE"></message>
+
+		<message id="0x0232" name="WM_EXITSIZEMOVE"></message>
+
+		<message id="0x0233" name="WM_DROPFILES"></message>
+
+		<message id="0x0234" name="WM_MDIREFRESHMENU"></message>
+
+		<message id="0x0280" name="WM_IME_REPORT"></message>
+
+		<message id="0x0281" name="WM_IME_SETCONTEXT"></message>
+
+		<message id="0x0282" name="WM_IME_NOTIFY"></message>
+
+		<message id="0x0283" name="WM_IME_CONTROL"></message>
+
+		<message id="0x0284" name="WM_IME_COMPOSITIONFULL"></message>
+
+		<message id="0x0285" name="WM_IME_SELECT"></message>
+
+		<message id="0x0286" name="WM_IME_CHAR"></message>
+
+		<message id="0x0288" name="WM_IME_REQUEST"></message>
+
+		<message id="0x0290" name="WM_IME_KEYDOWN"></message>
+
+		<message id="0x0291" name="WM_IME_KEYUP"></message>
+
+		<message id="0x02A0" name="WM_NCMOUSEHOVER"></message>
+
+		<message id="0x02A1" name="WM_MOUSEHOVER"></message>
+
+		<message id="0x02A2" name="WM_NCMOUSELEAVE"></message>
+
+		<message id="0x02A3" name="WM_MOUSELEAVE"></message>
+
+		<message id="0x0300" name="WM_CUT"></message>
+
+		<message id="0x0301" name="WM_COPY"></message>
+
+		<message id="0x0302" name="WM_PASTE"></message>
+
+		<message id="0x0303" name="WM_CLEAR"></message>
+
+		<message id="0x0304" name="WM_UNDO"></message>
+
+		<message id="0x0305" name="WM_RENDERFORMAT"></message>
+
+		<message id="0x0306" name="WM_RENDERALLFORMATS"></message>
+
+		<message id="0x0307" name="WM_DESTROYCLIPBOARD"></message>
+
+		<message id="0x0308" name="WM_DRAWCLIPBOARD"></message>
+
+		<message id="0x0309" name="WM_PAINTCLIPBOARD"></message>
+
+		<message id="0x030A" name="WM_VSCROLLCLIPBOARD"></message>
+
+		<message id="0x030B" name="WM_SIZECLIPBOARD"></message>
+
+		<message id="0x030C" name="WM_ASKCBFORMATNAME"></message>
+
+		<message id="0x030D" name="WM_CHANGECBCHAIN"></message>
+
+		<message id="0x030E" name="WM_HSCROLLCLIPBOARD"></message>
+
+		<message id="0x030F" name="WM_QUERYNEWPALETTE"></message>
+
+		<message id="0x0310" name="WM_PALETTEISCHANGING"></message>
+
+		<message id="0x0311" name="WM_PALETTECHANGED"></message>
+
+		<message id="0x0312" name="WM_HOTKEY">
+			<param type="uint32" name="hot key" from="wParam" enum="HotKey"/>
+			<param type="uint16" name="modifier keys" from="LOWORD(lParam)" enum="ModifierKeys"/>
+			<param type="uint16" name="virtual key" from="HIWORD(lParam)" enum="VirtualKey"/>
+		</message>
+
+		<message id="0x0317" name="WM_PRINT">
+			<param type="HDC" name="device context" from="wParam"/>
+			<param type="uint32" name="drawing options" from="lParam" flags="DrawingOptions"/>
+		</message>
+
+		<message id="0x0318" name="WM_PRINTCLIENT">
+			<param type="HDC" name="device context" from="wParam"/>
+			<param type="uint32" name="drawing options" from="lParam" flags="DrawingOptions"/>
+		</message>
+
+		<message id="0x0319" name="WM_APPCOMMAND"></message>
+
+		<!-- Common Control messages -->
+		<message id="0x2001" name="CCM_SETBKCOLOR"></message>
+
+		<message id="0x2002" name="CCM_SETCOLORSCHEME"></message>
+
+		<message id="0x2003" name="CCM_GETCOLORSCHEME"></message>
+
+		<message id="0x2004" name="CCM_GETDROPTARGET"></message>
+
+		<message id="0x2005" name="CCM_SETUNICODEFORMAT"></message>
+
+		<message id="0x2006" name="CCM_GETUNICODEFORMAT"></message>
+
+		<message id="0x2007" name="CCM_SETVERSION"></message>
+
+		<message id="0x2008" name="CCM_GETVERSION"></message>
+
+		<message id="0x2009" name="CCM_SETNOTIFYWINDOW"></message>
+
+		<message id="0x200B" name="CCM_SETWINDOWTHEME"></message>
+
+		<message id="0x200C" name="CCM_DPISCALE"></message>
+	</message_group>
+
+	<message_group class="Static">
+		<message id="0x0170" name="STM_SETICON">
+			<param type="handle" name="icon handle" from="wParam"/>
+			<param type="handle" name="previous handle" from="return"/>
+		</message>
+		
+		<message id="0x0171" name="STM_GETICON">
+			<param type="handle" name="icon handle" from="return"/>
+		</message>
+		
+		<message id="0x0172" name="STM_SETIMAGE">
+			<param type="uint32" name="type" from="wParam" enum="ImageType"/>
+			<param type="handle" name="image handle" from="lParam"/>
+			<param type="handle" name="previous handle" from="return"/>
+		</message>
+		
+		<message id="0x0173" name="STM_GETIMAGE">
+			<param type="uint32" name="type" from="wParam" enum="ImageType"/>
+			<param type="handle" name="image handle" from="return"/>
+		</message>
+	</message_group>
+
+	<message_group class="Button">
+		<message id="0x00F0" name="BM_GETCHECK">
+			<param type="uint32" name="check state" from="return" enum="ButtonState"/>
+		</message>
+		
+		<message id="0x00F1" name="BM_SETCHECK">
+			<param type="uint32" name="check state" from="wParam" enum="ButtonState"/>
+		</message>
+		
+		<message id="0x00F2" name="BM_GETSTATE">
+			<param type="uint32" name="state" from="return" enum="ButtonState"/>
+		</message>
+		
+		<message id="0x00F3" name="BM_SETSTATE">
+			<param type="bool" name="is highlighted" from="wParam"/>
+		</message>
+		
+		<message id="0x00F4" name="BM_SETSTYLE">
+			<param type="uint32" name="style" from="wParam"/>
+			<param type="bool" name="redraw" from="LOWORD(lParam)"/>
+		</message>
+		
+		<message id="0x00F5" name="BM_CLICK">
+		</message>
+		
+		<message id="0x00F6" name="BM_GETIMAGE">
+			<param type="uint32" name="type" from="wParam" enum="ImageType"/>
+			<param type="handle" name="image handle" from="return"/>
+		</message>
+		
+		<message id="0x00F7" name="BM_SETIMAGE">
+			<param type="uint32" name="type" from="wParam" enum="ImageType"/>
+			<param type="handle" name="image handle" from="lParam"/>
+			<param type="handle" name="previous handle" from="return"/>
+		</message>
+		
+		<message id="0x00F8" name="BM_SETDONTCLICK">
+			<param type="bool" name="state" from="wParam"/>
+		</message>
+	</message_group>
+
+	<message_group class="Edit,RICHEDIT,RichEdit20A,RichEdit20W,RichEdit50A,RichEdit50W">
+		<message id="0x00B0" name="EM_GETSEL">
+			<param type="UIntPointer" name="start" from="wParam" passed="out"/>
+			<param type="UIntPointer" name="end" from="lParam" passed="out"/>
+			<param type="uint16" name="start (16-bit)" from="LOWORD(return)"/>
+			<param type="uint16" name="end (16-bit)" from="HIWORD(return)"/>
+		</message>
+
+		<message id="0x00B1" name="EM_SETSEL">
+			<param type="int32" name="start" from="wParam"/>
+			<param type="int32" name="end" from="lParam"/>
+		</message>
+
+		<message id="0x00B2" name="EM_GETRECT">
+			<param type="RECT" name="formatting rectangle" from="lParam" passed="out"/>
+		</message>
+
+		<message id="0x00B3" name="EM_SETRECT">
+			<param type="bool" name="is relative" from="wParam"/>
+			<param type="RECT" name="formatting rectangle" from="lParam" passed="in"/>
+		</message>
+
+		<message id="0x00B4" name="EM_SETRECTNP">
+		</message>
+
+		<message id="0x00B5" name="EM_SCROLL">
+			<param type="uint32" name="scroll request" from="wParam" enum="VScrollType"/>
+			<param type="bool" name="is successful" from="HIWORD(return)"/>
+			<param type="int16" name="lines scrolled" from="LOWORD(return)"/>
+		</message>
+
+		<message id="0x00B6" name="EM_LINESCROLL">
+			<param type="int32" name="num horizontal chars" from="wParam"/>
+			<param type="int32" name="num vertical chars" from="lParam"/>
+			<param type="bool" name="is multiline" from="return"/>
+		</message>
+
+		<message id="0x00B7" name="EM_SCROLLCARET">
+		</message>
+
+		<message id="0x00B8" name="EM_GETMODIFY">
+			<param type="bool" name="is modified" from="return"/>
+		</message>
+
+		<message id="0x00B9" name="EM_SETMODIFY">
+			<param type="bool" name="is modified" from="wParam"/>
+		</message>
+
+		<message id="0x00BA" name="EM_GETLINECOUNT">
+			<param type="uint32" name="number of lines" from="return"/>
+		</message>
+
+		<message id="0x00BB" name="EM_LINEINDEX">
+			<param type="int32" name="line index" from="wParam"/>
+			<param type="int32" name="character index" from="return"/>
+		</message>
+
+		<message id="0x00BC" name="EM_SETHANDLE">
+			<param type="handle" name="memory handle" from="wParam"/>
+		</message>
+
+		<message id="0x00BD" name="EM_GETHANDLE">
+			<param type="handle" name="memory handle" from="return"/>
+		</message>
+
+		<message id="0x00BE" name="EM_GETTHUMB">
+			<param type="int32" name="position" from="return"/>
+		</message>
+
+		<message id="0x00C1" name="EM_LINELENGTH">
+			<param type="int32" name="character index" from="wParam"/>
+			<param type="int32" name="line length" from="return"/>
+		</message>
+
+		<message id="0x00C2" name="EM_REPLACESEL">
+			<param type="bool" name="can be undone" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x00C4" name="EM_GETLINE">
+			<param type="uint32" name="line index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="uint32" name="num chars copied" from="return"/>
+		</message>
+
+		<message id="0x00C5" name="EM_SETLIMITTEXT">
+			<param type="uint32" name="max number of chars" from="wParam"/>
+		</message>
+
+		<message id="0x00C6" name="EM_CANUNDO">
+			<param type="bool" name="can undo" from="return"/>
+		</message>
+
+		<message id="0x00C7" name="EM_UNDO">
+			<param type="bool" name="succeeded" from="return"/>
+		</message>
+
+		<message id="0x00C8" name="EM_FMTLINES">
+			<param type="bool" name="insert line-break characters" from="wParam"/>
+		</message>
+
+		<message id="0x00C9" name="EM_LINEFROMCHAR">
+			<param type="int32" name="character index" from="wParam"/>
+			<param type="int32" name="line index" from="return"/>
+		</message>
+
+		<message id="0x00CB" name="EM_SETTABSTOPS">
+			<param type="uint32" name="number of tab stops" from="wParam"/>
+			<param type="uint32" name="array pointer" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x00CC" name="EM_SETPASSWORDCHAR">
+			<param type="uint32" name="character" from="wParam"/>
+		</message>
+
+		<message id="0x00CD" name="EM_EMPTYUNDOBUFFER">
+		</message>
+
+		<message id="0x00CE" name="EM_GETFIRSTVISIBLELINE">
+			<param type="uint32" name="line index" from="return"/>
+		</message>
+
+		<message id="0x00CF" name="EM_SETREADONLY">
+			<param type="bool" name="is read-only" from="wParam"/>
+		</message>
+
+		<message id="0x00D0" name="EM_SETWORDBREAKPROC">
+			<param type="uint32" name="function address" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x00D1" name="EM_GETWORDBREAKPROC">
+			<param type="uint32" name="function address" from="return" format="x"/>
+		</message>
+
+		<message id="0x00D2" name="EM_GETPASSWORDCHAR">
+			<param type="uint32" name="character" from="return"/>
+		</message>
+
+		<message id="0x00D3" name="EM_SETMARGINS">
+			<param type="uint32" name="margins to set" from="wParam" flags="TextMargins"/>
+			<param type="uint16" name="left margin width" from="LOWORD(lParam)"/>
+			<param type="uint16" name="right margin width" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x00D4" name="EM_GETMARGINS">
+			<param type="uint16" name="left margin width" from="LOWORD(return)"/>
+			<param type="uint16" name="right margin width" from="HIWORD(return)"/>
+		</message>
+
+		<message id="0x00D5" name="EM_GETLIMITTEXT">
+			<param type="uint32" name="max number of chars" from="return"/>
+		</message>
+
+		<!-- These messages differ between Edit and RichEdit controls.
+			 In the future, i might make separate message groups for these classes,
+			 then they can define these messages their own way. -->
+		<message id="0x00D6" name="EM_POSFROMCHAR"></message>
+		<message id="0x00D7" name="EM_CHARFROMPOS"></message>
+
+		<message id="0x00D8" name="EM_SETIMESTATUS">
+			<param type="uint32" name="status type" from="wParam" enum="IMEStatusType"/>
+			<param type="uint32" name="data" from="lParam" flags="IMEDataTypes"/>
+			<param type="uint32" name="previous data" from="return" flags="IMEDataTypes"/>
+		</message>
+
+		<message id="0x00D9" name="EM_GETIMESTATUS">
+			<param type="uint32" name="status type" from="wParam" enum="IMEStatusType"/>
+			<param type="uint32" name="data" from="return" flags="IMEDataTypes"/>
+		</message>
+
+	</message_group>
+
+	<message_group class="ComboBox">
+		<message id="0x0140" name="CB_GETEDITSEL">
+			<param type="UIntPointer" name="start" from="wParam" passed="out"/>
+			<param type="UIntPointer" name="end" from="lParam" passed="out"/>
+			<param type="uint16" name="start (16-bit)" from="LOWORD(return)"/>
+			<param type="uint16" name="end (16-bit)" from="HIWORD(return)"/>
+		</message>
+
+		<message id="0x0141" name="CB_LIMITTEXT">
+			<param type="uint32" name="max number of chars" from="wParam"/>
+		</message>
+
+		<message id="0x0142" name="CB_SETEDITSEL">
+			<param type="uint16" name="start" from="LOWORD(lParam)"/>
+			<param type="uint16" name="end" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x0143" name="CB_ADDSTRING">
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="index inserted" from="return"/>
+		</message>
+
+		<message id="0x0144" name="CB_DELETESTRING">
+			<param type="int32" name="index to delete" from="wParam"/>
+			<param type="int32" name="num items remaining" from="return"/>
+		</message>
+
+		<message id="0x0145" name="CB_DIR">
+			<param type="uint32" name="attributes" from="wParam" flags="DirectoryAttributes"/>
+			<param type="uint32" name="path string pointer" from="lParam" format="x"/>
+			<param type="int32" name="last index" from="return"/>
+		</message>
+
+		<message id="0x0146" name="CB_GETCOUNT">
+			<param type="int32" name="num items" from="return"/>
+		</message>
+
+		<message id="0x0147" name="CB_GETCURSEL">
+			<param type="int32" name="selected item index" from="return"/>
+		</message>
+
+		<message id="0x0148" name="CB_GETLBTEXT">
+			<param type="int32" name="index to get" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="string length" from="return"/>
+		</message>
+
+		<message id="0x0149" name="CB_GETLBTEXTLEN">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="int32" name="length" from="return"/>
+		</message>
+
+		<message id="0x014A" name="CB_INSERTSTRING">
+			<param type="int32" name="insert index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="index inserted" from="return"/>
+		</message>
+
+		<message id="0x014B" name="CB_RESETCONTENT"></message>
+
+		<message id="0x014C" name="CB_FINDSTRING">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="found index" from="return"/>
+		</message>
+
+		<message id="0x014D" name="CB_SELECTSTRING">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="found index" from="return"/>
+		</message>
+
+		<message id="0x014E" name="CB_SETCURSEL">
+			<param type="int32" name="index to select" from="wParam"/>
+			<param type="int32" name="index selected" from="return"/>
+		</message>
+
+		<message id="0x014F" name="CB_SHOWDROPDOWN">
+			<param type="bool" name="show" from="wParam"/>
+		</message>
+
+		<message id="0x0150" name="CB_GETITEMDATA">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="uint32" name="data" from="return" format="x"/>
+		</message>
+
+		<message id="0x0151" name="CB_SETITEMDATA">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="uint32" name="data" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x0152" name="CB_GETDROPPEDCONTROLRECT">
+			<param type="RECT" name="coordinates" from="lParam" passed="out"/>
+			<param type="bool" name="succeeded" from="return"/>
+		</message>
+
+		<message id="0x0153" name="CB_SETITEMHEIGHT">
+			<param type="uint32" name="index" from="wParam"/>
+			<param type="uint32" name="height" from="lParam"/>
+		</message>
+
+		<message id="0x0154" name="CB_GETITEMHEIGHT">
+			<param type="uint32" name="index" from="wParam"/>
+			<param type="uint32" name="height" from="return"/>
+		</message>
+
+		<message id="0x0155" name="CB_SETEXTENDEDUI">
+			<param type="bool" name="use extended UI" from="wParam"/>
+			<param type="uint32" name="result" from="return"/>
+		</message>
+
+		<message id="0x0156" name="CB_GETEXTENDEDUI">
+			<param type="bool" name="use extended UI" from="return"/>
+		</message>
+
+		<message id="0x0157" name="CB_GETDROPPEDSTATE">
+			<param type="bool" name="is listbox visible" from="wParam"/>
+		</message>
+
+		<message id="0x0158" name="CB_FINDSTRINGEXACT">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="found index" from="return"/>
+		</message>
+
+		<message id="0x0159" name="CB_SETLOCALE">
+			<param type="uint32" name="locale identifier" from="wParam"/>
+			<param type="uint32" name="previous identifier" from="return"/>
+		</message>
+
+		<message id="0x01A6" name="CB_GETLOCALE">
+			<param type="uint16" name="region code" from="HIWORD(return)"/>
+			<param type="uint16" name="language identifier" from="LOWORD(return)"/>
+		</message>
+
+		<message id="0x015B" name="CB_GETTOPINDEX">
+			<param type="int32" name="index" from="return"/>
+		</message>
+
+		<message id="0x015C" name="CB_SETTOPINDEX">
+			<param type="uint32" name="index" from="wParam"/>
+		</message>
+
+		<message id="0x015D" name="CB_GETHORIZONTALEXTENT">
+			<param type="uint32" name="width" from="return"/>
+		</message>
+
+		<message id="0x0194" name="CB_SETHORIZONTALEXTENT">
+			<param type="uint32" name="width" from="wParam"/>
+		</message>
+
+		<message id="0x015F" name="CB_GETDROPPEDWIDTH">
+			<param type="uint32" name="width" from="return"/>
+		</message>
+
+		<message id="0x0160" name="CB_SETDROPPEDWIDTH">
+			<param type="uint32" name="minimum width" from="wParam"/>
+			<param type="uint32" name="new width" from="return"/>
+		</message>
+
+		<message id="0x0161" name="CB_INITSTORAGE">
+			<param type="uint32" name="number of items to add" from="wParam"/>
+			<param type="uint32" name="amount of memory" from="lParam"/>
+			<param type="int32" name="number of items allocated" from="return"/>
+		</message>
+
+		<message id="0x0163" name="CB_MULTIPLEADDSTRING">
+		</message>
+
+		<message id="0x0164" name="CB_GETCOMBOBOXINFO">
+		</message>
+	</message_group>
+
+	<message_group class="ComboBoxEx,ComboBoxEx32">
+		<message id="0x0401" name="CBEM_INSERTITEMA"></message>
+		<message id="0x0402" name="CBEM_SETIMAGELIST"></message>
+		<message id="0x0403" name="CBEM_GETIMAGELIST"></message>
+		<message id="0x0404" name="CBEM_GETITEMA"></message>
+		<message id="0x0405" name="CBEM_SETITEMA"></message>
+		<message id="0x0406" name="CBEM_GETCOMBOCONTROL"></message>
+		<message id="0x0407" name="CBEM_GETEDITCONTROL"></message>
+		<message id="0x0408" name="CBEM_SETEXSTYLE"></message>
+		<message id="0x0409" name="CBEM_GETEXSTYLE"></message>
+		<message id="0x040A" name="CBEM_HASEDITCHANGED"></message>
+		<message id="0x040B" name="CBEM_INSERTITEMW"></message>
+		<message id="0x040C" name="CBEM_SETITEMW"></message>
+		<message id="0x040D" name="CBEM_GETITEMW"></message>
+	</message_group>
+
+	<message_group class="ListBox">
+		<message id="0x0180" name="LB_ADDSTRING">
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="index inserted" from="return"/>
+		</message>
+
+		<message id="0x0181" name="LB_INSERTSTRING">
+			<param type="int32" name="insert index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="index inserted" from="return"/>
+		</message>
+
+		<message id="0x0182" name="LB_DELETESTRING">
+			<param type="int32" name="index to delete" from="wParam"/>
+			<param type="int32" name="num items remaining" from="return"/>
+		</message>
+
+		<message id="0x0183" name="LB_SELITEMRANGEEX">
+			<param type="int32" name="first index" from="wParam"/>
+			<param type="int32" name="last index" from="lParam"/>
+		</message>
+
+		<message id="0x0184" name="LB_RESETCONTENT">
+		</message>
+
+		<message id="0x0185" name="LB_SETSEL">
+			<param type="bool" name="select and highlight" from="wParam"/>
+			<param type="int32" name="index" from="lParam"/>
+		</message>
+
+		<message id="0x0186" name="LB_SETCURSEL">
+			<param type="int32" name="index" from="wParam"/>
+		</message>
+
+		<message id="0x0187" name="LB_GETSEL">
+			<param type="int32" name="index to get" from="wParam"/>
+			<param type="int32" name="selection state" from="return"/>
+		</message>
+
+		<message id="0x0188" name="LB_GETCURSEL">
+			<param type="int32" name="selected item index" from="return"/>
+		</message>
+
+		<message id="0x0189" name="LB_GETTEXT">
+			<param type="int32" name="index to get" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="string length" from="return"/>
+		</message>
+
+		<message id="0x018A" name="LB_GETTEXTLEN">
+			<param type="int32" name="index to get" from="wParam"/>
+			<param type="int32" name="string length" from="return"/>
+		</message>
+
+		<message id="0x018B" name="LB_GETCOUNT">
+			<param type="int32" name="num items" from="return"/>
+		</message>
+
+		<message id="0x018C" name="LB_SELECTSTRING">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="found index" from="return"/>
+		</message>
+
+		<message id="0x018D" name="LB_DIR">
+			<param type="uint32" name="attributes" from="wParam" flags="DirectoryAttributes"/>
+			<param type="uint32" name="path string pointer" from="lParam" format="x"/>
+			<param type="int32" name="last index" from="return"/>
+		</message>
+
+		<message id="0x018E" name="LB_GETTOPINDEX">
+			<param type="int32" name="index" from="return"/>
+		</message>
+
+		<message id="0x018F" name="LB_FINDSTRING">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="found index" from="return"/>
+		</message>
+
+		<message id="0x0190" name="LB_GETSELCOUNT">
+			<param type="int32" name="num selected items" from="return"/>
+		</message>
+
+		<message id="0x0191" name="LB_GETSELITEMS">
+			<param type="uint32" name="max number of items" from="wParam"/>
+			<param type="uint32" name="array pointer" from="lParam" format="x"/>
+			<param type="uint32" name="num items in buffer" from="return"/>
+		</message>
+
+		<message id="0x0192" name="LB_SETTABSTOPS">
+			<param type="uint32" name="num tab stops" from="wParam"/>
+			<param type="uint32" name="array pointer" from="lParam" format="x"/>
+			<param type="bool" name="were set" from="return"/>
+		</message>
+
+		<message id="0x0193" name="LB_GETHORIZONTALEXTENT">
+			<param type="uint32" name="width" from="return"/>
+		</message>
+
+		<message id="0x0194" name="LB_SETHORIZONTALEXTENT">
+			<param type="uint32" name="width" from="wParam"/>
+		</message>
+
+		<message id="0x0195" name="LB_SETCOLUMNWIDTH">
+			<param type="uint32" name="width" from="wParam"/>
+		</message>
+
+		<message id="0x0196" name="LB_ADDFILE">
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="index added" from="return"/>
+		</message>
+
+		<message id="0x0197" name="LB_SETTOPINDEX">
+			<param type="uint32" name="index" from="wParam"/>
+		</message>
+
+		<message id="0x0198" name="LB_GETITEMRECT">
+			<param type="uint32" name="index" from="wParam"/>
+			<param type="RECT" name="client coordinates" from="lParam" passed="out"/>
+		</message>
+
+		<message id="0x0199" name="LB_GETITEMDATA">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="uint32" name="data" from="return" format="x"/>
+		</message>
+
+		<message id="0x019A" name="LB_SETITEMDATA">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="uint32" name="data" from="lParam" format="x"/>
+		</message>
+
+		<message id="0x019B" name="LB_SELITEMRANGE">
+			<param type="bool" name="select" from="wParam"/>
+			<param type="uint16" name="first index" from="LOWORD(lParam)"/>
+			<param type="uint16" name="last index" from="HIWORD(lParam)"/>
+		</message>
+
+		<message id="0x019C" name="LB_SETANCHORINDEX">
+			<param type="uint32" name="index" from="wParam"/>
+		</message>
+
+		<message id="0x019D" name="LB_GETANCHORINDEX">
+			<param type="uint32" name="index" from="return"/>
+		</message>
+
+		<message id="0x019E" name="LB_SETCARETINDEX">
+			<param type="uint32" name="index" from="wParam"/>
+			<param type="bool" name="scroll partially visible" from="lParam"/>
+		</message>
+
+		<message id="0x019F" name="LB_GETCARETINDEX">
+			<param type="uint32" name="index" from="return"/>
+		</message>
+
+		<message id="0x01A0" name="LB_SETITEMHEIGHT">
+			<param type="uint32" name="index" from="wParam"/>
+			<param type="uint32" name="height" from="lParam"/>
+		</message>
+
+		<message id="0x01A1" name="LB_GETITEMHEIGHT">
+			<param type="uint32" name="index" from="wParam"/>
+			<param type="uint32" name="height" from="return"/>
+		</message>
+
+		<message id="0x01A2" name="LB_FINDSTRINGEXACT">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="string pointer" from="lParam" format="x"/>
+			<param type="int32" name="found index" from="return"/>
+		</message>
+
+		<message id="0x01A5" name="LB_SETLOCALE">
+			<param type="uint32" name="locale identifier" from="wParam"/>
+			<param type="uint32" name="previous identifier" from="return"/>
+		</message>
+
+		<message id="0x01A6" name="LB_GETLOCALE">
+			<param type="uint16" name="region code" from="HIWORD(return)"/>
+			<param type="uint16" name="language identifier" from="LOWORD(return)"/>
+		</message>
+
+		<message id="0x01A7" name="LB_SETCOUNT">
+			<param type="uint32" name="num items" from="wParam"/>
+		</message>
+
+		<message id="0x01A8" name="LB_INITSTORAGE">
+			<param type="uint32" name="num items to add" from="wParam"/>
+			<param type="uint32" name="bytes to allocate" from="lParam"/>
+			<param type="uint32" name="num items allocated" from="return"/>
+		</message>
+
+		<message id="0x01A9" name="LB_ITEMFROMPOINT">
+			<param type="int16" name="x" from="LOWORD(wParam)"/>
+			<param type="int16" name="y" from="HIWORD(wParam)"/>
+			<param type="uint16" name="nearest item index" from="LOWORD(return)"/>
+			<param type="bool" name="is outside" from="HIWORD(return)"/>
+		</message>
+
+		<message id="0x01B1" name="LB_MULTIPLEADDSTRING">
+		</message>
+
+		<message id="0x01B2" name="LB_GETLISTBOXINFO">
+			<param type="uint32" name="num items per column" from="return"/>
+		</message>
+
+	</message_group>
+
+	<message_group class="SysListView32">
+		<message id="0x1000" name="LVM_GETBKCOLOR">
+			<param type="uint32" name="color" from="return" format="x"/>
+		</message>
+		
+		<message id="0x1001" name="LVM_SETBKCOLOR">
+			<param type="uint32" name="color" from="lParam" format="x"/>
+			<param type="bool" name="succeeded" from="return"/>
+		</message>
+		
+		<message id="0x1002" name="LVM_GETIMAGELIST">
+			<param type="uint32" name="type" from="wParam" enum="ImageListType"/>
+			<param type="uint32" name="handle" from="return" format="x"/>
+		</message>
+		
+		<message id="0x1003" name="LVM_SETIMAGELIST">
+			<param type="uint32" name="type" from="wParam" enum="ImageListType"/>
+			<param type="uint32" name="handle" from="lParam" format="x"/>
+			<param type="uint32" name="previous handle" from="return" format="x"/>
+		</message>
+		
+		<message id="0x1004" name="LVM_GETITEMCOUNT">
+			<param type="uint32" name="number of items" from="return"/>
+		</message>
+		
+		<message id="0x1005" name="LVM_GETITEMA"></message>
+		<message id="0x1006" name="LVM_SETITEMA"></message>
+		<message id="0x1007" name="LVM_INSERTITEMA"></message>
+		
+		<message id="0x1008" name="LVM_DELETEITEM">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="bool" name="result" from="return"/>
+		</message>
+		
+		<message id="0x1009" name="LVM_DELETEALLITEMS">
+			<param type="bool" name="result" from="return"/>
+		</message>
+		
+		<message id="0x100A" name="LVM_GETCALLBACKMASK">
+			<param type="uint32" name="callback mask" from="return" flags="ListViewCallbackMask"/>
+		</message>
+		
+		<message id="0x100B" name="LVM_SETCALLBACKMASK">
+			<param type="uint32" name="callback mask" from="wParam" flags="ListViewCallbackMask"/>
+			<param type="bool" name="result" from="return"/>
+		</message>
+		
+		<message id="0x100C" name="LVM_GETNEXTITEM">
+			<param type="int32" name="start index" from="wParam"/>
+			<param type="uint32" name="search parameters" from="lParam" flags="ListViewNextItemFlags"/>
+			<param type="int32" name="index of next item" from="return"/>
+		</message>
+		
+		<message id="0x100D" name="LVM_FINDITEMA"></message>
+		
+		<message id="0x100E" name="LVM_GETITEMRECT">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="RECT" name="bounding rectangle" from="lParam" passed="in,out"/>
+			<param type="bool" name="result" from="return"/>
+		</message>
+		
+		<message id="0x100F" name="LVM_SETITEMPOSITION"></message>
+		<message id="0x1010" name="LVM_GETITEMPOSITION"></message>
+		<message id="0x1011" name="LVM_GETSTRINGWIDTHA"></message>
+		<message id="0x1012" name="LVM_HITTEST"></message>
+		<message id="0x1013" name="LVM_ENSUREVISIBLE"></message>
+		<message id="0x1014" name="LVM_SCROLL"></message>
+		<message id="0x1015" name="LVM_REDRAWITEMS"></message>
+		<message id="0x1016" name="LVM_ARRANGE"></message>
+		<message id="0x1017" name="LVM_EDITLABELA"></message>
+		<message id="0x1018" name="LVM_GETEDITCONTROL"></message>
+		<message id="0x1019" name="LVM_GETCOLUMNA"></message>
+		<message id="0x101A" name="LVM_SETCOLUMNA"></message>
+		<message id="0x101B" name="LVM_INSERTCOLUMNA"></message>
+		<message id="0x101C" name="LVM_DELETECOLUMN"></message>
+		<message id="0x101D" name="LVM_GETCOLUMNWIDTH"></message>
+		<message id="0x101E" name="LVM_SETCOLUMNWIDTH"></message>
+		<message id="0x101F" name="LVM_GETHEADER"></message>
+		<message id="0x1021" name="LVM_CREATEDRAGIMAGE"></message>
+		<message id="0x1022" name="LVM_GETVIEWRECT"></message>
+		<message id="0x1023" name="LVM_GETTEXTCOLOR"></message>
+		<message id="0x1024" name="LVM_SETTEXTCOLOR"></message>
+		<message id="0x1025" name="LVM_GETTEXTBKCOLOR"></message>
+		<message id="0x1026" name="LVM_SETTEXTBKCOLOR"></message>
+		<message id="0x1027" name="LVM_GETTOPINDEX"></message>
+		<message id="0x1028" name="LVM_GETCOUNTPERPAGE"></message>
+		<message id="0x1029" name="LVM_GETORIGIN"></message>
+		<message id="0x102A" name="LVM_UPDATE"></message>
+		<message id="0x102B" name="LVM_SETITEMSTATE"></message>
+		<message id="0x102C" name="LVM_GETITEMSTATE"></message>
+		<message id="0x102D" name="LVM_GETITEMTEXTA"></message>
+		<message id="0x1073" name="LVM_GETITEMTEXTW"></message>
+		<message id="0x102E" name="LVM_SETITEMTEXTA"></message>
+		<message id="0x102F" name="LVM_SETITEMCOUNT"></message>
+		<message id="0x1030" name="LVM_SORTITEMS"></message>
+		<message id="0x1031" name="LVM_SETITEMPOSITION32"></message>
+		<message id="0x1032" name="LVM_GETSELECTEDCOUNT"></message>
+		<message id="0x1033" name="LVM_GETITEMSPACING"></message>
+		<message id="0x1034" name="LVM_GETISEARCHSTRINGA"></message>
+		<message id="0x1035" name="LVM_SETICONSPACING"></message>
+		<message id="0x1036" name="LVM_SETEXTENDEDLISTVIEWSTYLE"></message>
+		<message id="0x1037" name="LVM_GETEXTENDEDLISTVIEWSTYLE"></message>
+		<message id="0x1038" name="LVM_GETSUBITEMRECT"></message>
+		<message id="0x1039" name="LVM_SUBITEMHIT"></message>
+		<message id="0x103A" name="LVM_SETCOLUMNORDERARRAY"></message>
+		<message id="0x103B" name="LVM_GETCOLUMNORDERARRAY"></message>
+		<message id="0x103C" name="LVM_SETHOTITEM"></message>
+		<message id="0x103D" name="LVM_GETHOTITEM"></message>
+		<message id="0x103E" name="LVM_SETHOTCURSOR"></message>
+		<message id="0x103F" name="LVM_GETHOTCURSOR"></message>
+		<message id="0x1040" name="LVM_APPROXIMATEVIEWRECT"></message>
+		<message id="0x1041" name="LVM_SETWORKAREAS"></message>
+		<message id="0x1042" name="LVM_GETSELECTIONMARK"></message>
+		<message id="0x1043" name="LVM_SETSELECTIONMARK"></message>
+		<message id="0x1044" name="LVM_SETBKIMAGEA"></message>
+		<message id="0x1045" name="LVM_GETBKIMAGEA"></message>
+		<message id="0x1046" name="LVM_GETWORKAREAS"></message>
+		<message id="0x1047" name="LVM_SETHOVERTIME"></message>
+		<message id="0x1048" name="LVM_GETHOVERTIME"></message>
+		<message id="0x1049" name="LVM_GETNUMBEROFWORKAREAS"></message>
+		<message id="0x104A" name="LVM_SETTOOLTIPS"></message>
+		<message id="0x104B" name="LVM_GETITEMW"></message>
+		<message id="0x104C" name="LVM_SETITEMW"></message>
+		<message id="0x104D" name="LVM_INSERTITEMW"></message>
+		<message id="0x104E" name="LVM_GETTOOLTIPS"></message>
+		<message id="0x1051" name="LVM_SORTITEMSEX"></message>
+		<message id="0x1053" name="LVM_FINDITEMW"></message>
+		<message id="0x1057" name="LVM_GETSTRINGWIDTHW"></message>
+		<message id="0x105C" name="LVM_GETGROUPSTATE"></message>
+		<message id="0x105D" name="LVM_GETFOCUSEDGROUP"></message>
+		<message id="0x105F" name="LVM_GETCOLUMNW"></message>
+		<message id="0x1060" name="LVM_SETCOLUMNW"></message>
+		<message id="0x1061" name="LVM_INSERTCOLUMNW"></message>
+		<message id="0x1062" name="LVM_GETGROUPRECT"></message>
+		<message id="0x1074" name="LVM_SETITEMTEXTW"></message>
+		<message id="0x1075" name="LVM_GETISEARCHSTRINGW"></message>
+		<message id="0x1076" name="LVM_EDITLABELW"></message>
+		<message id="0x108A" name="LVM_SETBKIMAGEW"></message>
+		<message id="0x108B" name="LVM_GETBKIMAGEW"></message>
+		<message id="0x108C" name="LVM_SETSELECTEDCOLUMN"></message>
+		<message id="0x108E" name="LVM_SETVIEW"></message>
+		<message id="0x108F" name="LVM_GETVIEW"></message>
+		<message id="0x1091" name="LVM_INSERTGROUP"></message>
+		<message id="0x1093" name="LVM_SETGROUPINFO"></message>
+		<message id="0x1095" name="LVM_GETGROUPINFO"></message>
+		<message id="0x1096" name="LVM_REMOVEGROUP"></message>
+		<message id="0x1097" name="LVM_MOVEGROUP"></message>
+		<message id="0x1098" name="LVM_GETGROUPCOUNT"></message>
+		<message id="0x1099" name="LVM_GETGROUPINFOBYINDEX"></message>
+		<message id="0x109A" name="LVM_MOVEITEMTOGROUP"></message>
+		<message id="0x109B" name="LVM_SETGROUPMETRICS"></message>
+		<message id="0x109C" name="LVM_GETGROUPMETRICS"></message>
+		<message id="0x109D" name="LVM_ENABLEGROUPVIEW"></message>
+		<message id="0x109E" name="LVM_SORTGROUPS"></message>
+		<message id="0x109F" name="LVM_INSERTGROUPSORTED"></message>
+		<message id="0x10A0" name="LVM_REMOVEALLGROUPS"></message>
+		<message id="0x10A1" name="LVM_HASGROUP"></message>
+		<message id="0x10A2" name="LVM_SETTILEVIEWINFO"></message>
+		<message id="0x10A3" name="LVM_GETTILEVIEWINFO"></message>
+		<message id="0x10A4" name="LVM_SETTILEINFO"></message>
+		<message id="0x10A5" name="LVM_GETTILEINFO"></message>
+		<message id="0x10A6" name="LVM_SETINSERTMARK"></message>
+		<message id="0x10A7" name="LVM_GETINSERTMARK"></message>
+		<message id="0x10A8" name="LVM_INSERTMARKHIT"></message>
+		<message id="0x10A9" name="LVM_GETINSERTMARKRECT"></message>
+		<message id="0x10AA" name="LVM_SETINSERTMARKCOLOR"></message>
+		<message id="0x10AB" name="LVM_GETINSERTMARKCOLOR"></message>
+		<message id="0x10AD" name="LVM_SETINFOTIP"></message>
+		<message id="0x10AE" name="LVM_GETSELECTEDCOLUMN"></message>
+		<message id="0x10AF" name="LVM_ISGROUPVIEWENABLED"></message>
+		<message id="0x10B0" name="LVM_GETOUTLINECOLOR"></message>
+		<message id="0x10B1" name="LVM_SETOUTLINECOLOR"></message>
+		<message id="0x10B3" name="LVM_CANCELEDITLABEL"></message>
+		<message id="0x10B4" name="LVM_MAPINDEXTOID"></message>
+		<message id="0x10B5" name="LVM_MAPIDTOINDEX"></message>
+		
+		<message id="0x10B6" name="LVM_ISITEMVISIBLE">
+			<param type="int32" name="index" from="wParam"/>
+			<param type="bool" name="is visible" from="return"/>
+		</message>
+		
+		<message id="0x10CC" name="LVM_GETEMPTYTEXT"></message>
+		<message id="0x10CD" name="LVM_GETFOOTERRECT"></message>
+		<message id="0x10CE" name="LVM_GETFOOTERINFO"></message>
+		<message id="0x10CF" name="LVM_GETFOOTERITEMRECT"></message>
+		<message id="0x10D0" name="LVM_GETFOOTERITEM"></message>
+		<message id="0x10D1" name="LVM_GETITEMINDEXRECT"></message>
+		<message id="0x10D2" name="LVM_SETITEMINDEXSTATE"></message>
+		<message id="0x10D3" name="LVM_GETNEXTITEMINDEX"></message>
+	</message_group>
+
+	<message_group class="SysTreeView32">
+		<message id="0x1100" name="TVM_INSERTITEMA"></message>
+		<message id="0x1101" name="TVM_DELETEITEM"></message>
+		<message id="0x1102" name="TVM_EXPAND"></message>
+		<message id="0x1104" name="TVM_GETITEMRECT"></message>
+		<message id="0x1105" name="TVM_GETCOUNT"></message>
+		<message id="0x1106" name="TVM_GETINDENT"></message>
+		<message id="0x1107" name="TVM_SETINDENT"></message>
+		<message id="0x1108" name="TVM_GETIMAGELIST"></message>
+		<message id="0x1109" name="TVM_SETIMAGELIST"></message>
+		<message id="0x110A" name="TVM_GETNEXTITEM"></message>
+		<message id="0x110B" name="TVM_SELECTITEM"></message>
+		<message id="0x110C" name="TVM_GETITEMA"></message>
+		<message id="0x110D" name="TVM_SETITEMA"></message>
+		<message id="0x110E" name="TVM_EDITLABELA"></message>
+		<message id="0x110F" name="TVM_GETEDITCONTROL"></message>
+		<message id="0x1110" name="TVM_GETVISIBLECOUNT"></message>
+		<message id="0x1111" name="TVM_HITTEST"></message>
+		<message id="0x1112" name="TVM_CREATEDRAGIMAGE"></message>
+		<message id="0x1113" name="TVM_SORTCHILDREN"></message>
+		<message id="0x1114" name="TVM_ENSUREVISIBLE"></message>
+		<message id="0x1115" name="TVM_SORTCHILDRENCB"></message>
+		<message id="0x1116" name="TVM_ENDEDITLABELNOW"></message>
+		<message id="0x1117" name="TVM_GETISEARCHSTRINGA"></message>
+		<message id="0x1118" name="TVM_SETTOOLTIPS"></message>
+		<message id="0x1119" name="TVM_GETTOOLTIPS"></message>
+		<message id="0x111A" name="TVM_SETINSERTMARK"></message>
+		<message id="0x111B" name="TVM_SETITEMHEIGHT"></message>
+		<message id="0x111C" name="TVM_GETITEMHEIGHT"></message>
+		<message id="0x111D" name="TVM_SETBKCOLOR"></message>
+		<message id="0x111E" name="TVM_SETTEXTCOLOR"></message>
+		<message id="0x111F" name="TVM_GETBKCOLOR"></message>
+		<message id="0x1120" name="TVM_GETTEXTCOLOR"></message>
+		<message id="0x1121" name="TVM_SETSCROLLTIME"></message>
+		<message id="0x1122" name="TVM_GETSCROLLTIME"></message>
+		<message id="0x1125" name="TVM_SETINSERTMARKCOLOR"></message>
+		<message id="0x1126" name="TVM_GETINSERTMARKCOLOR"></message>
+		<message id="0x1127" name="TVM_GETITEMSTATE"></message>
+		<message id="0x1128" name="TVM_SETLINECOLOR"></message>
+		<message id="0x1129" name="TVM_GETLINECOLOR"></message>
+		<message id="0x112A" name="TVM_MAPACCIDTOHTREEITEM"></message>
+		<message id="0x112B" name="TVM_MAPHTREEITEMTOACCID"></message>
+		<message id="0x112C" name="TVM_SETEXTENDEDSTYLE"></message>
+		<message id="0x112D" name="TVM_GETEXTENDEDSTYLE"></message>
+		<message id="0x1132" name="TVM_INSERTITEMW"></message>
+		<message id="0x113B" name="TVM_SETAUTOSCROLLINFO"></message>
+		<message id="0x113E" name="TVM_GETITEMW"></message>
+		<message id="0x113F" name="TVM_SETITEMW"></message>
+		<message id="0x1141" name="TVM_EDITLABELW"></message>
+		<message id="0x1140" name="TVM_GETISEARCHSTRINGW"></message>
+		<message id="0x1146" name="TVM_GETSELECTEDCOUNT"></message>
+		<message id="0x1147" name="TVM_SHOWINFOTIP"></message>
+		<message id="0x1148" name="TVM_GETITEMPARTRECT"></message>
+	</message_group>
+
+	<message_group class="ScrollBar">
+		<message id="0x00E0" name="SBM_SETPOS"></message>
+		<message id="0x00E1" name="SBM_GETPOS"></message>
+		<message id="0x00E2" name="SBM_SETRANGE"></message>
+		<message id="0x00E6" name="SBM_SETRANGEREDRAW"></message>
+		<message id="0x00E3" name="SBM_GETRANGE"></message>
+		<message id="0x00E4" name="SBM_ENABLE_ARROWS"></message>
+		<message id="0x00E9" name="SBM_SETSCROLLINFO"></message>
+		<message id="0x00EA" name="SBM_GETSCROLLINFO"></message>
+		<message id="0x00EB" name="SBM_GETSCROLLBARINFO"></message>
+	</message_group>
+
+	<message_group class="msctls_statusbar32">
+		<message id="0x0401" name="SB_SETTEXTA"></message>
+		<message id="0x0402" name="SB_GETTEXTA"></message>
+		<message id="0x0403" name="SB_GETTEXTLENGTHA"></message>
+		<message id="0x0404" name="SB_SETPARTS"></message>
+		<message id="0x0406" name="SB_GETPARTS"></message>
+		<message id="0x0407" name="SB_GETBORDERS"></message>
+		<message id="0x0408" name="SB_SETMINHEIGHT"></message>
+		<message id="0x0409" name="SB_SIMPLE"></message>
+		<message id="0x040A" name="SB_GETRECT"></message>
+		<message id="0x040B" name="SB_SETTEXTW"></message>
+		<message id="0x040C" name="SB_GETTEXTLENGTHW"></message>
+		<message id="0x040D" name="SB_GETTEXTW"></message>
+		<message id="0x040E" name="SB_ISSIMPLE"></message>
+		<message id="0x040F" name="SB_SETICON"></message>
+		<message id="0x0410" name="SB_SETTIPTEXTA"></message>
+		<message id="0x0411" name="SB_SETTIPTEXTW"></message>
+		<message id="0x0412" name="SB_GETTIPTEXTA"></message>
+		<message id="0x0413" name="SB_GETTIPTEXTW"></message>
+		<message id="0x0414" name="SB_GETICON"></message>
+	</message_group>
+
+	<message_group class="ToolbarWindow32">
+		<message id="0x0401" name="TB_ENABLEBUTTON"></message>
+		<message id="0x0402" name="TB_CHECKBUTTON"></message>
+		<message id="0x0403" name="TB_PRESSBUTTON"></message>
+		<message id="0x0404" name="TB_HIDEBUTTON"></message>
+		<message id="0x0405" name="TB_INDETERMINATE"></message>
+		<message id="0x0406" name="TB_MARKBUTTON"></message>
+		<message id="0x0409" name="TB_ISBUTTONENABLED"></message>
+		<message id="0x040A" name="TB_ISBUTTONCHECKED"></message>
+		<message id="0x040B" name="TB_ISBUTTONPRESSED"></message>
+		<message id="0x040C" name="TB_ISBUTTONHIDDEN"></message>
+		<message id="0x040D" name="TB_ISBUTTONINDETERMINATE"></message>
+		<message id="0x040E" name="TB_ISBUTTONHIGHLIGHTED"></message>
+		<message id="0x0411" name="TB_SETSTATE"></message>
+		<message id="0x0412" name="TB_GETSTATE"></message>
+		<message id="0x0413" name="TB_ADDBITMAP"></message>
+		<message id="0x0414" name="TB_ADDBUTTONSA"></message>
+		<message id="0x0415" name="TB_INSERTBUTTONA"></message>
+		<message id="0x0416" name="TB_DELETEBUTTON"></message>
+		<message id="0x0417" name="TB_GETBUTTON"></message>
+		<message id="0x0418" name="TB_BUTTONCOUNT"></message>
+		<message id="0x0419" name="TB_COMMANDTOINDEX"></message>
+		<message id="0x041A" name="TB_SAVERESTOREA"></message>
+		<message id="0x041B" name="TB_CUSTOMIZE"></message>
+		<message id="0x041C" name="TB_ADDSTRINGA"></message>
+		<message id="0x041D" name="TB_GETITEMRECT"></message>
+		<message id="0x041E" name="TB_BUTTONSTRUCTSIZE"></message>
+		<message id="0x041F" name="TB_SETBUTTONSIZE"></message>
+		<message id="0x0420" name="TB_SETBITMAPSIZE"></message>
+		<message id="0x0421" name="TB_AUTOSIZE"></message>
+		<message id="0x0423" name="TB_GETTOOLTIPS"></message>
+		<message id="0x0424" name="TB_SETTOOLTIPS"></message>
+		<message id="0x0425" name="TB_SETPARENT"></message>
+		<message id="0x0427" name="TB_SETROWS"></message>
+		<message id="0x0428" name="TB_GETROWS"></message>
+		<message id="0x0429" name="TB_GETBITMAPFLAGS"></message>
+		<message id="0x042A" name="TB_SETCMDID"></message>
+		<message id="0x042B" name="TB_CHANGEBITMAP"></message>
+		<message id="0x042C" name="TB_GETBITMAP"></message>
+		<message id="0x042D" name="TB_GETBUTTONTEXTA"></message>
+		<message id="0x042E" name="TB_REPLACEBITMAP"></message>
+		<message id="0x042F" name="TB_SETINDENT"></message>
+		<message id="0x0430" name="TB_SETIMAGELIST"></message>
+		<message id="0x0431" name="TB_GETIMAGELIST"></message>
+		<message id="0x0432" name="TB_LOADIMAGES"></message>
+		<message id="0x0433" name="TB_GETRECT"></message>
+		<message id="0x0434" name="TB_SETHOTIMAGELIST"></message>
+		<message id="0x0435" name="TB_GETHOTIMAGELIST"></message>
+		<message id="0x0436" name="TB_SETDISABLEDIMAGELIST"></message>
+		<message id="0x0437" name="TB_GETDISABLEDIMAGELIST"></message>
+		<message id="0x0438" name="TB_SETSTYLE"></message>
+		<message id="0x0439" name="TB_GETSTYLE"></message>
+		<message id="0x043A" name="TB_GETBUTTONSIZE"></message>
+		<message id="0x043B" name="TB_SETBUTTONWIDTH"></message>
+		<message id="0x043C" name="TB_SETMAXTEXTROWS"></message>
+		<message id="0x043D" name="TB_GETTEXTROWS"></message>
+		<message id="0x043E" name="TB_GETOBJECT"></message>
+		<message id="0x043F" name="TB_GETBUTTONINFOW"></message>
+		<message id="0x0440" name="TB_SETBUTTONINFOW"></message>
+		<message id="0x0441" name="TB_GETBUTTONINFOA"></message>
+		<message id="0x0442" name="TB_SETBUTTONINFOA"></message>
+		<message id="0x0443" name="TB_INSERTBUTTONW"></message>
+		<message id="0x0444" name="TB_ADDBUTTONSW"></message>
+		<message id="0x0445" name="TB_HITTEST"></message>
+		<message id="0x0446" name="TB_SETDRAWTEXTFLAGS"></message>
+		<message id="0x0447" name="TB_GETHOTITEM"></message>
+		<message id="0x0448" name="TB_SETHOTITEM"></message>
+		<message id="0x0449" name="TB_SETANCHORHIGHLIGHT"></message>
+		<message id="0x044A" name="TB_GETANCHORHIGHLIGHT"></message>
+		<message id="0x044B" name="TB_GETBUTTONTEXTW"></message>
+		<message id="0x044C" name="TB_SAVERESTOREW"></message>
+		<message id="0x044D" name="TB_ADDSTRINGW"></message>
+		<message id="0x044E" name="TB_MAPACCELERATORA"></message>
+		<message id="0x044F" name="TB_GETINSERTMARK"></message>
+		<message id="0x0450" name="TB_SETINSERTMARK"></message>
+		<message id="0x0451" name="TB_INSERTMARKHITTEST"></message>
+		<message id="0x0452" name="TB_MOVEBUTTON"></message>
+		<message id="0x0453" name="TB_GETMAXSIZE"></message>
+		<message id="0x0454" name="TB_SETEXTENDEDSTYLE"></message>
+		<message id="0x0455" name="TB_GETEXTENDEDSTYLE"></message>
+		<message id="0x0456" name="TB_GETPADDING"></message>
+		<message id="0x0457" name="TB_SETPADDING"></message>
+		<message id="0x0458" name="TB_SETINSERTMARKCOLOR"></message>
+		<message id="0x0459" name="TB_GETINSERTMARKCOLOR"></message>
+		<message id="0x045A" name="TB_MAPACCELERATORW"></message>
+		<message id="0x045B" name="TB_GETSTRINGW"></message>
+		<message id="0x045C" name="TB_GETSTRINGA"></message>
+		<message id="0x0465" name="TB_GETMETRICS"></message>
+		<message id="0x0466" name="TB_SETMETRICS"></message>
+		<message id="0x0468" name="TB_SETPRESSEDIMAGELIST"></message>
+		<message id="0x0469" name="TB_GETPRESSEDIMAGELIST"></message>
+	</message_group>
+
+	<message_group class="ReBarWindow32">
+		<message id="0x0401" name="RB_INSERTBANDA"></message>
+		<message id="0x0402" name="RB_DELETEBAND"></message>
+		<message id="0x0403" name="RB_GETBARINFO"></message>
+		<message id="0x0404" name="RB_SETBARINFO"></message>
+		<message id="0x0405" name="RB_GETBANDINFO"></message>
+		<message id="0x0406" name="RB_SETBANDINFOA"></message>
+		<message id="0x0407" name="RB_SETPARENT"></message>
+		<message id="0x0408" name="RB_HITTEST"></message>
+		<message id="0x0409" name="RB_GETRECT"></message>
+		<message id="0x040A" name="RB_INSERTBANDW"></message>
+		<message id="0x040B" name="RB_SETBANDINFOW"></message>
+		<message id="0x040C" name="RB_GETBANDCOUNT"></message>
+		<message id="0x040D" name="RB_GETROWCOUNT"></message>
+		<message id="0x040E" name="RB_GETROWHEIGHT"></message>
+		<message id="0x0410" name="RB_IDTOINDEX"></message>
+		<message id="0x0411" name="RB_GETTOOLTIPS"></message>
+		<message id="0x0412" name="RB_SETTOOLTIPS"></message>
+		<message id="0x0413" name="RB_SETBKCOLOR"></message>
+		<message id="0x0414" name="RB_GETBKCOLOR"></message>
+		<message id="0x0415" name="RB_SETTEXTCOLOR"></message>
+		<message id="0x0416" name="RB_GETTEXTCOLOR"></message>
+		<message id="0x0417" name="RB_SIZETORECT"></message>
+		<message id="0x0418" name="RB_BEGINDRAG"></message>
+		<message id="0x0419" name="RB_ENDDRAG"></message>
+		<message id="0x041A" name="RB_DRAGMOVE"></message>
+		<message id="0x041B" name="RB_GETBARHEIGHT"></message>
+		<message id="0x041C" name="RB_GETBANDINFOW"></message>
+		<message id="0x041D" name="RB_GETBANDINFOA"></message>
+		<message id="0x041E" name="RB_MINIMIZEBAND"></message>
+		<message id="0x041F" name="RB_MAXIMIZEBAND"></message>
+		<message id="0x0422" name="RB_GETBANDBORDERS"></message>
+		<message id="0x0423" name="RB_SHOWBAND"></message>
+		<message id="0x0425" name="RB_SETPALETTE"></message>
+		<message id="0x0426" name="RB_GETPALETTE"></message>
+		<message id="0x0427" name="RB_MOVEBAND"></message>
+		<message id="0x0428" name="RB_GETBANDMARGINS"></message>
+		<message id="0x0429" name="RB_SETEXTENDEDSTYLE"></message>
+		<message id="0x042A" name="RB_GETEXTENDEDSTYLE"></message>
+		<message id="0x042B" name="RB_PUSHCHEVRON"></message>
+		<message id="0x042C" name="RB_SETBANDWIDTH"></message>
+	</message_group>
+
+	<message_group class="SysHeader32">
+		<message id="0x1200" name="HDM_GETITEMCOUNT"></message>
+		<message id="0x1201" name="HDM_INSERTITEMA"></message>
+		<message id="0x1202" name="HDM_DELETEITEM"></message>
+		<message id="0x1203" name="HDM_GETITEMA"></message>
+		<message id="0x1204" name="HDM_SETITEMA"></message>
+		<message id="0x1205" name="HDM_LAYOUT"></message>
+		<message id="0x1206" name="HDM_HITTEST"></message>
+		<message id="0x1207" name="HDM_GETITEMRECT"></message>
+		<message id="0x1208" name="HDM_SETIMAGELIST"></message>
+		<message id="0x1209" name="HDM_GETIMAGELIST"></message>
+		<message id="0x120A" name="HDM_INSERTITEMW"></message>
+		<message id="0x120B" name="HDM_GETITEMW"></message>
+		<message id="0x120C" name="HDM_SETITEMW"></message>
+		<message id="0x120F" name="HDM_ORDERTOINDEX"></message>
+		<message id="0x1210" name="HDM_CREATEDRAGIMAGE"></message>
+		<message id="0x1211" name="HDM_GETORDERARRAY"></message>
+		<message id="0x1212" name="HDM_SETORDERARRAY"></message>
+		<message id="0x1213" name="HDM_SETHOTDIVIDER"></message>
+		<message id="0x1214" name="HDM_SETBITMAPMARGIN"></message>
+		<message id="0x1215" name="HDM_GETBITMAPMARGIN"></message>
+		<message id="0x1216" name="HDM_SETFILTERCHANGETIMEOUT"></message>
+		<message id="0x1217" name="HDM_EDITFILTER"></message>
+		<message id="0x1218" name="HDM_CLEARFILTER"></message>
+		<message id="0x1219" name="HDM_GETITEMDROPDOWNRECT"></message>
+		<message id="0x121A" name="HDM_GETOVERFLOWRECT"></message>
+		<message id="0x121B" name="HDM_GETFOCUSEDITEM"></message>
+		<message id="0x121C" name="HDM_SETFOCUSEDITEM"></message>
+	</message_group>
+
+	<message_group class="SysLink">
+		<message id="0x0700" name="LM_HITTEST"></message>
+		<message id="0x0701" name="LM_GETIDEALHEIGHT"></message>
+		<message id="0x0702" name="LM_SETITEM"></message>
+		<message id="0x0703" name="LM_GETITEM"></message>
+	</message_group>
+
+	<message_group class="msctls_trackbar32">
+		<message id="0x0400" name="TBM_GETPOS"></message>
+		<message id="0x0401" name="TBM_GETRANGEMIN"></message>
+		<message id="0x0402" name="TBM_GETRANGEMAX"></message>
+		<message id="0x0403" name="TBM_GETTIC"></message>
+		<message id="0x0404" name="TBM_SETTIC"></message>
+		<message id="0x0405" name="TBM_SETPOS"></message>
+		<message id="0x0406" name="TBM_SETRANGE"></message>
+		<message id="0x0407" name="TBM_SETRANGEMIN"></message>
+		<message id="0x0408" name="TBM_SETRANGEMAX"></message>
+		<message id="0x0409" name="TBM_CLEARTICS"></message>
+		<message id="0x040A" name="TBM_SETSEL"></message>
+		<message id="0x040B" name="TBM_SETSELSTART"></message>
+		<message id="0x040C" name="TBM_SETSELEND"></message>
+		<message id="0x040E" name="TBM_GETPTICS"></message>
+		<message id="0x040F" name="TBM_GETTICPOS"></message>
+		<message id="0x0410" name="TBM_GETNUMTICS"></message>
+		<message id="0x0411" name="TBM_GETSELSTART"></message>
+		<message id="0x0412" name="TBM_GETSELEND"></message>
+		<message id="0x0413" name="TBM_CLEARSEL"></message>
+		<message id="0x0414" name="TBM_SETTICFREQ"></message>
+		<message id="0x0415" name="TBM_SETPAGESIZE"></message>
+		<message id="0x0416" name="TBM_GETPAGESIZE"></message>
+		<message id="0x0417" name="TBM_SETLINESIZE"></message>
+		<message id="0x0418" name="TBM_GETLINESIZE"></message>
+		<message id="0x0419" name="TBM_GETTHUMBRECT"></message>
+		<message id="0x041A" name="TBM_GETCHANNELRECT"></message>
+		<message id="0x041B" name="TBM_SETTHUMBLENGTH"></message>
+		<message id="0x041C" name="TBM_GETTHUMBLENGTH"></message>
+		<message id="0x041D" name="TBM_SETTOOLTIPS"></message>
+		<message id="0x041E" name="TBM_GETTOOLTIPS"></message>
+		<message id="0x041F" name="TBM_SETTIPSIDE"></message>
+		<message id="0x0420" name="TBM_SETBUDDY"></message>
+		<message id="0x0421" name="TBM_GETBUDDY"></message>
+	</message_group>
+
+	<message_group class="tooltips_class32">
+		<message id="0x0401" name="TTM_ACTIVATE"></message>
+		<message id="0x0403" name="TTM_SETDELAYTIME"></message>
+		<message id="0x0404" name="TTM_ADDTOOLA"></message>
+		<message id="0x0405" name="TTM_DELTOOLA"></message>
+		<message id="0x0406" name="TTM_NEWTOOLRECTA"></message>
+		<message id="0x0407" name="TTM_RELAYEVENT"></message>
+		<message id="0x0408" name="TTM_GETTOOLINFOA"></message>
+		<message id="0x0409" name="TTM_SETTOOLINFOA"></message>
+		<message id="0x040A" name="TTM_HITTESTA"></message>
+		<message id="0x040B" name="TTM_GETTEXTA"></message>
+		<message id="0x040C" name="TTM_UPDATETIPTEXTA"></message>
+		<message id="0x040D" name="TTM_GETTOOLCOUNT"></message>
+		<message id="0x040E" name="TTM_ENUMTOOLSA"></message>
+		<message id="0x040F" name="TTM_GETCURRENTTOOLA"></message>
+		<message id="0x0410" name="TTM_WINDOWFROMPOINT"></message>
+		<message id="0x0411" name="TTM_TRACKACTIVATE"></message>
+		<message id="0x0412" name="TTM_TRACKPOSITION"></message>
+		<message id="0x0413" name="TTM_SETTIPBKCOLOR"></message>
+		<message id="0x0414" name="TTM_SETTIPTEXTCOLOR"></message>
+		<message id="0x0415" name="TTM_GETDELAYTIME"></message>
+		<message id="0x0416" name="TTM_GETTIPBKCOLOR"></message>
+		<message id="0x0417" name="TTM_GETTIPTEXTCOLOR"></message>
+		<message id="0x0418" name="TTM_SETMAXTIPWIDTH"></message>
+		<message id="0x0419" name="TTM_GETMAXTIPWIDTH"></message>
+		<message id="0x041A" name="TTM_SETMARGIN"></message>
+		<message id="0x041B" name="TTM_GETMARGIN"></message>
+		<message id="0x041C" name="TTM_POP"></message>
+		<message id="0x041D" name="TTM_UPDATE"></message>
+		<message id="0x041E" name="TTM_GETBUBBLESIZE"></message>
+		<message id="0x041F" name="TTM_ADJUSTRECT"></message>
+		<message id="0x0420" name="TTM_SETTITLEA"></message>
+		<message id="0x0421" name="TTM_SETTITLEW"></message>
+		<message id="0x0422" name="TTM_POPUP"></message>
+		<message id="0x0423" name="TTM_GETTITLE"></message>
+		<message id="0x0432" name="TTM_ADDTOOLW"></message>
+		<message id="0x0433" name="TTM_DELTOOLW"></message>
+		<message id="0x0434" name="TTM_NEWTOOLRECTW"></message>
+		<message id="0x0435" name="TTM_GETTOOLINFOW"></message>
+		<message id="0x0436" name="TTM_SETTOOLINFOW"></message>
+		<message id="0x0437" name="TTM_HITTESTW"></message>
+		<message id="0x0438" name="TTM_GETTEXTW"></message>
+		<message id="0x0439" name="TTM_UPDATETIPTEXTW"></message>
+		<message id="0x043A" name="TTM_ENUMTOOLSW"></message>
+		<message id="0x043B" name="TTM_GETCURRENTTOOLW"></message>
+	</message_group>
+
+	<message_group class="msctls_updown32">
+		<message id="0x0465" name="UDM_SETRANGE"></message>
+		<message id="0x0466" name="UDM_GETRANGE"></message>
+		<message id="0x0467" name="UDM_SETPOS"></message>
+		<message id="0x0468" name="UDM_GETPOS"></message>
+		<message id="0x0469" name="UDM_SETBUDDY"></message>
+		<message id="0x046A" name="UDM_GETBUDDY"></message>
+		<message id="0x046B" name="UDM_SETACCEL"></message>
+		<message id="0x046C" name="UDM_GETACCEL"></message>
+		<message id="0x046D" name="UDM_SETBASE"></message>
+		<message id="0x046E" name="UDM_GETBASE"></message>
+		<message id="0x046F" name="UDM_SETRANGE32"></message>
+		<message id="0x0470" name="UDM_GETRANGE32"></message>
+		<message id="0x0471" name="UDM_SETPOS32"></message>
+		<message id="0x0472" name="UDM_GETPOS32"></message>
+	</message_group>
+
+	<message_group class="msctls_progress32">
+		<message id="0x0401" name="PBM_SETRANGE"></message>
+		<message id="0x0402" name="PBM_SETPOS"></message>
+		<message id="0x0403" name="PBM_DELTAPOS"></message>
+		<message id="0x0404" name="PBM_SETSTEP"></message>
+		<message id="0x0405" name="PBM_STEPIT"></message>
+		<message id="0x0406" name="PBM_SETRANGE32"></message>
+		<message id="0x0407" name="PBM_GETRANGE"></message>
+		<message id="0x0408" name="PBM_GETPOS"></message>
+		<message id="0x0409" name="PBM_SETBARCOLOR"></message>
+		<message id="0x040A" name="PBM_SETMARQUEE"></message>
+		<message id="0x040D" name="PBM_GETSTEP"></message>
+		<message id="0x040C" name="PBM_GETBKCOLOR"></message>
+		<message id="0x040F" name="PBM_GETBARCOLOR"></message>
+		<message id="0x0410" name="PBM_SETSTATE"></message>
+		<message id="0x0411" name="PBM_GETSTATE"></message>
+	</message_group>
+
+	<message_group class="SysTabControl32">
+		<message id="0x1302" name="TCM_GETIMAGELIST"></message>
+		<message id="0x1303" name="TCM_SETIMAGELIST"></message>
+		<message id="0x1304" name="TCM_GETITEMCOUNT"></message>
+		<message id="0x1305" name="TCM_GETITEMA"></message>
+		<message id="0x1306" name="TCM_SETITEMA"></message>
+		<message id="0x1307" name="TCM_INSERTITEMA"></message>
+		<message id="0x1308" name="TCM_DELETEITEM"></message>
+		<message id="0x1309" name="TCM_DELETEALLITEMS"></message>
+		<message id="0x130A" name="TCM_GETITEMRECT"></message>
+		<message id="0x130B" name="TCM_GETCURSEL"></message>
+		<message id="0x130C" name="TCM_SETCURSEL"></message>
+		<message id="0x130D" name="TCM_HITTEST"></message>
+		<message id="0x130E" name="TCM_SETITEMEXTRA"></message>
+		<message id="0x1328" name="TCM_ADJUSTRECT"></message>
+		<message id="0x1329" name="TCM_SETITEMSIZE"></message>
+		<message id="0x132A" name="TCM_REMOVEIMAGE"></message>
+		<message id="0x132B" name="TCM_SETPADDING"></message>
+		<message id="0x132C" name="TCM_GETROWCOUNT"></message>
+		<message id="0x132D" name="TCM_GETTOOLTIPS"></message>
+		<message id="0x132E" name="TCM_SETTOOLTIPS"></message>
+		<message id="0x132F" name="TCM_GETCURFOCUS"></message>
+		<message id="0x1330" name="TCM_SETCURFOCUS"></message>
+		<message id="0x1331" name="TCM_SETMINTABWIDTH"></message>
+		<message id="0x1332" name="TCM_DESELECTALL"></message>
+		<message id="0x1333" name="TCM_HIGHLIGHTITEM"></message>
+		<message id="0x1334" name="TCM_SETEXTENDEDSTYLE"></message>
+		<message id="0x1335" name="TCM_GETEXTENDEDSTYLE"></message>
+		<message id="0x133C" name="TCM_GETITEMW"></message>
+		<message id="0x133D" name="TCM_SETITEMW"></message>
+		<message id="0x133E" name="TCM_INSERTITEMW"></message>
+	</message_group>
+
+	<message_group class="SysAnimate32">
+		<message id="0x0464" name="ACM_OPENA">
+			<param type="handle" name="module handle" from="wParam"/>
+			<param type="uint32" name="path pointer" from="lParam" format="x"/>
+		</message>
+		
+		<message id="0x0465" name="ACM_PLAY">
+			<param type="uint32" name="times repeat" from="wParam"/>
+			<param type="int16" name="begin frame index" from="LOWORD(lParam)"/>
+			<param type="int16" name="end frame index" from="HIWORD(lParam)"/>
+		</message>
+		
+		<message id="0x0466" name="ACM_STOP">
+		</message>
+		
+		<message id="0x0467" name="ACM_OPENW">
+			<param type="handle" name="module handle" from="wParam"/>
+			<param type="uint32" name="path pointer" from="lParam" format="x"/>
+		</message>
+		
+		<message id="0x0468" name="ACM_ISPLAYING">
+		</message>
+	</message_group>
+
+	<message_group class="SysMonthCal32">
+		<message id="0x1001" name="MCM_GETCURSEL"></message>
+		<message id="0x1002" name="MCM_SETCURSEL"></message>
+		<message id="0x1003" name="MCM_GETMAXSELCOUNT"></message>
+		<message id="0x1004" name="MCM_SETMAXSELCOUNT"></message>
+		<message id="0x1005" name="MCM_GETSELRANGE"></message>
+		<message id="0x1006" name="MCM_SETSELRANGE"></message>
+		<message id="0x1007" name="MCM_GETMONTHRANGE"></message>
+		<message id="0x1008" name="MCM_SETDAYSTATE"></message>
+		<message id="0x1009" name="MCM_GETMINREQRECT"></message>
+		<message id="0x100A" name="MCM_SETCOLOR"></message>
+		<message id="0x100B" name="MCM_GETCOLOR"></message>
+		<message id="0x100C" name="MCM_SETTODAY"></message>
+		<message id="0x100D" name="MCM_GETTODAY"></message>
+		<message id="0x100E" name="MCM_HITTEST"></message>
+		<message id="0x100F" name="MCM_SETFIRSTDAYOFWEEK"></message>
+		<message id="0x1010" name="MCM_GETFIRSTDAYOFWEEK"></message>
+		<message id="0x1011" name="MCM_GETRANGE"></message>
+		<message id="0x1012" name="MCM_SETRANGE"></message>
+		<message id="0x1013" name="MCM_GETMONTHDELTA"></message>
+		<message id="0x1014" name="MCM_SETMONTHDELTA"></message>
+		<message id="0x1015" name="MCM_GETMAXTODAYWIDTH"></message>
+		<message id="0x1016" name="MCM_GETCURRENTVIEW"></message>
+		<message id="0x1017" name="MCM_GETCALENDARCOUNT"></message>
+		<message id="0x1018" name="MCM_GETCALENDARGRIDINFO"></message>
+		<message id="0x101B" name="MCM_GETCALID"></message>
+		<message id="0x101C" name="MCM_SETCALID"></message>
+		<message id="0x101D" name="MCM_SIZERECTTOMIN"></message>
+		<message id="0x101E" name="MCM_SETCALENDARBORDER"></message>
+		<message id="0x101F" name="MCM_GETCALENDARBORDER"></message>
+		<message id="0x1020" name="MCM_SETCURRENTVIEW"></message>
+	</message_group>
+
+	<message_group class="SysDateTimePick32">
+		<message id="0x1001" name="DTM_GETSYSTEMTIME"></message>
+		<message id="0x1002" name="DTM_SETSYSTEMTIME"></message>
+		<message id="0x1003" name="DTM_GETRANGE"></message>
+		<message id="0x1004" name="DTM_SETRANGE"></message>
+		<message id="0x1005" name="DTM_SETFORMATA"></message>
+		<message id="0x1006" name="DTM_SETMCCOLOR"></message>
+		<message id="0x1007" name="DTM_GETMCCOLOR"></message>
+		<message id="0x1008" name="DTM_GETMONTHCAL"></message>
+		<message id="0x1009" name="DTM_SETMCFONT"></message>
+		<message id="0x100A" name="DTM_GETMCFONT"></message>
+		<message id="0x100B" name="DTM_SETMCSTYLE"></message>
+		<message id="0x100C" name="DTM_GETMCSTYLE"></message>
+		<message id="0x100D" name="DTM_CLOSEMONTHCAL"></message>
+		<message id="0x100E" name="DTM_GETDATETIMEPICKERINFO"></message>
+		<message id="0x100F" name="DTM_GETIDEALSIZE"></message>
+		<message id="0x1032" name="DTM_SETFORMATW"></message>
+	</message_group>
+</messages>

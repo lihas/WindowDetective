@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Viewing System UI Settings</h2>
+    </div>
+    <div id="content">
+      <p>The System Info dialog provides information about system-wide UI parameters,
+      most of which are accessible to an application via the
+      <a href="http://msdn.microsoft.com/en-us/library/ms724947.aspx">SystemParametersInfo</a>
+      and <a href="http://msdn.microsoft.com/en-us/library/ms724385.aspx">GetSystemMetrics</a>
+      API functions.</p>
+      <div class="screenshot" align="center">
+        <img src="images/system_info_window.png" />
+        <p>The System Info dialog, showing the System Metrics tab.</p>
+      </div>
+      <h3>General Info</h3>
+      <p>This tab shows many of the system parameters, organized into the following categories:
+      <ul>
+        <li>Accessibility parameters</li>
+        <li>Desktop parameters</li>
+        <li>Icon parameters</li>
+        <li>Input parameters</li>
+        <li>Menu parameters</li>
+        <li>Power parameters</li>
+        <li>Screen saver parameters</li>
+        <li>Time-out parameters</li>
+        <li>UI effect parameters</li>
+        <li>Window parameters</li>
+      </ul></p>
+      <h3>System Metrics</h3>
+      <p>Shows the list of system metrics; where the <i>Name</i> column is the name
+      of the metric as defined in the Windows API, and the <i>Value</i> column is
+      the integer value of the metric obtained from the GetSystemMetrics function.</p>
+      <h3>System Colours</h3>
+      <p>Shows the list of system-defined colour constants; where the <i>Name</i>
+      column is the name of the colour as defined in the Windows API, the <i>RGB</i>
+      column is the Red,Green,Blue value of the colour, and the <i>Colour</i>
+      column shows the colour visually.</p>
+      <p>You can double-click on the <i>Colour</i> column to change a colour.
+      The Reset button can be used to revert the colours back to the values they
+      were when this dialog was first opened.<br />
+      <p class="note"><b>Note:</b> The Operating System will inform all windows of this
+      change (by sending a WM_SYSCOLORCHANGE message). However, this change only affects
+      the current session. The new colors are not saved when the system terminates.</p>
+    </div>
+  </body>
+</html>

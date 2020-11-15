@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Defining Custom Messages</h2>
+    </div>
+    <div id="content">
+      <p>File: <code><b>&lt;Window Detective App Data&gt;\data\message_definitions.xml</b></code></p>
+      <p>Many applications use custom messages to send information and/or commands
+      between it's own windows or processes.
+      For example; <a href="https://wj32.org/processhacker/">Process Hacker</a>
+      (another great open-source project) defines custom messages for it's graph
+      window class.</p>
+      <p>If you wish to monitor such messages, you can define their names and
+      parameters for Window Detective so they will be shown in the message pane.
+      Otherwise, just the id and raw wParam/lParam values will be shown.</p>
+      <p>To define messages, edit the xml file mentioned above. It's format will look
+      something like this:</p>
+      <code style="white-space: pre;">
+    &lt;messages&gt;
+        &lt;message_group class="MyClass"&gt;
+            &lt;message id="0x1234" name="MY_MESSAGE_1"&gt;
+                &lt;param type="uint32" name="foo" from="wParam" flags="FooFlags"/&gt;
+                &lt;param type="int16" name="x" from="LOWORD(lParam)"/&gt;
+                &lt;param type="int16" name="y" from="HIWORD(lParam)"/&gt;
+            &lt;/message&gt;
+            &lt;message id="0x1235" name="MY_MESSAGE_2"&gt;
+                &lt;param type="int32" name="type" from="wParam" enum="MyInfoType"/&gt;
+                &lt;param type="HWND" name="window handle" from="lParam"/&gt;
+                &lt;param type="bool" name="succeeded" from="return"/&gt;
+            &lt;/message&gt;
+        &lt;/message_group&gt;
+    &lt;/messages&gt;
+      </code>
+      <p>Data type names are defined in <code>data\data_types.xml</code> in the
+      Window Detective install location. You can only use primitive types, structures
+      are not supported for custom messages.</p>
+      <p>Parameters can be taken from wParam, lParam, or the return value (for returning
+      messages).
+      The LOWORD and HIWORD pseudo-functions act the same as their equivalents in Windows
+      C/C++ programming - they take the low and high 16 bits respectively. LOBYTE and
+      HIBYTE are also available.
+      Bit-fields are currently not supported.</p>
+      </br>
+      <p>File: <code><b>&lt;Window Detective App Data&gt;\data\constants.ini</b></code></p>
+      <p>Here you can define constants such as flags and enums, which you can use in
+      "flags" and "enum" message parameters.</p>
+    </div>
+  </body>
+</html>
+
+
+

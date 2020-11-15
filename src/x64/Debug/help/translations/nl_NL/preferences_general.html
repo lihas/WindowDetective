@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Window Detective Help Documentatie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Algemene Voorkeuren</h2>
+    </div>
+    <div id="content">
+      <h4><a name="cursor"></a>Cursor</h4>
+      <p>De "venster kiezer" kan gebruik maken van 32-bit kleuren met transparantie op
+      besturingssystemen die dit ondersteunen (Window XP of hoger). Anders,
+      kun je kiezen voor een 16-bit ge&iuml;ndexeerde kleur cursor.
+      </p>
+      <h4><a name="regex"></a>Reguliere Expressie Syntaxis</h4>
+      <p>Bij gebruik van een reguliere expressie, zoals in de Vind dialoog
+      zal Window Detective een van de volgende syntaxis gebruiken:
+      <table class="optionlist">
+        <tr><td class="option">Standaard RegExp</td>
+        <td>Een rich Perl-like matchpatroon syntaxis.
+        </td></tr>
+        <tr><td class="option">Wildcard</td>
+        <td>Een simpel matchpatroon syntaxis zoals gebruikt bij
+        shells (commando interpreters) voor "file globbing".</br>
+        Wildcard matching is veel simpeler dan volledige regexps en heeft enkel vier mogelijkheden:
+        <table class="normal" style="border-collapse: collapse;">
+          <tr><td>c</td>
+          <td>Ieder karakter vertolkt zichzelf behalve degenen hieronder genoemd.
+          Dus c matcht het karakter c.</td>
+          </tr>
+          <tr class="alt"><td>?</td>
+          <td>Matcht ieder enkel karakter. Gelijk aan . in volledige regexps.</td>
+          </tr>
+          <tr><td>*</td>
+          <td>Matcht nul of meer karakters. Gelijk aan .* in volledige regexps.</td>
+          <tr class="alt"><td>[...]</td>
+          <td>Sets van karakters kunnen in rechte haken geplaatst worden, net als
+          in volledige regexps. Binnen de karakter klasse, net als erbuiten, backslash
+          heeft geen speciale betekenis.
+          </td>
+        </table>
+        </td></tr>
+        <tr><td class="option">Wildcard Unix</td>
+        <td>Hetzelfde als de Wildcard maar met het gedrag van een Unix shell.
+		De wildcard karakters kunnen worden escaped met het karakter "".
+        </td></tr>
+      </table>
+      Voor meer informatie over reguliere expressies, ga naar
+      <a href="http://www.regular-expressions.info">http://www.regular-expressions.info</a>
+      </p>
+    </div>
+  </body>
+</html>
