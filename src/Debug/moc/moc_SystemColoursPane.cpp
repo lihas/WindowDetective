@@ -1,46 +1,50 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'SystemColoursPane.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.1.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../../ui/SystemColoursPane.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'SystemColoursPane.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.1.0. It"
+#error "This file was generated using the moc from 5.15.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SystemColoursModel_t {
     QByteArrayData data[3];
-    char stringdata[27];
+    char stringdata0[26];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_SystemColoursModel_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_SystemColoursModel_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_SystemColoursModel_t qt_meta_stringdata_SystemColoursModel = {
     {
-QT_MOC_LITERAL(0, 0, 18),
-QT_MOC_LITERAL(1, 19, 5),
-QT_MOC_LITERAL(2, 25, 0)
+QT_MOC_LITERAL(0, 0, 18), // "SystemColoursModel"
+QT_MOC_LITERAL(1, 19, 5), // "reset"
+QT_MOC_LITERAL(2, 25, 0) // ""
+
     },
-    "SystemColoursModel\0reset\0\0"
+    "SystemColoursModel\0reset\0"
 };
 #undef QT_MOC_LITERAL
 
 static const uint qt_meta_data_SystemColoursModel[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -51,7 +55,7 @@ static const uint qt_meta_data_SystemColoursModel[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x0a,
+       1,    0,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -62,7 +66,8 @@ static const uint qt_meta_data_SystemColoursModel[] = {
 void SystemColoursModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        SystemColoursModel *_t = static_cast<SystemColoursModel *>(_o);
+        auto *_t = static_cast<SystemColoursModel *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->reset(); break;
         default: ;
@@ -71,10 +76,14 @@ void SystemColoursModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
     Q_UNUSED(_a);
 }
 
-const QMetaObject SystemColoursModel::staticMetaObject = {
-    { &QAbstractTableModel::staticMetaObject, qt_meta_stringdata_SystemColoursModel.data,
-      qt_meta_data_SystemColoursModel,  qt_static_metacall, 0, 0}
-};
+QT_INIT_METAOBJECT const QMetaObject SystemColoursModel::staticMetaObject = { {
+    QMetaObject::SuperData::link<QAbstractTableModel::staticMetaObject>(),
+    qt_meta_stringdata_SystemColoursModel.data,
+    qt_meta_data_SystemColoursModel,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *SystemColoursModel::metaObject() const
@@ -84,9 +93,9 @@ const QMetaObject *SystemColoursModel::metaObject() const
 
 void *SystemColoursModel::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_SystemColoursModel.stringdata))
-        return static_cast<void*>(const_cast< SystemColoursModel*>(this));
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_meta_stringdata_SystemColoursModel.stringdata0))
+        return static_cast<void*>(this);
     return QAbstractTableModel::qt_metacast(_clname);
 }
 
@@ -107,30 +116,32 @@ int SystemColoursModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     return _id;
 }
 struct qt_meta_stringdata_SystemColoursPane_t {
-    QByteArrayData data[4];
-    char stringdata[51];
+    QByteArrayData data[5];
+    char stringdata0[62];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_SystemColoursPane_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_SystemColoursPane_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_SystemColoursPane_t qt_meta_stringdata_SystemColoursPane = {
     {
-QT_MOC_LITERAL(0, 0, 17),
-QT_MOC_LITERAL(1, 18, 24),
-QT_MOC_LITERAL(2, 43, 0),
-QT_MOC_LITERAL(3, 44, 5)
+QT_MOC_LITERAL(0, 0, 17), // "SystemColoursPane"
+QT_MOC_LITERAL(1, 18, 24), // "colourTableDoubleClicked"
+QT_MOC_LITERAL(2, 43, 0), // ""
+QT_MOC_LITERAL(3, 44, 11), // "QModelIndex"
+QT_MOC_LITERAL(4, 56, 5) // "index"
+
     },
     "SystemColoursPane\0colourTableDoubleClicked\0"
-    "\0index\0"
+    "\0QModelIndex\0index"
 };
 #undef QT_MOC_LITERAL
 
 static const uint qt_meta_data_SystemColoursPane[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -141,10 +152,10 @@ static const uint qt_meta_data_SystemColoursPane[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x0a,
+       1,    1,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QModelIndex,    3,
+    QMetaType::Void, 0x80000000 | 3,    4,
 
        0        // eod
 };
@@ -152,7 +163,8 @@ static const uint qt_meta_data_SystemColoursPane[] = {
 void SystemColoursPane::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        SystemColoursPane *_t = static_cast<SystemColoursPane *>(_o);
+        auto *_t = static_cast<SystemColoursPane *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->colourTableDoubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         default: ;
@@ -160,10 +172,14 @@ void SystemColoursPane::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
     }
 }
 
-const QMetaObject SystemColoursPane::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_SystemColoursPane.data,
-      qt_meta_data_SystemColoursPane,  qt_static_metacall, 0, 0}
-};
+QT_INIT_METAOBJECT const QMetaObject SystemColoursPane::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_SystemColoursPane.data,
+    qt_meta_data_SystemColoursPane,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *SystemColoursPane::metaObject() const
@@ -173,9 +189,9 @@ const QMetaObject *SystemColoursPane::metaObject() const
 
 void *SystemColoursPane::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_SystemColoursPane.stringdata))
-        return static_cast<void*>(const_cast< SystemColoursPane*>(this));
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_meta_stringdata_SystemColoursPane.stringdata0))
+        return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
@@ -195,4 +211,5 @@ int SystemColoursPane::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     }
     return _id;
 }
+QT_WARNING_POP
 QT_END_MOC_NAMESPACE

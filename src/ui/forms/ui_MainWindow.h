@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'MainWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.1.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDockWidget>
 #include <QtWidgets/QFormLayout>
@@ -75,59 +74,59 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1000, 800);
         actnPreferences = new QAction(MainWindow);
-        actnPreferences->setObjectName(QStringLiteral("actnPreferences"));
+        actnPreferences->setObjectName(QString::fromUtf8("actnPreferences"));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/img/preferences.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/img/preferences.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnPreferences->setIcon(icon);
         actnHelp = new QAction(MainWindow);
-        actnHelp->setObjectName(QStringLiteral("actnHelp"));
+        actnHelp->setObjectName(QString::fromUtf8("actnHelp"));
         QIcon icon1;
-        icon1.addFile(QStringLiteral(":/img/help.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/img/help.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnHelp->setIcon(icon1);
         actnAbout = new QAction(MainWindow);
-        actnAbout->setObjectName(QStringLiteral("actnAbout"));
+        actnAbout->setObjectName(QString::fromUtf8("actnAbout"));
         actnFind = new QAction(MainWindow);
-        actnFind->setObjectName(QStringLiteral("actnFind"));
+        actnFind->setObjectName(QString::fromUtf8("actnFind"));
         QIcon icon2;
-        icon2.addFile(QStringLiteral(":/img/find.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/img/find.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnFind->setIcon(icon2);
         actnRefresh = new QAction(MainWindow);
-        actnRefresh->setObjectName(QStringLiteral("actnRefresh"));
+        actnRefresh->setObjectName(QString::fromUtf8("actnRefresh"));
         QIcon icon3;
-        icon3.addFile(QStringLiteral(":/img/refresh.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/img/refresh.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnRefresh->setIcon(icon3);
         actnTile = new QAction(MainWindow);
-        actnTile->setObjectName(QStringLiteral("actnTile"));
+        actnTile->setObjectName(QString::fromUtf8("actnTile"));
         QIcon icon4;
-        icon4.addFile(QStringLiteral(":/img/tile.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/img/tile.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnTile->setIcon(icon4);
         actnCascade = new QAction(MainWindow);
-        actnCascade->setObjectName(QStringLiteral("actnCascade"));
+        actnCascade->setObjectName(QString::fromUtf8("actnCascade"));
         QIcon icon5;
-        icon5.addFile(QStringLiteral(":/img/cascade.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/img/cascade.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnCascade->setIcon(icon5);
         actnCloseAllMdi = new QAction(MainWindow);
-        actnCloseAllMdi->setObjectName(QStringLiteral("actnCloseAllMdi"));
+        actnCloseAllMdi->setObjectName(QString::fromUtf8("actnCloseAllMdi"));
         actnSystemInfo = new QAction(MainWindow);
-        actnSystemInfo->setObjectName(QStringLiteral("actnSystemInfo"));
+        actnSystemInfo->setObjectName(QString::fromUtf8("actnSystemInfo"));
         QIcon icon6;
-        icon6.addFile(QStringLiteral(":/img/system_info.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon6.addFile(QString::fromUtf8(":/img/system_info.png"), QSize(), QIcon::Normal, QIcon::Off);
         actnSystemInfo->setIcon(icon6);
         actionConnect_to_server = new QAction(MainWindow);
-        actionConnect_to_server->setObjectName(QStringLiteral("actionConnect_to_server"));
+        actionConnect_to_server->setObjectName(QString::fromUtf8("actionConnect_to_server"));
         actionStart_Server = new QAction(MainWindow);
-        actionStart_Server->setObjectName(QStringLiteral("actionStart_Server"));
+        actionStart_Server->setObjectName(QString::fromUtf8("actionStart_Server"));
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout_2 = new QGridLayout(centralwidget);
         gridLayout_2->setSpacing(2);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout_2->setContentsMargins(2, 2, 2, 2);
         mdiArea = new QMdiArea(centralwidget);
-        mdiArea->setObjectName(QStringLiteral("mdiArea"));
+        mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
         mdiArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         mdiArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
 
@@ -135,47 +134,47 @@ public:
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 1000, 47));
         menuSpy = new QMenu(menubar);
-        menuSpy->setObjectName(QStringLiteral("menuSpy"));
+        menuSpy->setObjectName(QString::fromUtf8("menuSpy"));
         menuRemote = new QMenu(menuSpy);
-        menuRemote->setObjectName(QStringLiteral("menuRemote"));
+        menuRemote->setObjectName(QString::fromUtf8("menuRemote"));
         menuHelp = new QMenu(menubar);
-        menuHelp->setObjectName(QStringLiteral("menuHelp"));
+        menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
         menuEdit = new QMenu(menubar);
-        menuEdit->setObjectName(QStringLiteral("menuEdit"));
+        menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
         menuView = new QMenu(menubar);
-        menuView->setObjectName(QStringLiteral("menuView"));
+        menuView->setObjectName(QString::fromUtf8("menuView"));
         menuWindows = new QMenu(menubar);
-        menuWindows->setObjectName(QStringLiteral("menuWindows"));
+        menuWindows->setObjectName(QString::fromUtf8("menuWindows"));
         MainWindow->setMenuBar(menubar);
         treeDock = new QDockWidget(MainWindow);
-        treeDock->setObjectName(QStringLiteral("treeDock"));
+        treeDock->setObjectName(QString::fromUtf8("treeDock"));
         treeDockContents = new ResizableDockContainer();
-        treeDockContents->setObjectName(QStringLiteral("treeDockContents"));
+        treeDockContents->setObjectName(QString::fromUtf8("treeDockContents"));
         verticalLayout = new QVBoxLayout(treeDockContents);
         verticalLayout->setSpacing(0);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         widget = new QWidget(treeDockContents);
-        widget->setObjectName(QStringLiteral("widget"));
+        widget->setObjectName(QString::fromUtf8("widget"));
         formLayout = new QFormLayout(widget);
-        formLayout->setObjectName(QStringLiteral("formLayout"));
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setContentsMargins(5, 0, 0, 0);
         label = new QLabel(widget);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label);
 
         cbTreeView = new QComboBox(widget);
         QIcon icon7;
-        icon7.addFile(QStringLiteral(":/img/window.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon7.addFile(QString::fromUtf8(":/img/window.png"), QSize(), QIcon::Normal, QIcon::Off);
         cbTreeView->addItem(icon7, QString());
         QIcon icon8;
-        icon8.addFile(QStringLiteral(":/img/process.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon8.addFile(QString::fromUtf8(":/img/process.png"), QSize(), QIcon::Normal, QIcon::Off);
         cbTreeView->addItem(icon8, QString());
-        cbTreeView->setObjectName(QStringLiteral("cbTreeView"));
+        cbTreeView->setObjectName(QString::fromUtf8("cbTreeView"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, cbTreeView);
 
@@ -183,7 +182,7 @@ public:
         verticalLayout->addWidget(widget);
 
         windowTree = new WindowTree(treeDockContents);
-        windowTree->setObjectName(QStringLiteral("windowTree"));
+        windowTree->setObjectName(QString::fromUtf8("windowTree"));
         windowTree->setEditTriggers(QAbstractItemView::NoEditTriggers);
         windowTree->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
         windowTree->setUniformRowHeights(true);
@@ -192,24 +191,24 @@ public:
         verticalLayout->addWidget(windowTree);
 
         treeDock->setWidget(treeDockContents);
-        MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), treeDock);
+        MainWindow->addDockWidget(Qt::LeftDockWidgetArea, treeDock);
         pickerToolBar = new QToolBar(MainWindow);
-        pickerToolBar->setObjectName(QStringLiteral("pickerToolBar"));
+        pickerToolBar->setObjectName(QString::fromUtf8("pickerToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, pickerToolBar);
         mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
         mainToolBar->setIconSize(QSize(16, 16));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         logDock = new QDockWidget(MainWindow);
-        logDock->setObjectName(QStringLiteral("logDock"));
+        logDock->setObjectName(QString::fromUtf8("logDock"));
         logDockContents = new ResizableDockContainer();
-        logDockContents->setObjectName(QStringLiteral("logDockContents"));
+        logDockContents->setObjectName(QString::fromUtf8("logDockContents"));
         horizontalLayout_3 = new QHBoxLayout(logDockContents);
         horizontalLayout_3->setSpacing(0);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         logList = new QTreeWidget(logDockContents);
-        logList->setObjectName(QStringLiteral("logList"));
+        logList->setObjectName(QString::fromUtf8("logList"));
         logList->setEditTriggers(QAbstractItemView::NoEditTriggers);
         logList->setDragDropOverwriteMode(false);
         logList->setSelectionMode(QAbstractItemView::NoSelection);
@@ -221,7 +220,7 @@ public:
         horizontalLayout_3->addWidget(logList);
 
         logDock->setWidget(logDockContents);
-        MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(8), logDock);
+        MainWindow->addDockWidget(Qt::BottomDockWidgetArea, logDock);
 
         menubar->addAction(menuSpy->menuAction());
         menubar->addAction(menuEdit->menuAction());
@@ -250,71 +249,77 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Window Detective", 0));
-        actnPreferences->setText(QApplication::translate("MainWindow", "&Preferences...", 0));
-        actnHelp->setText(QApplication::translate("MainWindow", "&Help Contents", 0));
-        actnHelp->setShortcut(QApplication::translate("MainWindow", "F1", 0));
-        actnAbout->setText(QApplication::translate("MainWindow", "&About Window Detective", 0));
-        actnFind->setText(QApplication::translate("MainWindow", "&Find...", 0));
-#ifndef QT_NO_TOOLTIP
-        actnFind->setToolTip(QApplication::translate("MainWindow", "Find a window", 0));
-#endif // QT_NO_TOOLTIP
-        actnFind->setShortcut(QApplication::translate("MainWindow", "Ctrl+F", 0));
-        actnRefresh->setText(QApplication::translate("MainWindow", "&Refresh", 0));
-#ifndef QT_NO_TOOLTIP
-        actnRefresh->setToolTip(QApplication::translate("MainWindow", "Refresh all window", 0));
-#endif // QT_NO_TOOLTIP
-        actnRefresh->setShortcut(QApplication::translate("MainWindow", "F5", 0));
-        actnTile->setText(QApplication::translate("MainWindow", "&Tile", 0));
-        actnCascade->setText(QApplication::translate("MainWindow", "&Cascade", 0));
-        actnCloseAllMdi->setText(QApplication::translate("MainWindow", "&Close All", 0));
-#ifndef QT_NO_TOOLTIP
-        actnCloseAllMdi->setToolTip(QApplication::translate("MainWindow", "Close All MDI Windows", 0));
-#endif // QT_NO_TOOLTIP
-        actnSystemInfo->setText(QApplication::translate("MainWindow", "System Info", 0));
-#ifndef QT_NO_TOOLTIP
-        actnSystemInfo->setToolTip(QApplication::translate("MainWindow", "View System UI Configuration Settings", 0));
-#endif // QT_NO_TOOLTIP
-        actionConnect_to_server->setText(QApplication::translate("MainWindow", "Connect to server", 0));
-        actionStart_Server->setText(QApplication::translate("MainWindow", "Start Server", 0));
-#ifndef QT_NO_WHATSTHIS
-        mdiArea->setWhatsThis(QApplication::translate("MainWindow", "The main pane, holds multiple property or message panes.", 0));
-#endif // QT_NO_WHATSTHIS
-        menuSpy->setTitle(QApplication::translate("MainWindow", "&Inspect", 0));
-        menuRemote->setTitle(QApplication::translate("MainWindow", "Remote", 0));
-        menuHelp->setTitle(QApplication::translate("MainWindow", "&Help", 0));
-        menuEdit->setTitle(QApplication::translate("MainWindow", "&Edit", 0));
-        menuView->setTitle(QApplication::translate("MainWindow", "&View", 0));
-        menuWindows->setTitle(QApplication::translate("MainWindow", "&Windows", 0));
-#ifndef QT_NO_WHATSTHIS
-        treeDock->setWhatsThis(QApplication::translate("MainWindow", "Lists all windows in the system, sorted either by relationship to the desktop window or by owner process", 0));
-#endif // QT_NO_WHATSTHIS
-        treeDock->setWindowTitle(QApplication::translate("MainWindow", "Window Hierarchy", 0));
-        label->setText(QApplication::translate("MainWindow", "View:", 0));
-        cbTreeView->setItemText(0, QApplication::translate("MainWindow", "Desktop window hierarchy", 0));
-        cbTreeView->setItemText(1, QApplication::translate("MainWindow", "Process window hierarchy", 0));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Window Detective", nullptr));
+        actnPreferences->setText(QCoreApplication::translate("MainWindow", "&Preferences...", nullptr));
+        actnHelp->setText(QCoreApplication::translate("MainWindow", "&Help Contents", nullptr));
+#if QT_CONFIG(shortcut)
+        actnHelp->setShortcut(QCoreApplication::translate("MainWindow", "F1", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actnAbout->setText(QCoreApplication::translate("MainWindow", "&About Window Detective", nullptr));
+        actnFind->setText(QCoreApplication::translate("MainWindow", "&Find...", nullptr));
+#if QT_CONFIG(tooltip)
+        actnFind->setToolTip(QCoreApplication::translate("MainWindow", "Find a window", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        actnFind->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+F", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actnRefresh->setText(QCoreApplication::translate("MainWindow", "&Refresh", nullptr));
+#if QT_CONFIG(tooltip)
+        actnRefresh->setToolTip(QCoreApplication::translate("MainWindow", "Refresh all window", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        actnRefresh->setShortcut(QCoreApplication::translate("MainWindow", "F5", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actnTile->setText(QCoreApplication::translate("MainWindow", "&Tile", nullptr));
+        actnCascade->setText(QCoreApplication::translate("MainWindow", "&Cascade", nullptr));
+        actnCloseAllMdi->setText(QCoreApplication::translate("MainWindow", "&Close All", nullptr));
+#if QT_CONFIG(tooltip)
+        actnCloseAllMdi->setToolTip(QCoreApplication::translate("MainWindow", "Close All MDI Windows", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actnSystemInfo->setText(QCoreApplication::translate("MainWindow", "System Info", nullptr));
+#if QT_CONFIG(tooltip)
+        actnSystemInfo->setToolTip(QCoreApplication::translate("MainWindow", "View System UI Configuration Settings", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionConnect_to_server->setText(QCoreApplication::translate("MainWindow", "Connect to server", nullptr));
+        actionStart_Server->setText(QCoreApplication::translate("MainWindow", "Start Server", nullptr));
+#if QT_CONFIG(whatsthis)
+        mdiArea->setWhatsThis(QCoreApplication::translate("MainWindow", "The main pane, holds multiple property or message panes.", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        menuSpy->setTitle(QCoreApplication::translate("MainWindow", "&Inspect", nullptr));
+        menuRemote->setTitle(QCoreApplication::translate("MainWindow", "Remote", nullptr));
+        menuHelp->setTitle(QCoreApplication::translate("MainWindow", "&Help", nullptr));
+        menuEdit->setTitle(QCoreApplication::translate("MainWindow", "&Edit", nullptr));
+        menuView->setTitle(QCoreApplication::translate("MainWindow", "&View", nullptr));
+        menuWindows->setTitle(QCoreApplication::translate("MainWindow", "&Windows", nullptr));
+#if QT_CONFIG(whatsthis)
+        treeDock->setWhatsThis(QCoreApplication::translate("MainWindow", "Lists all windows in the system, sorted either by relationship to the desktop window or by owner process", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        treeDock->setWindowTitle(QCoreApplication::translate("MainWindow", "Window Hierarchy", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "View:", nullptr));
+        cbTreeView->setItemText(0, QCoreApplication::translate("MainWindow", "Desktop window hierarchy", nullptr));
+        cbTreeView->setItemText(1, QCoreApplication::translate("MainWindow", "Process window hierarchy", nullptr));
 
-#ifndef QT_NO_WHATSTHIS
-        cbTreeView->setWhatsThis(QApplication::translate("MainWindow", "Selects how the windows are displayed in the tree.", 0));
-#endif // QT_NO_WHATSTHIS
+#if QT_CONFIG(whatsthis)
+        cbTreeView->setWhatsThis(QCoreApplication::translate("MainWindow", "Selects how the windows are displayed in the tree.", nullptr));
+#endif // QT_CONFIG(whatsthis)
         QTreeWidgetItem *___qtreewidgetitem = windowTree->headerItem();
-        ___qtreewidgetitem->setText(0, QApplication::translate("MainWindow", "Window", 0));
-#ifndef QT_NO_WHATSTHIS
-        windowTree->setWhatsThis(QApplication::translate("MainWindow", "Lists all windows in the system, arranged either by relationship to the desktop window or by owner process.", 0));
-#endif // QT_NO_WHATSTHIS
-        pickerToolBar->setWindowTitle(QApplication::translate("MainWindow", "Picker ToolBar", 0));
-        mainToolBar->setWindowTitle(QApplication::translate("MainWindow", "Main ToolBar", 0));
-#ifndef QT_NO_WHATSTHIS
-        logDock->setWhatsThis(QApplication::translate("MainWindow", "Displays any status messages or window events as they happen", 0));
-#endif // QT_NO_WHATSTHIS
-        logDock->setWindowTitle(QApplication::translate("MainWindow", "Logs", 0));
+        ___qtreewidgetitem->setText(0, QCoreApplication::translate("MainWindow", "Window", nullptr));
+#if QT_CONFIG(whatsthis)
+        windowTree->setWhatsThis(QCoreApplication::translate("MainWindow", "Lists all windows in the system, arranged either by relationship to the desktop window or by owner process.", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        pickerToolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "Picker ToolBar", nullptr));
+        mainToolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "Main ToolBar", nullptr));
+#if QT_CONFIG(whatsthis)
+        logDock->setWhatsThis(QCoreApplication::translate("MainWindow", "Displays any status messages or window events as they happen", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        logDock->setWindowTitle(QCoreApplication::translate("MainWindow", "Logs", nullptr));
         QTreeWidgetItem *___qtreewidgetitem1 = logList->headerItem();
-        ___qtreewidgetitem1->setText(2, QApplication::translate("MainWindow", "Message", 0));
-        ___qtreewidgetitem1->setText(1, QApplication::translate("MainWindow", "Level", 0));
-        ___qtreewidgetitem1->setText(0, QApplication::translate("MainWindow", "Time", 0));
-#ifndef QT_NO_WHATSTHIS
-        logList->setWhatsThis(QApplication::translate("MainWindow", "Displays any status messages, errors, or window events as they happen.", 0));
-#endif // QT_NO_WHATSTHIS
+        ___qtreewidgetitem1->setText(2, QCoreApplication::translate("MainWindow", "Message", nullptr));
+        ___qtreewidgetitem1->setText(1, QCoreApplication::translate("MainWindow", "Level", nullptr));
+        ___qtreewidgetitem1->setText(0, QCoreApplication::translate("MainWindow", "Time", nullptr));
+#if QT_CONFIG(whatsthis)
+        logList->setWhatsThis(QCoreApplication::translate("MainWindow", "Displays any status messages, errors, or window events as they happen.", nullptr));
+#endif // QT_CONFIG(whatsthis)
     } // retranslateUi
 
 };

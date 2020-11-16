@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'RemoteConnectionDialog.ui'
 **
-** Created by: Qt User Interface Compiler version 5.1.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,13 +10,10 @@
 #define UI_REMOTECONNECTIONDIALOG_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -52,15 +49,15 @@ public:
     void setupUi(QDialog *RemoteConnectionDialog)
     {
         if (RemoteConnectionDialog->objectName().isEmpty())
-            RemoteConnectionDialog->setObjectName(QStringLiteral("RemoteConnectionDialog"));
+            RemoteConnectionDialog->setObjectName(QString::fromUtf8("RemoteConnectionDialog"));
         RemoteConnectionDialog->resize(825, 324);
         RemoteConnectionDialog->setMinimumSize(QSize(800, 300));
         RemoteConnectionDialog->setBaseSize(QSize(800, 300));
         formLayout_2 = new QFormLayout(RemoteConnectionDialog);
-        formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
+        formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
         formLayout_2->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         tabWidget = new QTabWidget(RemoteConnectionDialog);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -68,13 +65,13 @@ public:
         tabWidget->setSizePolicy(sizePolicy);
         tabWidget->setMinimumSize(QSize(0, 50));
         tab = new QWidget();
-        tab->setObjectName(QStringLiteral("tab"));
+        tab->setObjectName(QString::fromUtf8("tab"));
         formLayout = new QFormLayout(tab);
-        formLayout->setObjectName(QStringLiteral("formLayout"));
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setSizeConstraint(QLayout::SetMinimumSize);
         formLayout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         label = new QLabel(tab);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -84,7 +81,7 @@ public:
         formLayout->setWidget(0, QFormLayout::LabelRole, label);
 
         lineEdit = new QLineEdit(tab);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(1);
@@ -94,28 +91,28 @@ public:
         formLayout->setWidget(0, QFormLayout::FieldRole, lineEdit);
 
         label_2 = new QLabel(tab);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setObjectName(QString::fromUtf8("label_2"));
         sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy1);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
 
         lineEdit_2 = new QLineEdit(tab);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
         sizePolicy2.setHeightForWidth(lineEdit_2->sizePolicy().hasHeightForWidth());
         lineEdit_2->setSizePolicy(sizePolicy2);
 
         formLayout->setWidget(1, QFormLayout::FieldRole, lineEdit_2);
 
         horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         cancelConnectToRemoteServerButton = new QPushButton(tab);
-        cancelConnectToRemoteServerButton->setObjectName(QStringLiteral("cancelConnectToRemoteServerButton"));
+        cancelConnectToRemoteServerButton->setObjectName(QString::fromUtf8("cancelConnectToRemoteServerButton"));
 
         horizontalLayout_4->addWidget(cancelConnectToRemoteServerButton);
 
         connectToRemoteServerButton = new QPushButton(tab);
-        connectToRemoteServerButton->setObjectName(QStringLiteral("connectToRemoteServerButton"));
+        connectToRemoteServerButton->setObjectName(QString::fromUtf8("connectToRemoteServerButton"));
 
         horizontalLayout_4->addWidget(connectToRemoteServerButton);
 
@@ -124,11 +121,11 @@ public:
 
         tabWidget->addTab(tab, QString());
         StartServerTab = new QWidget();
-        StartServerTab->setObjectName(QStringLiteral("StartServerTab"));
+        StartServerTab->setObjectName(QString::fromUtf8("StartServerTab"));
         formLayout_3 = new QFormLayout(StartServerTab);
-        formLayout_3->setObjectName(QStringLiteral("formLayout_3"));
+        formLayout_3->setObjectName(QString::fromUtf8("formLayout_3"));
         ServerRunningStatusText = new QLabel(StartServerTab);
-        ServerRunningStatusText->setObjectName(QStringLiteral("ServerRunningStatusText"));
+        ServerRunningStatusText->setObjectName(QString::fromUtf8("ServerRunningStatusText"));
         QSizePolicy sizePolicy3(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
         sizePolicy3.setHorizontalStretch(1);
         sizePolicy3.setVerticalStretch(1);
@@ -139,7 +136,7 @@ public:
         formLayout_3->setWidget(0, QFormLayout::SpanningRole, ServerRunningStatusText);
 
         label_3 = new QLabel(StartServerTab);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setObjectName(QString::fromUtf8("label_3"));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(2);
@@ -150,7 +147,7 @@ public:
         formLayout_3->setWidget(1, QFormLayout::LabelRole, label_3);
 
         serverListenPortInput = new QSpinBox(StartServerTab);
-        serverListenPortInput->setObjectName(QStringLiteral("serverListenPortInput"));
+        serverListenPortInput->setObjectName(QString::fromUtf8("serverListenPortInput"));
         QSizePolicy sizePolicy5(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy5.setHorizontalStretch(1);
         sizePolicy5.setVerticalStretch(2);
@@ -167,9 +164,9 @@ public:
         formLayout_3->setWidget(1, QFormLayout::FieldRole, serverListenPortInput);
 
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         startServerButton = new QPushButton(StartServerTab);
-        startServerButton->setObjectName(QStringLiteral("startServerButton"));
+        startServerButton->setObjectName(QString::fromUtf8("startServerButton"));
         sizePolicy2.setHeightForWidth(startServerButton->sizePolicy().hasHeightForWidth());
         startServerButton->setSizePolicy(sizePolicy2);
         startServerButton->setMinimumSize(QSize(0, 0));
@@ -177,7 +174,7 @@ public:
         horizontalLayout->addWidget(startServerButton);
 
         pushButton_3 = new QPushButton(StartServerTab);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
         pushButton_3->setSizePolicy(sizePolicy);
         pushButton_3->setMinimumSize(QSize(0, 0));
@@ -207,17 +204,17 @@ public:
 
     void retranslateUi(QDialog *RemoteConnectionDialog)
     {
-        RemoteConnectionDialog->setWindowTitle(QApplication::translate("RemoteConnectionDialog", "Remote Connection", 0));
-        label->setText(QApplication::translate("RemoteConnectionDialog", "Remote Server IP Address", 0));
-        label_2->setText(QApplication::translate("RemoteConnectionDialog", "Remote Server Port", 0));
-        cancelConnectToRemoteServerButton->setText(QApplication::translate("RemoteConnectionDialog", "Cancel", 0));
-        connectToRemoteServerButton->setText(QApplication::translate("RemoteConnectionDialog", "Connect", 0));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("RemoteConnectionDialog", "Connect Remote", 0));
-        ServerRunningStatusText->setText(QApplication::translate("RemoteConnectionDialog", "Server not running", 0));
-        label_3->setText(QApplication::translate("RemoteConnectionDialog", "Server Port", 0));
-        startServerButton->setText(QApplication::translate("RemoteConnectionDialog", "Start", 0));
-        pushButton_3->setText(QApplication::translate("RemoteConnectionDialog", "Stop", 0));
-        tabWidget->setTabText(tabWidget->indexOf(StartServerTab), QApplication::translate("RemoteConnectionDialog", "Start Server", 0));
+        RemoteConnectionDialog->setWindowTitle(QCoreApplication::translate("RemoteConnectionDialog", "Remote Connection", nullptr));
+        label->setText(QCoreApplication::translate("RemoteConnectionDialog", "Remote Server IP Address", nullptr));
+        label_2->setText(QCoreApplication::translate("RemoteConnectionDialog", "Remote Server Port", nullptr));
+        cancelConnectToRemoteServerButton->setText(QCoreApplication::translate("RemoteConnectionDialog", "Cancel", nullptr));
+        connectToRemoteServerButton->setText(QCoreApplication::translate("RemoteConnectionDialog", "Connect", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("RemoteConnectionDialog", "Connect Remote", nullptr));
+        ServerRunningStatusText->setText(QCoreApplication::translate("RemoteConnectionDialog", "Server not running", nullptr));
+        label_3->setText(QCoreApplication::translate("RemoteConnectionDialog", "Server Port", nullptr));
+        startServerButton->setText(QCoreApplication::translate("RemoteConnectionDialog", "Start", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("RemoteConnectionDialog", "Stop", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(StartServerTab), QCoreApplication::translate("RemoteConnectionDialog", "Start Server", nullptr));
     } // retranslateUi
 
 };

@@ -4,6 +4,34 @@ I have been a long term user of Window Detective.
 It is an amazing software but lacks certain features which I want, for eg. x64 support.
 The idea is to get all the changes mainlined to aurthor's original repository on sourceforge.
 
+# Update 1 : Upgrading to QT 5.15.1, and VS 2019
+QT 5.4  onwards has quite a bit of DPI awareness support.
+QT 5.15 is LTS (Long term support version).
+
+Install QT 5.15.1 SDK (https://www.qt.io/download-qt-installer). 
+Select "MSVC 2019 32 bit", and "MSVC 2019 64 bit" during installation.
+Make sure "QTDIRx64", and "QTDIRx86" environment variables point to the right paths.
+Eg.
+```
+QTDIRx64=C:\qt\5.15.1\msvc2019_64
+QTDIRx86=C:\qt\5.15.1\msvc2019
+```
+
+Copy the following binaries from "$(QTDIRx64)\bin" to "src\x64\Release"
+
+```
+Qt5Core.dll
+Qt5Gui.dll
+Qt5Network.dll
+Qt5Widgets.dll
+Qt5Xml.dll
+```
+
+Copy "$(QTDIRx64)\plugins\platforms\qwindows.dll" to "src\x64\Release\platforms\qwindows.dll"
+
+Do the same for x86, and debug versions. Note that release versions dont have d at the end of file names, debug versions do have. Eg. Qt5Core.dll, and Qt5Cored.dll.
+
+
 # Improvements
 ## 64 bit support
 Had to upgrade solution to use Visual Studio 2012 as pre built VS2010 QT (5.1.0) binaries for x64 opengl didn't exist.

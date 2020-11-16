@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'SearchResultsDialog.ui'
 **
-** Created by: Qt User Interface Compiler version 5.1.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,9 +10,7 @@
 #define UI_SEARCHRESULTSDIALOG_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -40,18 +38,18 @@ public:
     void setupUi(QDialog *SearchResultsDialog)
     {
         if (SearchResultsDialog->objectName().isEmpty())
-            SearchResultsDialog->setObjectName(QStringLiteral("SearchResultsDialog"));
+            SearchResultsDialog->setObjectName(QString::fromUtf8("SearchResultsDialog"));
         SearchResultsDialog->resize(480, 380);
         verticalLayout = new QVBoxLayout(SearchResultsDialog);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(6, 6, 6, 6);
         criteriaLabel = new QLabel(SearchResultsDialog);
-        criteriaLabel->setObjectName(QStringLiteral("criteriaLabel"));
+        criteriaLabel->setObjectName(QString::fromUtf8("criteriaLabel"));
 
         verticalLayout->addWidget(criteriaLabel);
 
         windowList = new WindowTree(SearchResultsDialog);
-        windowList->setObjectName(QStringLiteral("windowList"));
+        windowList->setObjectName(QString::fromUtf8("windowList"));
         windowList->setEditTriggers(QAbstractItemView::NoEditTriggers);
         windowList->setDragDropOverwriteMode(false);
         windowList->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -63,21 +61,21 @@ public:
         verticalLayout->addWidget(windowList);
 
         widget = new QWidget(SearchResultsDialog);
-        widget->setObjectName(QStringLiteral("widget"));
+        widget->setObjectName(QString::fromUtf8("widget"));
         horizontalLayout = new QHBoxLayout(widget);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(3, 3, 3, 3);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
         repeatButton = new QPushButton(widget);
-        repeatButton->setObjectName(QStringLiteral("repeatButton"));
+        repeatButton->setObjectName(QString::fromUtf8("repeatButton"));
 
         horizontalLayout->addWidget(repeatButton);
 
         closeButton = new QPushButton(widget);
-        closeButton->setObjectName(QStringLiteral("closeButton"));
+        closeButton->setObjectName(QString::fromUtf8("closeButton"));
 
         horizontalLayout->addWidget(closeButton);
 
@@ -92,15 +90,15 @@ public:
 
     void retranslateUi(QDialog *SearchResultsDialog)
     {
-        SearchResultsDialog->setWindowTitle(QApplication::translate("SearchResultsDialog", "Search Results", 0));
-        criteriaLabel->setText(QApplication::translate("SearchResultsDialog", "Search Criteria", 0));
+        SearchResultsDialog->setWindowTitle(QCoreApplication::translate("SearchResultsDialog", "Search Results", nullptr));
+        criteriaLabel->setText(QCoreApplication::translate("SearchResultsDialog", "Search Criteria", nullptr));
         QTreeWidgetItem *___qtreewidgetitem = windowList->headerItem();
-        ___qtreewidgetitem->setText(0, QApplication::translate("SearchResultsDialog", "Window", 0));
-#ifndef QT_NO_WHATSTHIS
-        repeatButton->setWhatsThis(QApplication::translate("SearchResultsDialog", "Re-runs this search, and updates the results.", 0));
-#endif // QT_NO_WHATSTHIS
-        repeatButton->setText(QApplication::translate("SearchResultsDialog", "&Repeat", 0));
-        closeButton->setText(QApplication::translate("SearchResultsDialog", "&Close", 0));
+        ___qtreewidgetitem->setText(0, QCoreApplication::translate("SearchResultsDialog", "Window", nullptr));
+#if QT_CONFIG(whatsthis)
+        repeatButton->setWhatsThis(QCoreApplication::translate("SearchResultsDialog", "Re-runs this search, and updates the results.", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        repeatButton->setText(QCoreApplication::translate("SearchResultsDialog", "&Repeat", nullptr));
+        closeButton->setText(QCoreApplication::translate("SearchResultsDialog", "&Close", nullptr));
     } // retranslateUi
 
 };

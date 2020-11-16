@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'SetPropertiesDialog.ui'
 **
-** Created by: Qt User Interface Compiler version 5.1.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,14 +10,11 @@
 #define UI_SETPROPERTIESDIALOG_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -78,35 +75,35 @@ public:
     void setupUi(QDialog *SetPropertiesDialog)
     {
         if (SetPropertiesDialog->objectName().isEmpty())
-            SetPropertiesDialog->setObjectName(QStringLiteral("SetPropertiesDialog"));
+            SetPropertiesDialog->setObjectName(QString::fromUtf8("SetPropertiesDialog"));
         SetPropertiesDialog->setWindowModality(Qt::ApplicationModal);
         SetPropertiesDialog->resize(425, 313);
         SetPropertiesDialog->setMinimumSize(QSize(400, 300));
         verticalLayout = new QVBoxLayout(SetPropertiesDialog);
         verticalLayout->setSpacing(3);
         verticalLayout->setContentsMargins(3, 3, 3, 3);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         tabWidget = new QTabWidget(SetPropertiesDialog);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         generalTab = new QWidget();
-        generalTab->setObjectName(QStringLiteral("generalTab"));
+        generalTab->setObjectName(QString::fromUtf8("generalTab"));
         generalTab->setAutoFillBackground(true);
         verticalLayout_2 = new QVBoxLayout(generalTab);
         verticalLayout_2->setSpacing(10);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         widget_2 = new QWidget(generalTab);
-        widget_2->setObjectName(QStringLiteral("widget_2"));
+        widget_2->setObjectName(QString::fromUtf8("widget_2"));
         gridLayout_3 = new QGridLayout(widget_2);
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         label = new QLabel(widget_2);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
         label->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout_3->addWidget(label, 0, 0, 1, 1);
 
         txtWindowText = new QLineEdit(widget_2);
-        txtWindowText->setObjectName(QStringLiteral("txtWindowText"));
+        txtWindowText->setObjectName(QString::fromUtf8("txtWindowText"));
 
         gridLayout_3->addWidget(txtWindowText, 0, 1, 1, 1);
 
@@ -114,41 +111,41 @@ public:
         verticalLayout_2->addWidget(widget_2);
 
         widget_3 = new QWidget(generalTab);
-        widget_3->setObjectName(QStringLiteral("widget_3"));
+        widget_3->setObjectName(QString::fromUtf8("widget_3"));
         widget_3->setMaximumSize(QSize(300, 16777215));
         gridLayout_2 = new QGridLayout(widget_3);
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         label_2 = new QLabel(widget_3);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout_2->addWidget(label_2, 0, 0, 1, 1);
 
         txtDimensions = new QLineEdit(widget_3);
-        txtDimensions->setObjectName(QStringLiteral("txtDimensions"));
+        txtDimensions->setObjectName(QString::fromUtf8("txtDimensions"));
 
         gridLayout_2->addWidget(txtDimensions, 0, 1, 1, 3);
 
         label_3 = new QLabel(widget_3);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout_2->addWidget(label_3, 1, 0, 1, 1);
 
         txtPos = new QLineEdit(widget_3);
-        txtPos->setObjectName(QStringLiteral("txtPos"));
+        txtPos->setObjectName(QString::fromUtf8("txtPos"));
 
         gridLayout_2->addWidget(txtPos, 1, 1, 1, 1);
 
         label_4 = new QLabel(widget_3);
-        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout_2->addWidget(label_4, 1, 2, 1, 1);
 
         txtSize = new QLineEdit(widget_3);
-        txtSize->setObjectName(QStringLiteral("txtSize"));
+        txtSize->setObjectName(QString::fromUtf8("txtSize"));
 
         gridLayout_2->addWidget(txtSize, 1, 3, 1, 1);
 
@@ -156,22 +153,22 @@ public:
         verticalLayout_2->addWidget(widget_3);
 
         widget_4 = new QWidget(generalTab);
-        widget_4->setObjectName(QStringLiteral("widget_4"));
+        widget_4->setObjectName(QString::fromUtf8("widget_4"));
         verticalLayout_4 = new QVBoxLayout(widget_4);
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         chVisible = new QCheckBox(widget_4);
-        chVisible->setObjectName(QStringLiteral("chVisible"));
+        chVisible->setObjectName(QString::fromUtf8("chVisible"));
 
         verticalLayout_4->addWidget(chVisible);
 
         chEnabled = new QCheckBox(widget_4);
-        chEnabled->setObjectName(QStringLiteral("chEnabled"));
+        chEnabled->setObjectName(QString::fromUtf8("chEnabled"));
 
         verticalLayout_4->addWidget(chEnabled);
 
         chAlwaysOnTop = new QCheckBox(widget_4);
-        chAlwaysOnTop->setObjectName(QStringLiteral("chAlwaysOnTop"));
+        chAlwaysOnTop->setObjectName(QString::fromUtf8("chAlwaysOnTop"));
 
         verticalLayout_4->addWidget(chAlwaysOnTop);
 
@@ -184,28 +181,28 @@ public:
 
         tabWidget->addTab(generalTab, QString());
         stylesTab = new QWidget();
-        stylesTab->setObjectName(QStringLiteral("stylesTab"));
+        stylesTab->setObjectName(QString::fromUtf8("stylesTab"));
         stylesTab->setAutoFillBackground(true);
         verticalLayout_3 = new QVBoxLayout(stylesTab);
         verticalLayout_3->setContentsMargins(3, 3, 3, 3);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         widget_5 = new QWidget(stylesTab);
-        widget_5->setObjectName(QStringLiteral("widget_5"));
+        widget_5->setObjectName(QString::fromUtf8("widget_5"));
         gridLayout_5 = new QGridLayout(widget_5);
-        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
         gridLayout_5->setContentsMargins(3, 0, 3, 0);
         label_5 = new QLabel(widget_5);
-        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setObjectName(QString::fromUtf8("label_5"));
 
         gridLayout_5->addWidget(label_5, 0, 0, 1, 1);
 
         label_6 = new QLabel(widget_5);
-        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setObjectName(QString::fromUtf8("label_6"));
 
         gridLayout_5->addWidget(label_6, 1, 0, 1, 1);
 
         spnStyleBits = new HexSpinBox(widget_5);
-        spnStyleBits->setObjectName(QStringLiteral("spnStyleBits"));
+        spnStyleBits->setObjectName(QString::fromUtf8("spnStyleBits"));
         spnStyleBits->setMinimumSize(QSize(100, 0));
         spnStyleBits->setMaximumSize(QSize(200, 16777215));
         spnStyleBits->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -214,7 +211,7 @@ public:
         gridLayout_5->addWidget(spnStyleBits, 0, 1, 1, 1);
 
         spnExStyleBits = new HexSpinBox(widget_5);
-        spnExStyleBits->setObjectName(QStringLiteral("spnExStyleBits"));
+        spnExStyleBits->setObjectName(QString::fromUtf8("spnExStyleBits"));
         spnExStyleBits->setMinimumSize(QSize(100, 0));
         spnExStyleBits->setMaximumSize(QSize(200, 16777215));
         spnExStyleBits->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -230,12 +227,12 @@ public:
         verticalLayout_3->addWidget(widget_5);
 
         widget_6 = new QWidget(stylesTab);
-        widget_6->setObjectName(QStringLiteral("widget_6"));
+        widget_6->setObjectName(QString::fromUtf8("widget_6"));
         horizontalLayout_2 = new QHBoxLayout(widget_6);
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         stylesList = new QListWidget(widget_6);
-        stylesList->setObjectName(QStringLiteral("stylesList"));
+        stylesList->setObjectName(QString::fromUtf8("stylesList"));
         stylesList->setEditTriggers(QAbstractItemView::NoEditTriggers);
         stylesList->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
         stylesList->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
@@ -244,7 +241,7 @@ public:
         horizontalLayout_2->addWidget(stylesList);
 
         txtStyleDesc = new QPlainTextEdit(widget_6);
-        txtStyleDesc->setObjectName(QStringLiteral("txtStyleDesc"));
+        txtStyleDesc->setObjectName(QString::fromUtf8("txtStyleDesc"));
         txtStyleDesc->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
         txtStyleDesc->setUndoRedoEnabled(false);
         txtStyleDesc->setReadOnly(true);
@@ -262,22 +259,21 @@ public:
         verticalLayout->addWidget(tabWidget);
 
         widget = new QWidget(SetPropertiesDialog);
-        widget->setObjectName(QStringLiteral("widget"));
+        widget->setObjectName(QString::fromUtf8("widget"));
         horizontalLayout = new QHBoxLayout(widget);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(-1, 3, -1, 3);
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
         setButton = new QPushButton(widget);
-        setButton->setObjectName(QStringLiteral("setButton"));
-        setButton->setDefault(true);
+        setButton->setObjectName(QString::fromUtf8("setButton"));
 
         horizontalLayout->addWidget(setButton);
 
         closeButton = new QPushButton(widget);
-        closeButton->setObjectName(QStringLiteral("closeButton"));
+        closeButton->setObjectName(QString::fromUtf8("closeButton"));
 
         horizontalLayout->addWidget(closeButton);
 
@@ -302,6 +298,7 @@ public:
         QObject::connect(closeButton, SIGNAL(clicked()), SetPropertiesDialog, SLOT(close()));
 
         tabWidget->setCurrentIndex(1);
+        setButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(SetPropertiesDialog);
@@ -309,20 +306,20 @@ public:
 
     void retranslateUi(QDialog *SetPropertiesDialog)
     {
-        SetPropertiesDialog->setWindowTitle(QApplication::translate("SetPropertiesDialog", "Set Properties [*]", 0));
-        label->setText(QApplication::translate("SetPropertiesDialog", "Text:", 0));
-        label_2->setText(QApplication::translate("SetPropertiesDialog", "Dimensions:", 0));
-        label_3->setText(QApplication::translate("SetPropertiesDialog", "Pos:", 0));
-        label_4->setText(QApplication::translate("SetPropertiesDialog", "Size:", 0));
-        chVisible->setText(QApplication::translate("SetPropertiesDialog", "Visible", 0));
-        chEnabled->setText(QApplication::translate("SetPropertiesDialog", "Enabled", 0));
-        chAlwaysOnTop->setText(QApplication::translate("SetPropertiesDialog", "Always on top", 0));
-        tabWidget->setTabText(tabWidget->indexOf(generalTab), QApplication::translate("SetPropertiesDialog", "General", 0));
-        label_5->setText(QApplication::translate("SetPropertiesDialog", "Style bits:", 0));
-        label_6->setText(QApplication::translate("SetPropertiesDialog", "Extended Style bits:", 0));
-        tabWidget->setTabText(tabWidget->indexOf(stylesTab), QApplication::translate("SetPropertiesDialog", "Styles", 0));
-        setButton->setText(QApplication::translate("SetPropertiesDialog", "&Set", 0));
-        closeButton->setText(QApplication::translate("SetPropertiesDialog", "&Close", 0));
+        SetPropertiesDialog->setWindowTitle(QCoreApplication::translate("SetPropertiesDialog", "Set Properties [*]", nullptr));
+        label->setText(QCoreApplication::translate("SetPropertiesDialog", "Text:", nullptr));
+        label_2->setText(QCoreApplication::translate("SetPropertiesDialog", "Dimensions:", nullptr));
+        label_3->setText(QCoreApplication::translate("SetPropertiesDialog", "Pos:", nullptr));
+        label_4->setText(QCoreApplication::translate("SetPropertiesDialog", "Size:", nullptr));
+        chVisible->setText(QCoreApplication::translate("SetPropertiesDialog", "Visible", nullptr));
+        chEnabled->setText(QCoreApplication::translate("SetPropertiesDialog", "Enabled", nullptr));
+        chAlwaysOnTop->setText(QCoreApplication::translate("SetPropertiesDialog", "Always on top", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(generalTab), QCoreApplication::translate("SetPropertiesDialog", "General", nullptr));
+        label_5->setText(QCoreApplication::translate("SetPropertiesDialog", "Style bits:", nullptr));
+        label_6->setText(QCoreApplication::translate("SetPropertiesDialog", "Extended Style bits:", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(stylesTab), QCoreApplication::translate("SetPropertiesDialog", "Styles", nullptr));
+        setButton->setText(QCoreApplication::translate("SetPropertiesDialog", "&Set", nullptr));
+        closeButton->setText(QCoreApplication::translate("SetPropertiesDialog", "&Close", nullptr));
     } // retranslateUi
 
 };

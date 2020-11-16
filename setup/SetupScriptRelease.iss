@@ -46,13 +46,13 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 ; x64
 Source: "..\src\x64\Release\Window Detective_x64_Release.exe"; DestDir: "{commonpf64}\{#MyAppName}\x64"; Flags: ignoreversion; Check: IsWin64;
 Source: "..\src\x64\Release\*"; DestDir: "{commonpf64}\{#MyAppName}\x64"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsWin64;
-Source: "QT\x64\platforms\qwindows.dll"; DestDir: "{commonpf64}\{#MyAppName}\x64\platforms"; Flags: ignoreversion; Check: IsWin64;
+;Source: "QT\x64\platforms\qwindows.dll"; DestDir: "{commonpf64}\{#MyAppName}\x64\platforms"; Flags: ignoreversion; Check: IsWin64;
 Source: "VS2012\vcredist_x64.exe"; DestDir: "{tmp}";  MinVersion: 0.0,5.0; Flags: deleteafterinstall; Check: IsWin64;
 
 ; x86
 Source: "..\src\Win32\Release\Window Detective_Win32_Release.exe"; DestDir: "{code:GetProgramFiles}\{#MyAppName}\x86"; Flags: ignoreversion;
 Source: "..\src\Win32\Release\*"; DestDir: "{code:GetProgramFiles}\{#MyAppName}\x86"; Flags: ignoreversion recursesubdirs createallsubdirs;
-Source: "QT\x86\platforms\qwindows.dll"; DestDir: "{code:GetProgramFiles}\{#MyAppName}\x86\platforms"; Flags: ignoreversion;
+;Source: "QT\x86\platforms\qwindows.dll"; DestDir: "{code:GetProgramFiles}\{#MyAppName}\x86\platforms"; Flags: ignoreversion;
 Source: "VS2012\vcredist_x86.exe"; DestDir: "{tmp}";  MinVersion: 0.0,5.0; Flags: deleteafterinstall;
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

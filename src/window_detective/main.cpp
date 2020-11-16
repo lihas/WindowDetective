@@ -234,7 +234,7 @@ int main(int argc, char *argv[]) {
     // window to the front (although i couldn't get that to work). But it uses the Qt network
     // module and so may be a bit bloated.
     // Download from http://qt.gitorious.org/qt-solutions
-    HANDLE mutex = CreateMutexW(0, true, L"WD"APP_GUID);
+    HANDLE mutex = CreateMutexW(0, true, L"WD" APP_GUID);
     if (mutex && GetLastError() == ERROR_ALREADY_EXISTS) {
         CloseHandle(mutex);
         // FIXME: No methods of bringing the window to the top seem to work
@@ -244,6 +244,9 @@ int main(int argc, char *argv[]) {
         }
         exit(0);
     }
+
+    //DPI awareness
+    WindowDetective::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     // Create the app instance and initialize
     WindowDetective app(argc, argv);

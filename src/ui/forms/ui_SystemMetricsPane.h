@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'SystemMetricsPane.ui'
 **
-** Created by: Qt User Interface Compiler version 5.1.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,9 +10,7 @@
 #define UI_SYSTEMMETRICSPANE_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QTableView>
@@ -31,20 +29,20 @@ public:
     void setupUi(QWidget *SystemMetricsPane)
     {
         if (SystemMetricsPane->objectName().isEmpty())
-            SystemMetricsPane->setObjectName(QStringLiteral("SystemMetricsPane"));
+            SystemMetricsPane->setObjectName(QString::fromUtf8("SystemMetricsPane"));
         SystemMetricsPane->resize(500, 400);
         verticalLayout = new QVBoxLayout(SystemMetricsPane);
         verticalLayout->setSpacing(0);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(SystemMetricsPane);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
         label->setMargin(6);
 
         verticalLayout->addWidget(label);
 
         table = new QTableView(SystemMetricsPane);
-        table->setObjectName(QStringLiteral("table"));
+        table->setObjectName(QString::fromUtf8("table"));
         table->setEditTriggers(QAbstractItemView::NoEditTriggers);
         table->setSelectionBehavior(QAbstractItemView::SelectRows);
         table->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
@@ -69,8 +67,8 @@ public:
 
     void retranslateUi(QWidget *SystemMetricsPane)
     {
-        label->setText(QApplication::translate("SystemMetricsPane", "List of system metrics, obtained from the GetSystemMetrics API function", 0));
-        Q_UNUSED(SystemMetricsPane);
+        label->setText(QCoreApplication::translate("SystemMetricsPane", "List of system metrics, obtained from the GetSystemMetrics API function", nullptr));
+        (void)SystemMetricsPane;
     } // retranslateUi
 
 };
